@@ -3,22 +3,22 @@ import { IoHome, IoBriefcase, IoMail, IoAlbums } from "react-icons/io5";
 export const navItems = [
   {
     name: "Home",
-    path: "/",
+    path: "#Home",
     icon: <IoHome />,
   },
   {
     name: "Jobs",
-    path: "/jobs",
+    path: "#Jobs",
     icon: <IoBriefcase />,
   },
   {
     name: "Projects",
-    path: "/projects",
+    path: "#Projects",
     icon: <IoAlbums />,
   },
   {
     name: "Contact",
-    path: "/contact",
+    path: "#Contact",
     icon: <IoMail />,
   },
 ];
