@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
-      <h1>Footer</h1>
+    <div className="dark:bg-SectionDark bg-NavBar">
+      <h3 className="text-center text-Detail font-bold text-lg">VLDM</h3>
     </div>
   );
 };
