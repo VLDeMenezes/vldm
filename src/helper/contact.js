@@ -2,7 +2,7 @@ import { IoLogoGithub, IoLogoLinkedin, IoMail } from "react-icons/io5";
 export const contact = [
   {
     name: "Mail",
-    path: "mail:estudiodemenezes@gmail.com",
+    path: "mailto:estudiodemenezes@gmail.com",
     icon: <IoMail />,
   },
   {
