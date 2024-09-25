@@ -4,10 +4,12 @@ import React from "react";
 const ContactSection = () => {
   return (
     <section
-      className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[100vh] mt-[10vh]"
+      className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[50vh] mt-[10vh] mb-[20vh]"
       id="Contact"
     >
-      <h2 className="text-2xl m-auto">CONTACTO</h2>
+      <h2 className="text-2xl mx-auto my-2 dark:text-Detail  drop-shadow-xl">
+        Contact
+      </h2>
       <p className="m-auto italic text-SectionDark dark:text-SectionLigth font-semibold">
         Podras contactarme a traves de cualquiera de los siguientes medios:
       </p>

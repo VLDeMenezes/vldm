@@ -5,19 +5,19 @@ export const Jobs = [
   {
     name: "Web Developer",
     description:
-      "Desde hace 2 años, comencé a explorar el mundo del desarrollo web, descubriendo una nueva pasión por la tecnología y el desarrollo FrontEnd en especial, aunque también en Full Stack. Mi enfoque autodidacta me ha permitido adquirir conocimientos sólidos en HTML, CSS, JavaScript, y frameworks como React y Next.js. Estoy emocionado por combinar mi experiencia en derecho con mis nuevas habilidades técnicas para ofrecer soluciones efectivas en el ámbito digital.",
+      "Since 2 years ago, I started exploring the world of web development, discovering a new passion for technology and FrontEnd development in particular, but also Full Stack. My self-taught approach has allowed me to acquire solid knowledge in HTML, CSS, JavaScript, and frameworks such as React and Next.js. I am excited to combine my legal background with my new technical skills to offer effective solutions in the digital field.",
     icon: <FaComputer />,
   },
   {
-    name: "Abogado",
+    name: "Lawyer",
     description:
-      "Más de 5 años de experiencia en la práctica legal y un posgrado en derecho procesal. A lo largo de mi carrera, he desarrollado habilidades analíticas y una atención al detalle que me permiten abordar problemas complejos con soluciones innovadoras",
+      "Over 5 years of experience in legal practice and a postgraduate degree in procedural law. Throughout my career, I have developed analytical skills and attention to detail that allow me to address complex problems with innovative solutions.",
     icon: <GoLaw />,
   },
   {
-    name: "Administrativo",
+    name: "Administrative",
     description:
-      "Mas de 2 años de experiencia en el manejo de expedientes administrativos, interaccion publica, gestion de proyectos estatales y desenvolvimiento en la gestión de recursos humanos.",
+      "More than 2 years of experience in the management of administrative records, public interaction, management of state projects and development in human resources management.",
     icon: <TbDeviceIpadMinus />,
   },
 ];

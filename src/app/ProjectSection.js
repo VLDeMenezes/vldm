@@ -8,17 +8,20 @@ const ProjectSection = () => {
       className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[100vh] mt-[10vh]"
       id="Projects"
     >
-      <h2 className="text-2xl m-auto"> MIS PROYECTOS</h2>
-      <ul className="m-auto flex flex-wrap gap-5">
+      <h2 className="text-2xl mx-auto my-2 dark:text-Detail  drop-shadow-xl">
+        {" "}
+        My Projects
+      </h2>
+      <ul className="mx-auto my-10 flex flex-wrap gap-10 justify-center">
         {project.map((item) => (
           <a
-            className="flex flex-col justify-center shadow-lg text-justify p-4 md:size-[25vw] bg-SectionDark dark:bg-SectionLigth hover:scale-105 duration-150 rounded-lg  cursor-default relative"
+            className="flex flex-col justify-around shadow-lg text-justify p-4 md:size-[25vw] bg-SectionDark dark:bg-SectionLigth hover:scale-105 duration-150 rounded-lg   cursor-pointer "
             href={item.path}
             target="_blank"
             aria-label={`Proyecto ${item.name}`}
             key={item.name}
           >
-            <h3 className="text-2xl text-center font-semibold text-SectionLigth">
+            <h3 className="text-2xl text-center font-semibold text-SectionLigth ">
               {item.name}
             </h3>
             <Image
@@ -29,6 +32,13 @@ const ProjectSection = () => {
               className="mx-auto my-2"
             />
             <p className="text-wrap">{item.description}</p>
+            <small
+              className={`text-end font-semibold ${
+                item.status === "Deployed" ? "text-green-600" : "text-red-600"
+              }`}
+            >
+              {item.status}
+            </small>
           </a>
         ))}
       </ul>

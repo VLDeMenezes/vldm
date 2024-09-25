@@ -1,4 +1,5 @@
 "use client";
+import DarkmodeButton from "@/components/darkmodeButton";
 import { navItems } from "@/helper/NavItems";
 
 import React, { useEffect, useState } from "react";
@@ -15,7 +16,7 @@ const NavBar = () => {
         const sectionHeight = section.offsetHeight;
         const scrollPosition = window.scrollY;
 
-        if (scrollPosition >= sectionTop - sectionHeight / 3) {
+        if (scrollPosition >= sectionTop - sectionHeight / 2) {
           selectedSection = section.id;
         }
       });
@@ -30,7 +31,7 @@ const NavBar = () => {
     };
   }, [select]);
   return (
-    <nav className="fixed bottom-0 left-0 right-0 md:top-0 size-w-full min-h-[10vh] max-h-[10vh] bg-NavBar opacity-90 z-30">
+    <nav className="fixed bottom-0 left-0 right-0 md:top-0 size-w-full min-h-[10vh] max-h-[10vh] bg-NavBar dark:bg-slate-800 opacity-90 z-30">
       <div className="flex flex-row justify-around absolute w-full h-full">
         {navItems.map((item) => (
           <a
@@ -38,15 +39,23 @@ const NavBar = () => {
             key={item.name}
             className={`bg-gray-400 p-2 rounded-lg m-auto text-3xl text-iconLigth dark:text-iconDark duration-150 ${
               select === item.name
-                ? "text-iconLigthSelect dark:text-iconDarkSelect text-4xl relative bottom-[5vh] md:top-[2vh] scale-125"
+                ? "text-iconLigthSelect dark:text-iconDarkSelect text-4xl relative bottom-[5vh] md:top-[2vh] scale-125 flex flex-col items-center"
                 : ""
             }`}
             aria-label="{item.name}"
             onClick={() => SetSelect(item.name)}
           >
             {item.icon}
+            <p
+              className={` ${
+                select === item.name ? "block" : "hidden"
+              } text-sm italic text-center`}
+            >
+              {item.name}
+            </p>
           </a>
         ))}
+        <DarkmodeButton />
       </div>
     </nav>
   );

@@ -7,7 +7,9 @@ const JobSection = () => {
       className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[100vh] mt-[10vh]"
       id="Jobs"
     >
-      <h2 className="text-2xl m-auto"> MIS TRABAJOS</h2>
+      <h2 className="text-2xl mx-auto my-2 dark:text-Detail  drop-shadow-xl">
+        My Jobs
+      </h2>
 
       <article className="mx-auto my-10 flex flex-wrap gap-10 justify-center">
         {Jobs.map((job) => (

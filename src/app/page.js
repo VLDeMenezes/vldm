@@ -2,6 +2,7 @@ import Image from "next/image";
 import JobSection from "./JobSection";
 import ContactSection from "./ContactSection";
 import ProjectSection from "./ProjectSection";
+import DarkmodeButton from "@/components/darkmodeButton";
 
 export default function Home() {
   return (
@@ -10,9 +11,11 @@ export default function Home() {
         className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[100vh] md:mt-[13vh]"
         id="Home"
       >
-        <p className="ml-[5vw] mt-[5vh] text-xl">Hola! me presento:</p>
-        <div className="flex flex-row justify-around">
-          <div className="flex flex-col justify-center p-2 m-2 rounded-full md:size-[185px] bg-SectionDark overflow-hidden">
+        <p className="ml-[5vw] mt-[5vh] text-xl dark:text-zinc-50">
+          Hey, let`s get to know me:
+        </p>
+        <div className="flex flex-row justify-around ">
+          <div className="flex flex-col justify-center p-2 m-2 rounded-full dark:rounded-none md:size-[185px] bg-SectionDark overflow-hidden">
             <Image
               src={"/profile-Photoroom.png"}
               alt="Foto de Victor De Menezes"
@@ -27,22 +30,24 @@ export default function Home() {
             </h1>
           </article>
         </div>
-        <p className="text-center md:text-start md:ml-[6vw]">
-          Full Stack Developer | Abogado
+        <p className="text-center md:text-start md:ml-[6vw] dark:text-zinc-50">
+          Full Stack Developer | Lawyer
         </p>
-        <p className="text-wrap m-2 text-center text-SectionDark dark:text-SectionLigth font-semibold">
-          Este nombre es el que ayudará a tu empresa a lograr sus objetivos!
+        <p className="text-wrap m-2 text-center text-SectionDark dark:text-SectionLigth font-semibold italic animate-pulse">
+          This name will help you achieve your company`s goals.
         </p>
-        <p className="text-justify mx-[10vw]">
-          Como abogado y desarrollador Full Stack, mi trayectoria está marcada
-          por una profunda curiosidad y una constante adaptación al cambio. Mi
-          pasión por la tecnología no solo se refleja en mi capacidad para
-          automatizar procesos, sino en mi habilidad para integrar diversas
-          experiencias en soluciones creativas que mejoran la calidad de vida.
-          Estoy comprometido con estar a la vanguardia de la innovación,
-          aplicando conocimientos multidisciplinarios para transformar desafíos
-          en oportunidades
-        </p>
+
+        <div class="bg-SectionDark dark:bg-Detail md:mx-[10vw] p-2 rounded-lg">
+          <p className="text-justify ">
+            As a lawyer and Full Stack developer, my career is marked by a deep
+            curiosity and a constant adaptation to change. My passion for
+            technology is not only reflected in my ability to automate
+            processes, but in my skill to integrate diverse experiences into
+            creative solutions that improve the quality of life. I am committed
+            to being at the forefront of innovation, applying multidisciplinary
+            knowledge to transform challenges into opportunities.
+          </p>
+        </div>
       </section>
 
       <JobSection />
