@@ -31,7 +31,7 @@ const NavBar = () => {
     };
   }, [select]);
   return (
-    <nav className="fixed bottom-0 left-0 right-0 md:top-0 size-w-full min-h-[10vh] max-h-[10vh] bg-NavBar dark:bg-slate-800 opacity-90 z-30">
+    <nav className="fixed bottom-0 left-0 right-0 md:top-0 size-w-full min-h-[10vh] max-h-[10vh] bg-gray-400 dark:bg-slate-800 opacity-90 z-30">
       <div className="flex flex-row justify-around absolute w-full h-full">
         {navItems.map((item) => (
           <a

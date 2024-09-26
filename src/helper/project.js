@@ -18,7 +18,7 @@ export const project = [
   {
     name: "Leyria & De Menezes",
     image: "/leyriaCaputara.png",
-    path: "https://github.com/VLDeMenezes/L-DM",
+    path: "https://l-dm.vercel.app/",
     description: "Law firm app to schedule appointments online",
     status: "Deployed",
   },

@@ -18,7 +18,7 @@ const DarkmodeButton = () => {
     }
   };
   return (
-    <div className="bg-gray-400 p-2 rounded-lg m-auto text-3xl text-iconLigth dark:text-iconDark duration-150">
+    <div className="bg-gray-400 p-2 rounded-lg m-auto text-3xl text-iconLigth dark:text-iconDark duration-300">
       {darkMode ? (
         <IoMoon onClick={handleChange} className="text-3xl cursor-pointer" />
       ) : (

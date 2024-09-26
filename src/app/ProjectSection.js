@@ -8,7 +8,7 @@ const ProjectSection = () => {
       className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[100vh] mt-[10vh]"
       id="Projects"
     >
-      <h2 className="text-2xl mx-auto my-2 dark:text-Detail  drop-shadow-xl">
+      <h2 className="text-2xl lg:text-4xl mx-auto my-2 dark:text-Detail  drop-shadow-xl">
         {" "}
         My Projects
       </h2>
@@ -21,7 +21,7 @@ const ProjectSection = () => {
             aria-label={`Proyecto ${item.name}`}
             key={item.name}
           >
-            <h3 className="text-2xl text-center font-semibold text-SectionLigth ">
+            <h3 className="text-2xl lg:text-3xl text-center font-semibold text-SectionLigth ">
               {item.name}
             </h3>
             <Image
@@ -29,11 +29,12 @@ const ProjectSection = () => {
               alt={`Imagen del Proyecto ${item.name}`}
               width={200}
               height={200}
-              className="mx-auto my-2"
+              layout="responsive"
+              className="mx-auto my-2 lg:size-[10vw]"
             />
-            <p className="text-wrap">{item.description}</p>
+            <p className="text-wrap lg:text-lg">{item.description}</p>
             <small
-              className={`text-end font-semibold ${
+              className={`text-end lg:text-lg font-semibold ${
                 item.status === "Deployed" ? "text-green-600" : "text-red-600"
               }`}
             >
