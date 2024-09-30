@@ -9,6 +9,7 @@
 
 body {
   @apply bg-Background dark:bg-Darkground text-gray-50 dark:text-iconDarkSelect;
+  height: 100%;
 }
 
 h1 {
@@ -19,4 +20,52 @@ h1 {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.navbar-item {
+  transition: transform 0.3s ease, color 0.3s ease;
+
+}
+
+.navbar-item-selected {
+  transform: scale(1.2);
+}
+
+.parallax {
+  background-image: url('/profile-Photoroom.png');
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes backgroundMove {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100vw 0;
+    /* Mueve el fondo hacia la derecha */
+  }
+}
+
+.animate-backgroundMove {
+  animation: backgroundMove 30s linear infinite;
+  /* 30 segundos para un ciclo completo */
+}
+
+@keyframes roundAnimation {
+  0% {
+    border-radius: 0;
+  }
+
+  100% {
+    border-radius: 50%;
+  }
+}
+
+.animate-rounded {
+  animation: roundAnimation 5s ease-in-out forwards;
 }

@@ -21,12 +21,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="relative">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased duration-300`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased duration-300 min-h-screen`}
       >
-        <NavBar />
+        <div
+          className="absolute inset-0 -z-10 bg-cover bg-center  animate-backgroundMove"
+          style={{
+            backgroundImage: "url('/stacked.svg')",
 
+            opacity: 0.6,
+          }}
+        />
+        <NavBar />
         {children}
         <Footer />
       </body>

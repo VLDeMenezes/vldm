@@ -10,12 +10,10 @@ const NavBar = () => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
       let selectedSection = select;
-
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const scrollPosition = window.scrollY;
-
         if (scrollPosition >= sectionTop - sectionHeight / 2) {
           selectedSection = section.id;
         }
@@ -37,9 +35,9 @@ const NavBar = () => {
           <a
             href={item.path}
             key={item.name}
-            className={`bg-gray-400 p-2 rounded-lg m-auto text-3xl text-iconLigth dark:text-iconDark duration-150 ${
+            className={`bg-gray-400 p-2 rounded-lg m-auto text-3xl text-iconLigth dark:text-iconDark navbar-item ${
               select === item.name
-                ? "text-iconLigthSelect dark:text-iconDarkSelect text-4xl relative bottom-[5vh] md:top-[2vh] scale-125 flex flex-col items-center"
+                ? "text-iconLigthSelect dark:text-iconDarkSelect text-4xl relative bottom-[5vh] md:top-[2vh] scale-125 flex flex-col items-center navbar-item-selected "
                 : ""
             }`}
             aria-label="{item.name}"
