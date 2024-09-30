@@ -52,6 +52,7 @@ h1 {
 }
 
 .animate-backgroundMove {
+
   animation: backgroundMove 30s linear infinite;
   /* 30 segundos para un ciclo completo */
 }
