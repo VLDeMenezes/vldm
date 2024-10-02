@@ -10,7 +10,7 @@ const ProjectSection = () => {
     >
       <h2 className="text-2xl lg:text-4xl mx-auto my-2 dark:text-Detail  drop-shadow-xl">
         {" "}
-        My Projects
+        My latest Projects
       </h2>
       <ul className="mx-auto my-10 flex flex-wrap gap-10 justify-center">
         {project.map((item) => (

@@ -36,7 +36,7 @@ const ContactSection = () => {
             className="m-auto size-[30vw] md:size-[10vw] flex  bg-SectionDark dark:bg-SectionLigth hover:scale-105 rounded-lg"
           >
             <p
-              className="text-5xl lg:text-7xl m-auto"
+              className="text-5xl lg:text-7xl m-auto hover:text-SectionLigth hover:dark:text-SectionDark"
               alt={`Icono de ${item.name}`}
             >
               {item.icon}
