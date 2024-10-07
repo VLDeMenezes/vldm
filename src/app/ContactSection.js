@@ -30,7 +30,7 @@ const ContactSection = () => {
             href={item.path}
             key={item.name}
             aria-label={item.name}
-            className="m-auto size-[30vw] md:size-[10vw] flex  bg-SectionDark dark:bg-SectionLigth hover:scale-105 rounded-lg"
+            className="m-auto size-[30vw] md:size-[10vw] flex  bg-SectionDark dark:bg-SectionLigth md:hover:scale-105 rounded-lg"
           >
             <p
               className="text-5xl lg:text-7xl m-auto hover:text-SectionLigth hover:dark:text-SectionDark"

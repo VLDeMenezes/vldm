@@ -25,7 +25,7 @@ const ProjectSection = () => {
       <ul className="mx-auto my-10 flex flex-wrap gap-4 justify-center">
         {project.map((item) => (
           <div
-            className="group flex flex-col justify-between shadow-lg text-justify p-4 w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-SectionDark dark:bg-SectionLight hover:scale-105 duration-300 ease-in-out transform rounded-lg cursor-pointer"
+            className="md:group flex flex-col justify-between shadow-lg text-justify p-4 w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-SectionDark dark:bg-SectionLight md:hover:scale-105 duration-300 ease-in-out transform rounded-lg cursor-pointer"
             onClick={() => handleOpenModal(item)}
             aria-label={`Proyecto ${item.name}`}
             key={item.name}
@@ -57,7 +57,7 @@ const ProjectSection = () => {
               {item.status}
             </small>
 
-            <div className="hidden group-hover:flex group-hover:flex-row gap-2 items-center text-3xl justify-center mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out ">
+            <div className="hidden group-hover:flex md:group-hover:flex-row gap-2 items-center text-3xl justify-center mt-4 opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 ease-in-out ">
               {item.tecs.map((tec) => (
                 <p key={tec.name} className="hover:scale-105 hover:text-Detail">
                   {tec.icon}
@@ -73,20 +73,20 @@ const ProjectSection = () => {
           onClick={handleCloseModal}
         >
           <div
-            className="bg-slate-100 text-black dark:bg-slate-800 rounded-lg p-4 w-[80%] h-[80%] md:w-1/2 md:h-5/6 my-5 text-center relative border-b-8  border-SectionDark shadow-2xl"
+            className="bg-slate-100 text-black dark:bg-slate-800 rounded-lg p-4 w-[90%] h-[90%] md:w-1/2 md:h-5/6 md:my-5 text-center relative border-b-8  border-SectionDark shadow-2xl flex flex-col justify-around"
             onClick={(e) => e.stopPropagation()} // Evitar cerrar el modal al hacer click dentro de él
           >
-            <span className="absolute top-0 left-0 bg-Detail p-6 rounded-br-full">
+            <span className="absolute top-0 left-0 bg-Detail p-6 rounded-br-full z-0">
               {""}
             </span>
             <button
-              className="absolute top-0 right-0 p-4 text-xl text-red-500 hover:scale-110 hover:text-red-600"
+              className="absolute top-0 right-0 p-4 text-2xl text-red-500 md:hover:scale-110 md:hover:text-red-600 z-20"
               onClick={handleCloseModal}
               aria-label="Close"
             >
               <IoCloseCircle />
             </button>
-            <h3 className="text-3xl font-semibold mb-4">
+            <h3 className="text-base md:text-3xl text-SectionDark font-bold mb-4 z-10">
               {selectedProject.name}
             </h3>
             <Image
@@ -96,10 +96,12 @@ const ProjectSection = () => {
               height={400}
               className="mx-auto"
             />
-            <p className=" my-4">{selectedProject.description}</p>
+            <p className="text-sm md:text-base lg:text-lg my-4">
+              {selectedProject.description}
+            </p>
             <div className="flex flex-row justify-center gap-4 ">
               <a
-                className="text-lg font-semibold hover:scale-105 hover:text-Detail"
+                className="text-sm md:text-lg font-semibold md:hover:scale-105 md:hover:text-Detail"
                 href={selectedProject.github}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -109,7 +111,7 @@ const ProjectSection = () => {
               |
               {selectedProject.status === "Deployed" ? (
                 <a
-                  className="block text-lg font-semibold text-green-600 hover:scale-105"
+                  className="block text-sm md:text-lg font-semibold text-green-600 md:hover:scale-105"
                   href={selectedProject.path}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -118,14 +120,14 @@ const ProjectSection = () => {
                 </a>
               ) : (
                 <small
-                  className={`block text-lg font-semibold text-red-600 cursor-default"
+                  className={`block text-sm md:text-lg font-semibold text-red-600 cursor-default"
               }`}
                 >
                   {selectedProject.status}
                 </small>
               )}
             </div>
-            <div className="flex justify-center gap-4 mt-6 text-2xl ">
+            <div className="flex justify-center gap-4 md:mt-6 text-2xl ">
               {selectedProject.tecs.map((tec) => (
                 <div
                   key={tec.name}
