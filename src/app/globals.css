@@ -40,6 +40,11 @@ h1 {
   background-size: cover;
 }
 
+body {
+  -webkit-overflow-scrolling: touch;
+  /* Para un scroll suave en iOS */
+}
+
 @keyframes backgroundMove {
   0% {
     background-position: 0 0;

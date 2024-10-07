@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="relative">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased duration-300 min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased duration-300 min-h-screen `}
       >
         <div
           className="absolute inset-0 -z-10 bg-cover bg-center  animate-backgroundMove"

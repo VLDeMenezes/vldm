@@ -7,6 +7,10 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+    boxShadow: {
+      phoneMockup:
+        "0px 10px 20px rgba(0, 0, 0, 0.5), 0px 5px 10px rgba(0, 0, 0, 0.3)",
+    },
     extend: {
       colors: {
         Background: "#D9CCC1",
