@@ -5,11 +5,8 @@ import { ReactTyped } from "react-typed";
 
 const ContactSection = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[100vh] md:mt-[13vh]"
+    <section
+      className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[70vh] md:min-h-[100vh] md:mt-[13vh]"
       id="Contact"
     >
       <h2 className="text-2xl lg:text-4xl mx-auto my-2 dark:text-Detail  drop-shadow-xl">
@@ -44,7 +41,7 @@ const ContactSection = () => {
           </a>
         ))}
       </article>
-    </motion.section>
+    </section>
   );
 };
 

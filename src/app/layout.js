@@ -22,6 +22,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="relative">
+      <head>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased duration-300 min-h-screen `}
       >

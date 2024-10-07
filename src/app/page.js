@@ -12,11 +12,8 @@ import { IoPhonePortraitOutline } from "react-icons/io5";
 export default function Home() {
   return (
     <main className="mx-auto w-[90%] md:w-[75%]">
-      <motion.section
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[100vh] md:mt-[13vh]"
+      <section
+        className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[70vh] md:min-h-[100vh] md:mt-[13vh]"
         id="Home"
       >
         <div className=" hidden md:flex flex-col gap-4 items-center absolute top-5 right-5 group cursor-pointer">
@@ -37,30 +34,15 @@ export default function Home() {
         <p className="ml-[5vw] mt-[5vh] text-xl lg:text-2xl dark:text-zinc-50">
           Hey, let`s get to know me:
         </p>
-        <div className="flex flex-row justify-around ">
-          <div className="flex flex-col justify-center p-2 m-2 rounded-md md:w-[20vw] lg:w-[20vw] md:h-[15vh] lg:h-[40vh] bg-SectionDark overflow-hidden animate-rounded">
-            <Image
-              src={"/profile-Photoroom.png"}
-              alt="Foto de Victor De Menezes"
-              width={200}
-              height={200}
-              layout="responsive"
-              className=""
-            />
-          </div>
-
-          <article className="flex flex-col justify-center">
-            <h1 className="text-3xl italic lg:text-5xl text-SectionDark font-semibold">
-              <ReactTyped
-                strings={["VICTOR LEANDRO DE MENEZES"]}
-                typeSpeed={60}
-                startDelay={200}
-                showCursor={false}
-              />
-            </h1>
-          </article>
+        <div className="size-[90%] md:size-[80%] mt-2 rounded-lg overflow-hidden mx-auto">
+          <lottie-player
+            src="./profileAndName.json"
+            background="transparent"
+            speed="1"
+            autoplay
+          ></lottie-player>
         </div>
-        <p className="text-center md:text-start md:ml-[6vw] lg:ml-[8vw] dark:text-zinc-50">
+        <p className="text-center md:text-start md:ml-[8vw] lg:ml-[12vw] dark:text-zinc-50">
           Full Stack Developer | Lawyer
         </p>
         <p className="text-wrap m-2 text-center text-SectionDark dark:text-SectionLigth font-semibold italic animate-pulse lg:text-xl drop-shadow-xl transition-transform duration-500 hover:scale-110">
@@ -75,7 +57,7 @@ export default function Home() {
           quality of life. I am committed to being at the forefront of
           innovation.
         </div>
-      </motion.section>
+      </section>
 
       <JobSection />
       <ProjectSection />
