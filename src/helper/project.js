@@ -74,7 +74,7 @@ export const project = [
     image: "/showfilmsCaputa.png",
     path: "https://github.com/VLDeMenezes/ShowFilms",
     description:
-      "ShowFilms is a platform that displays descriptions, authors, directors and contextual information about different movies, allowing you to rate them. Created with basic technologies (HTML, CSS & JavaScript) to demonstrate the potential that can arise without the use of frameworks or other libraries. Uses a mongodb as DataBase",
+      "ShowFilms  displays descriptions, authors, directors and contextual information about different movies, allowing you to rate them. Created with basic technologies (HTML, CSS & JavaScript) to demonstrate the potential without the use of any frameworks or libraries. Uses a mongodb as DataBase",
     status: "Not deployed",
     tecs: [
       { name: "HTML 5", icon: <IoLogoHtml5 /> },

@@ -13,9 +13,10 @@ export default function Home() {
   return (
     <main className="mx-auto w-[90%] md:w-[75%]">
       <section
-        className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[70vh] md:min-h-[100vh] md:mt-[13vh]"
+        className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[70vh] md:min-h-[100vh] md:mt-[13vh] relative"
         id="Home"
       >
+        {/* SVG */}
         <div className=" hidden md:flex flex-col gap-4 items-center absolute top-5 right-5 group cursor-pointer">
           <Link
             href="/movile"

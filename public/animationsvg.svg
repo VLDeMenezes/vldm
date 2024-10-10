@@ -1,0 +1,12 @@
+<svg width="200" height="100" viewBox="0 0 200 100" style="transform: rotate(75deg);">
+  <path class="wave" d="M0 50 C 25 0, 75 100, 100 50 S 175 0, 200 50 L 200 100 L 0 100 Z" fill="blue">
+    <animate 
+      attributeName="d" 
+      values="
+        M0 50 C 25 0, 75 100, 100 50 S 175 0, 200 50 L 200 100 L 0 100 Z;
+        M0 50 C 25 10, 75 90, 100 50 S 175 10, 200 50 L 200 100 L 0 100 Z;
+        M0 50 C 25 0, 75 100, 100 50 S 175 0, 200 50 L 200 100 L 0 100 Z" 
+      dur="2s" 
+      repeatCount="indefinite" />
+  </path>
+</svg>

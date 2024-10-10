@@ -73,8 +73,8 @@ const ProjectSection = () => {
           onClick={handleCloseModal}
         >
           <div
-            className="bg-slate-100 text-black dark:bg-slate-800 rounded-lg p-4 w-[90%] h-[90%] md:w-1/2 md:h-5/6 md:my-5 text-center relative border-b-8  border-SectionDark shadow-2xl flex flex-col justify-around"
-            onClick={(e) => e.stopPropagation()} // Evitar cerrar el modal al hacer click dentro de él
+            className="bg-slate-100 text-black dark:bg-slate-800 rounded-lg p-4 w-[90%] h-[90%] md:w-2/3 md:h-5/6 md:my-5 text-center relative border-b-8  border-SectionDark shadow-2xl flex flex-col justify-around"
+            onClick={(e) => e.stopPropagation()}
           >
             <span className="absolute top-0 left-0 bg-Detail p-6 rounded-br-full z-0">
               {""}
