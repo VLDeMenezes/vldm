@@ -51,7 +51,7 @@ export default function Home() {
         </p>
 
         <div className="bg-SectionDark dark:bg-Detail md:mx-[10vw] p-2 lg:p-4 lg:mt-8 rounded-lg">
-          As a lawyer and Full Stack developer, my career is marked by a deep
+          As Full Stack developer and a lawyer, my career is marked by a deep
           curiosity and a constant adaptation to change.My passion for
           technology is reflected in my ability to automate processes. I
           integrate diverse experiences into creative solutions that improve the
