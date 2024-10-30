@@ -23,7 +23,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="relative">
       <head>
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script
+          async
+          nonce="<uniqueNonce>"
+          src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+        ></script>
       </head>
 
       <body
