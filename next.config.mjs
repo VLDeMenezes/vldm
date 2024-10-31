@@ -9,6 +9,22 @@ const ContentSecurityPolicy = `
 `;
 
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.vldm-portafolio.vercel.app",
+          },
+        ],
+        destination: "https://vldm-portafolio.vercel.app/:path*",
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {
