@@ -17,8 +17,8 @@ const ContactSection = () => {
           strings={[
             "Feel free to write to me to learn more about me and interact. You can contact me through the following means:",
           ]}
-          typeSpeed={60}
-          startDelay={800}
+          typeSpeed={90}
+          startDelay={200}
           showCursor={false}
         />
       </div>

@@ -37,7 +37,7 @@ export default function Home() {
         </p>
         <div className="size-[90%] md:size-[80%] mt-2 rounded-lg overflow-hidden mx-auto">
           <lottie-player
-            src="./profileAndName.json"
+            src="/profileAndName.json"
             background="transparent"
             speed="1"
             autoplay
