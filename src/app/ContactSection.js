@@ -1,6 +1,5 @@
-import { contact } from "@/helper/contact";
+import { contact } from "../helper/contact";
 import React from "react";
-import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
 import { useTranslation } from "react-i18next";
 

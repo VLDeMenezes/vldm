@@ -1,4 +1,4 @@
-import { Jobs } from "@/helper/Jobs";
+import { Jobs } from "../helper/Jobs";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

@@ -4,10 +4,10 @@ import { TbDeviceIpadMinus } from "react-icons/tb";
 export const Jobs = [
   {
     name: "Happ3n Front End",
-
-    i18n: "happ3n",icon: <FaComputer />,
+    i18n: "happ3n",
+    icon: <FaComputer />,
   },
-  
+
   {
     name: "Prisma Tec Front End",
     i18n: "prisma",

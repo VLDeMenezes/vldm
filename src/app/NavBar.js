@@ -1,6 +1,6 @@
 "use client";
-import DarkmodeButton from "@/components/darkmodeButton";
-import { navItems } from "@/helper/NavItems";
+import DarkmodeButton from "../components/darkmodeButton";
+import { navItems } from "../helper/NavItems";
 import LanguageSwitcher from "./i18n/i18n-Selector/switchLanguage";
 
 import React, { useEffect, useState } from "react";

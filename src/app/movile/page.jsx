@@ -1,4 +1,4 @@
-import PhoneScreen from "@/components/PhoneScreen";
+import PhoneScreen from "../../components/PhoneScreen";
 import Link from "next/link";
 import React from "react";
 import { IoDesktopOutline } from "react-icons/io5";

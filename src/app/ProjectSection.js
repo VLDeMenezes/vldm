@@ -1,4 +1,4 @@
-import { project } from "@/helper/project";
+import { project } from "../helper/project";
 import Image from "next/image";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
