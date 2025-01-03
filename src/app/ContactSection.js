@@ -30,8 +30,11 @@ const ContactSection = () => {
             href={item.path}
             key={item.name}
             aria-label={item.name}
-            className="m-auto size-[30vw] md:size-[10vw] flex  bg-SectionDark dark:bg-SectionLigth md:hover:scale-105 rounded-lg"
+            className="m-auto size-[30vw] md:size-[10vw] flex  bg-SectionDark dark:bg-SectionLigth md:hover:scale-105 rounded-lg relative group"
           >
+            <span className="absolute top-36 left-1/2 -translate-x-1/2 scale-0 group-hover:scale-100 transition-transform bg-black text-white text-sm rounded px-2 py-1">
+              {item.name}
+            </span>
             <p
               className="text-5xl lg:text-7xl m-auto hover:text-SectionLigth hover:dark:text-SectionDark"
               alt={`Icono de ${item.name}`}
