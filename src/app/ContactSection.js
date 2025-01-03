@@ -2,8 +2,10 @@ import { contact } from "@/helper/contact";
 import React from "react";
 import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
+import { useTranslation } from "react-i18next";
 
 const ContactSection = () => {
+  const { t } = useTranslation();
   return (
     <section
       className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[70vh] md:min-h-[100vh] md:mt-[13vh]"
@@ -14,10 +16,8 @@ const ContactSection = () => {
       </h2>
       <div className="m-auto w-2/3 text-justify italic text-lg lg:text-xl text-SectionDark dark:text-SectionLigth font-semibold">
         <ReactTyped
-          strings={[
-            "Feel free to write to me to learn more about me and interact. You can contact me through the following means:",
-          ]}
-          typeSpeed={90}
+          strings={[`${t("Contact")}`]}
+          typeSpeed={120}
           startDelay={200}
           showCursor={false}
         />

@@ -23,8 +23,7 @@ export const project = [
     name: "NearVet",
     image: "/NearVetcaptura.png",
     path: "https://near-vet-front-git-main-teamhvets-projects.vercel.app/",
-    description:
-      " NearVet is a web app for veterinary clinics with CRUD of Users, Pets, Veterinarians, Appointments, Medical records, with payment gateway integration, it has different views and is connected to a database deployed in OnRender.",
+
     status: "Deployed",
     tecs: [
       { name: "TypeScript", icon: <TbBrandTypescript /> },
@@ -40,8 +39,7 @@ export const project = [
     name: "ShopAll",
     image: "/shopallCaptura.png",
     path: "https://github.com/VLDeMenezes/ShopAll",
-    description:
-      "ShopAll is an e-commerce template created for a store of products such as cell phones, tablets and computers, mainly from the Apple market. It offers detailed product rendering with descriptions and prices from the PostGresSql database.",
+
     status: "Not deployed",
     tecs: [
       { name: "NextJs", icon: <RiNextjsLine /> },
@@ -53,11 +51,10 @@ export const project = [
     github: "https://github.com/VLDeMenezes/ShopAll",
   },
   {
-    name: "Leyria & De Menezes",
+    name: "LeyriaApp",
     image: "/leyriaCaputara.png",
     path: "https://l-dm.vercel.app/",
-    description:
-      "Leyria & De Menezes is a web application for scheduling appointments with a law firm, applicable to law firms, it allows the publication of news and certifications as well as scheduling appointments online.",
+
     status: "Deployed",
     tecs: [
       { name: "HTML 5", icon: <IoLogoReact /> },
@@ -73,8 +70,7 @@ export const project = [
     name: "ShowFilms",
     image: "/showfilmsCaputa.png",
     path: "https://github.com/VLDeMenezes/ShowFilms",
-    description:
-      "ShowFilms  displays descriptions, authors, directors and contextual information about different movies, allowing you to rate them. Created with basic technologies (HTML, CSS & JavaScript) to demonstrate the potential without the use of any frameworks or libraries. Uses a mongodb as DataBase",
+
     status: "Not deployed",
     tecs: [
       { name: "HTML 5", icon: <IoLogoHtml5 /> },
@@ -88,8 +84,7 @@ export const project = [
     name: "SumarioLegalApp",
     image: "/sentenciasApp.png",
     path: "https://sentenciasapp.vercel.app/",
-    description:
-      "Sumario Legal App is a web app that allows you to upload and summarize criminal records using AI Geminis and download the synopsis in editable word. Designed to automate summary tasks for court rulings and decisions",
+
     status: "Deployed",
     tecs: [
       {

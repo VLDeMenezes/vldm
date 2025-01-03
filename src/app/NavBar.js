@@ -1,11 +1,14 @@
 "use client";
 import DarkmodeButton from "@/components/darkmodeButton";
 import { navItems } from "@/helper/NavItems";
+import LanguageSwitcher from "./i18n/i18n-Selector/switchLanguage";
 
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
   const [select, SetSelect] = useState("Home");
+  const { t } = useTranslation();
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
@@ -40,7 +43,7 @@ const NavBar = () => {
                 ? "text-iconLigthSelect dark:text-iconDarkSelect text-2xl md:text-4xl relative bottom-[5vh] md:top-[2vh] scale-125 flex flex-col items-center navbar-item-selected "
                 : ""
             }`}
-            aria-label="{item.name}"
+            aria-label={item.name}
             onClick={() => SetSelect(item.name)}
           >
             {item.icon}
@@ -49,10 +52,11 @@ const NavBar = () => {
                 select === item.name ? "block" : "hidden"
               } text-sm italic text-center`}
             >
-              {item.name}
+              {t("navBar." + item.name)}
             </p>
           </a>
         ))}
+        <LanguageSwitcher />
         <DarkmodeButton />
       </div>
     </nav>

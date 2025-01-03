@@ -1,0 +1,29 @@
+{
+  "Home": {
+    "knowMe": "Hey, te invito a conocermeÑ",
+    "job": "Full Stack Developer | Abogado",
+    "myGoal": "Este nombre ayudará a tu Empresa a conseguir grandes logros.",
+    "description": "Como desarrollador Full Stack y abogado, mi carrera está marcada por una profunda curiosidad y una constante adaptación al cambio. Mi pasión por la tecnología se refleja en mi capacidad para automatizar procesos. Integro diversas experiencias en soluciones creativas que mejoran la calidad de vida. Estoy comprometido a estar a la vanguardia de la innovación."
+  },
+  "Jobs": {
+    "happ3n": "Desarrollando la nueva versión de happ3n, una aplicación web que reúne a personas interesadas en la web3 y en eventos que tienen lugar en diferentes países, permitiéndoles interactuar también en sus propios canales y hubs",
+    "prisma": "Realizar páginas web profesionales para clientes de todo el mundo, utilizando React, Next.js y Tailwind CSS, y también desarrollar el sitio web de la empresa.",
+    "freelancer": "Hace 4 años que empecé a explorar el mundo del desarrollo web, descubriendo una nueva pasión por la tecnología y el desarrollo FrontEnd en particular, pero también Full Stack. Mi enfoque autodidacta me ha permitido adquirir sólidos conocimientos en HTML, CSS, JavaScript y frameworks como React y Next.js. Estoy entusiasmado por combinar mi formación legal con mis nuevas habilidades técnicas para ofrecer soluciones efectivas en el ámbito digital.",
+    "lawyer": "Más de 6 años de experiencia en el ejercicio profesional de la abogacía y un posgrado en derecho procesal. A lo largo de mi carrera he desarrollado habilidades analíticas y de atención al detalle que me permiten abordar problemas complejos con soluciones innovadoras."
+  },
+  "Projects": {
+    "NearVet": "NearVet es una aplicación web para clínicas veterinarias con CRUD de Usuarios, Mascotas, Veterinarios, Citas, Historiales médicos, con integración de pasarela de pagos, cuenta con diferentes vistas y está conectada a una base de datos desplegada en OnRender.",
+    "ShopAll": "ShopAll es un modelo de comercio electrónico creada para una tienda de  de celulares, tablets y computadoras, principalmente del mercado de Apple. Ofrece representación detallada de productos con descripciones y precios desde la base de datos PostGresSql.",
+    "LeyriaApp": "Leyria & De Menezes es una aplicación web para agendar turnos con el despacho de abogados, aplicable a Profesionales, permite la publicación de noticias y certificaciones así como agendar citas en línea.",
+    "ShowFilms": "ShowFilms es un aplicativo de películas que muestra descripciones, autores, directores e información contextual sobre diferentes películas, lo que permite calificarlas. Creado con tecnologías básicas (HTML, CSS y JavaScript) para demostrar el potencial sin el uso de ningún framework o biblioteca. Utiliza una base de datos mongodb",
+    "SumarioLegalApp": "Sumario Legal App es una aplicación web que permite cargar y resumir antecedentes penales mediante AI Geminis y descargar la sinopsis en formato Word editable. Diseñada para automatizar tareas de resumen de sentencias y decisiones judiciales."
+  },
+  "Contact": "No dudes en escribirme para conocerme más e interactuar conmigo. Puedes contactarme a través de los siguientes medios:",
+  "navBar": {
+    "Home": "Inicio",
+    "Jobs": "Trabajos",
+    "Projects": "Proyectos",
+    "About": "Sobre mi",
+    "Contact": "Contacto"
+  }
+}

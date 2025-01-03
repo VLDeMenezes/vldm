@@ -1,10 +1,12 @@
 import { project } from "@/helper/project";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { IoCloseCircle, IoCloseCircleOutline } from "react-icons/io5";
 
 const ProjectSection = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const { t } = useTranslation();
   const handleOpenModal = (project) => {
     setSelectedProject(project);
   };
@@ -44,7 +46,7 @@ const ProjectSection = () => {
             />
 
             <p className="text-sm md:text-base lg:text-lg">
-              {item.description}
+              {t("Projects." + item.name)}
             </p>
 
             <small

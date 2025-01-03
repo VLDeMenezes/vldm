@@ -1,7 +1,10 @@
 import { Jobs } from "@/helper/Jobs";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const JobSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       className="bg-SectionLigth dark:bg-SectionDark flex flex-col my-2 p-3 justify-center rounded-lg min-h-[100vh] mt-[10vh]"
@@ -26,7 +29,7 @@ const JobSection = () => {
 
             <strong className="text-center lg:text-xl mt-5">{job.name}</strong>
             <p className="text-wrap overflow-hidden lg:text-xl">
-              {job.description}
+              {t(`Jobs.${job.i18n}`)}
             </p>
           </div>
         ))}
