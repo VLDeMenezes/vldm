@@ -1,7 +1,7 @@
 import { Jobs } from "../helper/Jobs";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
+import CarrouselJobs from "../components/Carrousel.jobs";
 const JobSection = () => {
   const { t } = useTranslation();
 
@@ -13,8 +13,8 @@ const JobSection = () => {
       <h2 className="text-2xl lg:text-4xl mx-auto my-2 dark:text-Detail  drop-shadow-xl">
         My Jobs
       </h2>
-
-      <article className="mx-auto my-10 flex flex-wrap gap-10 justify-center">
+      <CarrouselJobs />
+      {/* <article className="mx-auto my-10 flex flex-wrap gap-10 justify-center">
         {Jobs.map((job) => (
           <div
             key={job.name}
@@ -33,7 +33,7 @@ const JobSection = () => {
             </p>
           </div>
         ))}
-      </article>
+      </article> */}
     </section>
   );
 };

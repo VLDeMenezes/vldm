@@ -14,25 +14,35 @@ export default function RootLayout({ children }) {
     <html lang="es" className="relative">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* <!-- Primary Meta Tags --> */}
+        <title>VLDM Portfolio</title>
+        <meta name="title" content="VLDM Portfolio" />
+        <meta name="description" content="FullStack Developer" />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vldm.is-a.dev/" />
+        <meta property="og:title" content="VLDM Portfolio" />
+        <meta
+          property="og:description"
+          content="FullStack Developer - Desarrollador Web y Móvil"
+        />
+        <meta property="og:image" content="/TagFoto.png" />
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://vldm.is-a.dev/" />
+        <meta property="twitter:title" content="VLDM Portfolio" />
+        <meta property="twitter:description" content="FullStack Developer" />
+        <meta
+          property="twitter:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
         <meta
           name="keywords"
           content="Desarrollo web, aplicaciones móviles, portafolio, diseño responsivo"
         />
         <meta name="author" content="VLDM" />
-        <meta property="og:title" content="VLDM - Desarrollador Web y Móvil" />
-        <meta
-          property="og:description"
-          content="Portafolio profesional de VLDM, especializado en desarrollo web y aplicaciones móviles."
-        />
-        <meta property="og:image" content="/og-image.jpg" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="VLDM - Desarrollador Web y Móvil" />
-        <meta
-          name="twitter:description"
-          content="Portafolio profesional de VLDM."
-        />
-        <meta name="twitter:image" content="/twitter-image.jpg" />
       </head>
       <body className={` antialiased duration-300 min-h-screen`}>
         <div

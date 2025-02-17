@@ -47,6 +47,18 @@ body {
   /* Para un scroll suave en iOS */
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 1fr;
+}
+.card-selected {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.card-selected-div {
+}
 @keyframes backgroundMove {
   0% {
     background-position: 0 0;
