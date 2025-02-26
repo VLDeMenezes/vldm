@@ -18,16 +18,16 @@ const CarrouselJobs = () => {
           <div
             className={`flex items-center  w-full  ${
               selected === index
-                ? "flex-row gap-5 justify-center mt-[10px]"
-                : "flex-col min-h-full justify-start max-w-[100%]"
+                ? "flex-row gap-5 justify-center mt-[20px]"
+                : "flex-col min-h-full justify-start max-w-[100%] pt-5"
             }`}
             onClick={() => setSelected(index)}
           >
             <img
               className={`${
                 selected === index
-                  ? "w-14 h-14 bg-Detail rounded-full object-cover object-left"
-                  : "max-w-30"
+                  ? "w-14 h-14  mt-2  object-contain object-left"
+                  : "w-24 "
               }`}
               src={selected === index ? job.avatar : job.img}
               alt="Job Imagen"
@@ -44,7 +44,7 @@ const CarrouselJobs = () => {
           </div>
           <p
             className={`${
-              selected === index ? "text-center mt-40 text-lg" : "hidden"
+              selected === index ? "text-center mt-40 text-lg p-5" : "hidden"
             }`}
           >
             {t(`Jobs.${job.i18n}`)}

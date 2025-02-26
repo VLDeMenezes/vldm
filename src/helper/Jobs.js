@@ -21,12 +21,14 @@ export const Jobs = [
     name: "Freelancer Web Developer",
     i18n: "freelancer",
     icon: <FaComputer />,
-    img: "/Jobs/HAP-logo.png",
+    img: "/Jobs/VLDM .png",
+    avatar: "/Jobs/VLDM .png",
   },
   {
     name: "Lawyer",
     i18n: "lawyer",
     icon: <GoLaw />,
-    img: "/Jobs/HAP-logo.png",
+    img: "/Jobs/logoLeyria.png",
+    avatar: "/Jobs/logoLeyria.png",
   },
 ];
