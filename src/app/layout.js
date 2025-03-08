@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
           property="og:description"
           content="FullStack Developer - Desarrollador Web y Móvil"
         />
-        <meta property="og:image" content="/TagFoto.png" />
+        <meta property="og:image" content="/TagFoto.webp" />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />

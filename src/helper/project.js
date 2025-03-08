@@ -20,8 +20,23 @@ import {
 } from "react-icons/si";
 export const project = [
   {
+    name: "Gilson Regalos",
+    image: "/gilsonPic.webp",
+    path: "https://gilsonregalos.com.ar/",
+
+    status: "Deployed",
+    tecs: [
+      { name: "TypeScript", icon: <TbBrandTypescript /> },
+      { name: "NextJs", icon: <RiNextjsLine /> },
+      { name: "Vercel", icon: <IoLogoVercel /> },
+      { name: "TailwindCss", icon: <RiTailwindCssFill /> },
+      
+    ],
+    github: "https://github.com/VLDeMenezes/",
+  },
+  {
     name: "NearVet",
-    image: "/NearVetcaptura.png",
+    image: "/NearVetPic.webp",
     path: "https://near-vet-front-git-main-teamhvets-projects.vercel.app/",
 
     status: "Deployed",
@@ -37,7 +52,7 @@ export const project = [
   },
   {
     name: "ShopAll",
-    image: "/shopallCaptura.png",
+    image: "/shopAllPic.webp",
     path: "https://github.com/VLDeMenezes/ShopAll",
 
     status: "Not deployed",
@@ -52,7 +67,7 @@ export const project = [
   },
   {
     name: "LeyriaApp",
-    image: "/leyriaCaputara.png",
+    image: "/leyriaPic.webp",
     path: "https://l-dm.vercel.app/",
 
     status: "Deployed",
@@ -68,7 +83,7 @@ export const project = [
   },
   {
     name: "ShowFilms",
-    image: "/showfilmsCaputa.png",
+    image: "/showFilmsPic.webp",
     path: "https://github.com/VLDeMenezes/ShowFilms",
 
     status: "Not deployed",
@@ -82,7 +97,7 @@ export const project = [
   },
   {
     name: "SumarioLegalApp",
-    image: "/sentenciasApp.png",
+    image: "/sentenciasPic.webp",
     path: "https://sentenciasapp.vercel.app/",
 
     status: "Deployed",

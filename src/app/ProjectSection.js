@@ -41,7 +41,6 @@ const ProjectSection = () => {
               alt={`Imagen del Proyecto ${item.name}`}
               width={200}
               height={200}
-              layout="responsive"
               className="mx-auto my-2"
             />
 
@@ -91,13 +90,17 @@ const ProjectSection = () => {
             <h3 className="text-base md:text-3xl text-SectionDark font-bold mb-4 z-10">
               {selectedProject.name}
             </h3>
+            <div className="mx-auto w-[90%] h-[50%] overflow-hidden">
+
             <Image
               src={selectedProject.image}
               alt={`Imagen del Proyecto ${selectedProject.name}`}
-              width={400}
-              height={400}
-              className="mx-auto"
-            />
+              width={600}
+              height={600}
+              className="object-contain object-center mx-auto"
+              
+              />
+              </div>
             <p className="text-sm md:text-base lg:text-lg my-4">
               {selectedProject.description}
             </p>

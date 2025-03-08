@@ -12,6 +12,7 @@
     "lawyer": "Over 6 years of experience in legal practice and a postgraduate degree in procedural law. Throughout my career, I have developed analytical skills and attention to detail that allow me to address complex problems with innovative solutions."
   },
   "Projects": {
+    "Gilson Regalos": "Toy store website showing promotions, articles and contact with the company, about page and CTA for contact via WhatsApp",
     "NearVet": "NearVet is a web app for veterinary clinics with CRUD of Users, Pets, Veterinarians, Appointments, Medical records, with payment gateway integration, it has different views and is connected to a database deployed in OnRender.",
     "ShopAll": "ShopAll is an e-commerce template created for a store of products such as cell phones, tablets and computers, mainly from the Apple market. It offers detailed product rendering with descriptions and prices from the PostGresSql database.",
     "LeyriaApp": "Leyria & De Menezes is a web application for scheduling appointments with a law firm, applicable to law firms, it allows the publication of news and certifications as well as scheduling appointments online.",
