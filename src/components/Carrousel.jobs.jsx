@@ -1,57 +1,56 @@
-/* eslint-disable @next/next/no-img-element */
+import React, { useState, useEffect, useRef } from "react";
+import { Jobs } from "../helper/Jobs"; // Asegúrate de que la ruta sea correcta
+import JobCard from "./Card.jobs";
+import CarouselDots from "./Carrousel.dots";
 import { useTranslation } from "react-i18next";
-import { Jobs } from "../helper/Jobs";
-import { useState } from "react";
-const CarrouselJobs = () => {
-  const [selected, setSelected] = useState(2);
-  const { t } = useTranslation();
+
+const JobsCarousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselRef = useRef(null);
+  const {t} = useTranslation();
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % Jobs.length);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  useEffect(() => {
+    const intervalId = setInterval(nextSlide, 8000); // Cambia cada 5 segundos
+
+    return () => clearInterval(intervalId); // Limpiar el intervalo al desmontar
+  }, []);
+
+  useEffect(() => {
+    if (carouselRef.current) {
+      carouselRef.current.style.transform = `translateX(-${
+        currentIndex * 100
+      }%)`;
+    }
+  }, [currentIndex]);
+
   return (
-    <section className="w-full h-[650px] bg-Darkground flex flex-row items-center justify-between">
-      {Jobs.map((job, index) => (
-        <article
-          onClick={() => setSelected(index)}
-          className={`flex flex-col items-center h-full transition-all duration-1000 ${
-            selected === index ? "w-full bg-iconDark" : " cursor-pointer"
-          }`}
-          key={index}
-        >
-          <div
-            className={`flex items-center  w-full  ${
-              selected === index
-                ? "flex-row gap-5 justify-center mt-[20px]"
-                : "flex-col min-h-full justify-start max-w-[100%] pt-5"
-            }`}
-            onClick={() => setSelected(index)}
-          >
-            <img
-              className={`${
-                selected === index
-                  ? "w-14 h-14  mt-2  object-contain object-left"
-                  : "w-24 "
-              }`}
-              src={selected === index ? job.avatar : job.img}
-              alt="Job Imagen"
-            />
-            <h3
-              className={`font-semibold ${
-                selected === index
-                  ? ""
-                  : "-rotate-90 text-lg text-center h-full w-full flex justify-center items-center"
-              }`}
-            >
-              {job.name}
-            </h3>
+    <div className="relative overflow-hidden w-full">
+      <div
+        className="flex transition-transform duration-500 ease-in-out"
+        ref={carouselRef}
+      >
+        {Jobs.map((job, index) => (
+          <div key={index} className="w-full flex-shrink-0 p-4">
+            <JobCard job={job} />
           </div>
-          <p
-            className={`${
-              selected === index ? "text-center mt-40 text-lg p-5" : "hidden"
-            }`}
-          >
-            {t(`Jobs.${job.i18n}`)}
-          </p>
-        </article>
-      ))}
-    </section>
+        ))}
+      </div>
+
+      <CarouselDots
+        total={Jobs.length}
+        currentIndex={currentIndex}
+        goToSlide={goToSlide}
+      />
+    </div>
   );
 };
-export default CarrouselJobs;
+
+export default JobsCarousel;

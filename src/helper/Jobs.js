@@ -1,33 +1,27 @@
-import { GoLaw } from "react-icons/go";
-import { FaComputer } from "react-icons/fa6";
-import { TbDeviceIpadMinus } from "react-icons/tb";
+
 export const Jobs = [
   {
     name: "Happ3n Front End",
-    i18n: "happ3n",
-    icon: <FaComputer />,
+    i18n: "Jobs.happ3n",
     img: "/Jobs/HAP-logo.png",
     avatar: "/Jobs/logo.svg",
   },
 
   {
     name: "Prisma Tec Front End",
-    i18n: "prisma",
-    icon: <FaComputer />,
+    i18n: "Jobs.prisma",
     img: "/Jobs/prisma-logo.jpg",
     avatar: "/Jobs/prisma-avatar.jpg",
   },
   {
     name: "Freelancer Web Developer",
-    i18n: "freelancer",
-    icon: <FaComputer />,
+    i18n: "Jobs.freelancer",
     img: "/Jobs/VLDM .png",
     avatar: "/Jobs/VLDM .png",
   },
   {
     name: "Lawyer",
-    i18n: "lawyer",
-    icon: <GoLaw />,
+    i18n: "Jobs.lawyer",
     img: "/Jobs/logoLeyria.png",
     avatar: "/Jobs/logoLeyria.png",
   },
