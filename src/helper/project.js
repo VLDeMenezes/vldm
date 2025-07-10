@@ -20,6 +20,19 @@ import {
 } from "react-icons/si";
 export const project = [
   {
+    name: "Milagros Cosmetic",
+    image: "/Milagros.webp",
+    path: "https://www.milagrosgutierrezcosmiatra.com.ar/",
+    status: "Deployed",
+    tecs: [
+      { name: "TypeScript", icon: <TbBrandTypescript /> },
+      { name: "NextJs", icon: <RiNextjsLine /> },
+      { name: "Vercel", icon: <IoLogoVercel /> },
+      { name: "TailwindCss", icon: <RiTailwindCssFill /> },
+    ],
+    github: "https://github.com/VLDeMenezes/",
+  },
+  {
     name: "Gilson Regalos",
     image: "/gilsonPic.webp",
     path: "https://gilsonregalos.com.ar/",
@@ -30,7 +43,6 @@ export const project = [
       { name: "NextJs", icon: <RiNextjsLine /> },
       { name: "Vercel", icon: <IoLogoVercel /> },
       { name: "TailwindCss", icon: <RiTailwindCssFill /> },
-      
     ],
     github: "https://github.com/VLDeMenezes/",
   },
