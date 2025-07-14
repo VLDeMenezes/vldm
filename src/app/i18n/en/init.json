@@ -14,6 +14,7 @@
   "Projects": {
     "Milagros Cosmetic": "E-commerce offering products, blogs, and courses for a one-person cosmetic dermatology business. With search engine optimization and SEO.",
     "Gilson Regalos": "Toy store website showing promotions, articles and contact with the company, about page and CTA for contact via WhatsApp",
+    "Node Ready": "Backend based on NodeJs and Express, with Auth and JWT, easy to deploy and with complete API documentation. It uses PostgreSQL and MongoDB as databases, and Swagger for API documentation.",
     "NearVet": "NearVet is a web app for veterinary clinics with CRUD of Users, Pets, Veterinarians, Appointments, Medical records, with payment gateway integration, it has different views and is connected to a database deployed in OnRender.",
     "ShopAll": "ShopAll is an e-commerce template created for a store of products such as cell phones, tablets and computers, mainly from the Apple market. It offers detailed product rendering with descriptions and prices from the PostGresSql database.",
     "LeyriaApp": "Leyria & De Menezes is a web application for scheduling appointments with a law firm, applicable to law firms, it allows the publication of news and certifications as well as scheduling appointments online.",

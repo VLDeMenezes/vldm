@@ -17,6 +17,7 @@ import {
   SiRedux,
   SiPostgresql,
   SiMongodb,
+  SiSwagger
 } from "react-icons/si";
 export const project = [
   {
@@ -45,6 +46,22 @@ export const project = [
       { name: "TailwindCss", icon: <RiTailwindCssFill /> },
     ],
     github: "https://github.com/VLDeMenezes/",
+  },
+  {
+    name: "Node Ready",
+    image: "/NodeReady.webp",
+    path: "https://github.com/VLDeMenezes/NodeReady",
+
+    status: "Ready to deploy",
+    tecs: [
+      { name: "TypeScript", icon: <TbBrandTypescript /> },
+      { name: "NodeJs", icon: <IoLogoNodejs /> },
+      { name: "Express", icon: <SiExpress /> },
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "Swagger", icon: <SiSwagger /> },
+    ],
+    github: "https://github.com/VLDeMenezes/NodeReady",
   },
   {
     name: "NearVet",
