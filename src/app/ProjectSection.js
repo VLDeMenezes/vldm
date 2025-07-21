@@ -27,7 +27,7 @@ const ProjectSection = () => {
       <ul className="mx-auto my-10 flex flex-wrap gap-4 justify-center">
         {project.map((item) => (
           <div
-            className="md:group flex flex-col justify-between shadow-lg text-justify p-4 w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-SectionDark dark:bg-SectionLight md:hover:scale-105 duration-300 ease-in-out transform rounded-lg cursor-pointer"
+            className="md:group flex flex-col justify-between shadow-lg text-justify p-4 w-full sm:w-[90%] md:w-[45%] lg:w-[30%] bg-SectionDark dark:bg-SectionLigth md:hover:scale-105 duration-300 ease-in-out transform rounded-lg cursor-pointer"
             onClick={() => handleOpenModal(item)}
             aria-label={`Proyecto ${item.name}`}
             key={item.name}
@@ -51,8 +51,8 @@ const ProjectSection = () => {
             <small
               className={`text-end text-sm md:text-base lg:text-lg font-semibold ${
                 item.status === "Deployed"
-                  ? "text-green-600"
-                  : "text-red-600 cursor-default"
+                  ? "text-green-600 dark:text-green-800"
+                  : "text-red-600 dark:text-red-800 cursor-default"
               }`}
             >
               {item.status}

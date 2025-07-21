@@ -38,7 +38,7 @@ const JobsCarousel = () => {
         ref={carouselRef}
       >
         {Jobs.map((job, index) => (
-          <div key={index} className="w-full flex-shrink-0 p-4">
+          <div key={index} className="w-full flex-shrink-0 md:p-4">
             <JobCard job={job} />
           </div>
         ))}

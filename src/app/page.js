@@ -42,12 +42,22 @@ export default function Home() {
             autoplay
           ></lottie-player>
         </div>
-        <p className="text-center md:text-start md:ml-[8vw] lg:ml-[12vw] dark:text-zinc-50">
-          {t("Home.job")}
-        </p>
+        <div className="flex flex-col items-start md:text-start md:ml-[8vw] lg:ml-[12vw] gap-2">
+          <p className="text-center  dark:text-zinc-50">{t("Home.job")}</p>
+          <div className="flex flex-col md:flex-row gap-4 items-center">
+        <Link
+          className="w-fit p-2 bg-SectionDark dark:bg-SectionLigth rounded-lg hover:bg-slate-700 hover:scale-105 transition-all duration-150 ease-in-out"
+          href={"/cv.pdf"}
+          target="_blank"
+        >
+          Download CV
+        </Link>
         <p className="text-wrap m-2 text-center text-SectionDark dark:text-SectionLigth font-semibold italic animate-pulse lg:text-xl drop-shadow-xl transition-transform duration-500 hover:scale-110">
           {t("Home.myGoal")}
         </p>
+
+          </div>
+        </div>
 
         <div className="bg-SectionDark dark:bg-Detail md:mx-[10vw] p-2 lg:p-4 lg:mt-8 rounded-lg">
           {t("Home.description")}

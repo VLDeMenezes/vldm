@@ -6,19 +6,20 @@ const JobCard = ({ job }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-white/20 text-black rounded-md shadow-md p-6 text-center relative min-h-[450px] md:min-h-[300px] flex flex-col justify-center">
+    <div className="bg-SectionDark dark:bg-SectionLigth text-white dark:text-black rounded-md shadow-md p-6 text-center relative md:min-h-[300px] flex flex-col md:justify-center min-h-full">
       {job.img && (
-        <div className="absolute top-0 w-20 h-20 mx-auto mb-4">
+        <div className="absolute flex justify-center w-20 h-20 top-1 mx-auto mb-4 z-0">
           <Image
             src={job.img}
             alt={`${job.name} Logo`}
-            layout="fill"
-            objectFit="contain"
+            width={75}
+            height={75}
+            className="object-contain"
           />
         </div>
       )}
-      <h3 className="text-xl font-semibold mt-10 mb-2">{job.name}</h3>
-      <p className="text-gray-600 mb-2">{t(job.i18n)}</p>{" "}
+      <h3 className="text-2xl font-semibold mt-10 md:mt-5 mb-2 z-10">{job.name}</h3>
+      <p className="text-slate-300 dark:text-gray-800 mb-2">{t(job.i18n)}</p>{" "}
     </div>
   );
 };
