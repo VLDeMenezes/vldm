@@ -21,6 +21,19 @@ import {
 } from "react-icons/si";
 export const project = [
   {
+    name: "SurveyApp",
+    image: "/surveyApp.webp",
+    path: "https://surveyapp-xi.vercel.app/",
+    status: "Deployed",
+    tecs: [
+      { name: "TypeScript", icon: <TbBrandTypescript /> },
+      { name: "NextJs", icon: <RiNextjsLine /> },
+      { name: "Vercel", icon: <IoLogoVercel /> },
+      { name: "TailwindCss", icon: <RiTailwindCssFill /> },
+    ],
+    github: "https://github.com/VLDeMenezes/",
+  },
+  {
     name: "Milagros Cosmetic",
     image: "/Milagros.webp",
     path: "https://www.milagrosgutierrezcosmiatra.com.ar/",

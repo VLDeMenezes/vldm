@@ -12,6 +12,7 @@
     "lawyer": "Más de 6 años de experiencia en el ejercicio profesional de la abogacía y un posgrado en derecho procesal. A lo largo de mi carrera he desarrollado habilidades analíticas y de atención al detalle que me permiten abordar problemas complejos con soluciones innovadoras."
   },
   "Projects": {
+    "SurveyApp": "SurveyApp es una aplicación para encuestadores orientada a los intereses políticos y partidarios. Interfaz intuitiva creado en base mobile-first. CRUD de encuestas, etapas, usuarios y generación automática de analíticas y progreso.",
     "Milagros Cosmetic":"E-comerce de productos, blogs y cursos para una empresa unipersonal de Dermocosmiatria. Con posicionamiento y mejora para buscadores a través del SEO",
     "Gilson Regalos":"Web de una Juguetería donde muestra promociones, artículos y contacto con la empresa, pagina de about y CTA de contacto mediante WhatsApp",
     "Node Ready":"Backend basado en NodeJs y Express, con Auth y JWT, de fácil despliegue y con una documentación completa de la API. Utiliza PostgreSQL y MongoDB como bases de datos, y Swagger para la documentación de la API.",
