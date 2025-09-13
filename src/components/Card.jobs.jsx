@@ -18,8 +18,17 @@ const JobCard = ({ job }) => {
           />
         </div>
       )}
-      <h3 className="text-2xl font-semibold mt-10 md:mt-5 mb-2 z-10">{job.name}</h3>
-      <p className="text-slate-300 dark:text-gray-800 mb-2">{t(job.i18n)}</p>{" "}
+      <h3 className="text-2xl font-semibold mt-10 md:mt-5 mb-2 z-10">
+        {job.name}
+      </h3>
+      <p className="text-slate-300 dark:text-gray-800 mb-2">{t(job.i18n)}</p>
+      <Image
+        src={job.avatar}
+        alt={`${job.name} Avatar`}
+        className="hide sm:block object-contain mx-auto"
+        width={25}
+        height={25}
+      />
     </div>
   );
 };
