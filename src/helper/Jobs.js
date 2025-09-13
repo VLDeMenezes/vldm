@@ -1,10 +1,16 @@
 
 export const Jobs = [
   {
+    name: "Awaq Front End",
+    i18n: "Jobs.awaq",
+    img: "/Jobs/awaq-logo.png",
+    avatar: "/Jobs/awaq-avatar.png",
+  },
+  {
     name: "Happ3n Front End",
     i18n: "Jobs.happ3n",
-    img: "/Jobs/HAP-logo.png",
-    avatar: "/Jobs/logo.svg",
+    img: "/Jobs/happ3n-logo.png",
+    avatar: "/Jobs/happ3n-avatar.svg",
   },
 
   {
@@ -16,13 +22,13 @@ export const Jobs = [
   {
     name: "Freelancer Web Developer",
     i18n: "Jobs.freelancer",
-    img: "/Jobs/VLDM .png",
-    avatar: "/Jobs/VLDM .png",
+    img: "/Jobs/VLDM.png",
+    avatar: "/Jobs/VLDM.png",
   },
   {
     name: "Lawyer",
     i18n: "Jobs.lawyer",
-    img: "/Jobs/logoLeyria.png",
-    avatar: "/Jobs/logoLeyria.png",
+    img: "/Jobs/leyria-logo.png",
+    avatar: "/Jobs/leyria-logo.png",
   },
 ];
