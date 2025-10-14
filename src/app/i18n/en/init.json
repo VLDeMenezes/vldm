@@ -13,7 +13,7 @@
     "lawyer": "Over 6 years of experience in legal practice and a postgraduate degree in procedural law. Throughout my career, I have developed analytical skills and attention to detail that allow me to address complex problems with innovative solutions."
   },
   "Projects": {
-    "SurveyApp": "SurveyApp is an application for pollsters focused on political and partisan interests. Intuitive interface built on a mobile-first foundation. CRUD for surveys, stages, users, and automatic generation of analytics and progress.",
+    "SurveyApp": "SurveyApp is an Progressive Web App for IOs, Android and Windows for pollsters focused on political and partisan interests. Intuitive interface built on a mobile-first foundation. CRUD for surveys, stages, users, and automatic generation of analytics and progress.",
     "Milagros Cosmetic": "E-commerce offering products, blogs, and courses for a one-person cosmetic dermatology business. With search engine optimization and SEO.",
     "Gilson Regalos": "Toy store website showing promotions, articles and contact with the company, about page and CTA for contact via WhatsApp",
     "Node Ready": "Backend based on NodeJs and Express, with Auth and JWT, easy to deploy and with complete API documentation. It uses PostgreSQL and MongoDB as databases, and Swagger for API documentation.",
@@ -27,7 +27,7 @@
   "navBar": {
     "Home": "Home",
     "Jobs": "Jobs",
-    "Projects": "Projects",
+    "Projects": "Apps",
     "About": "About",
     "Contact": "Contact"
   }

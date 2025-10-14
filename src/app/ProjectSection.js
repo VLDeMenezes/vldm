@@ -20,8 +20,7 @@ const ProjectSection = () => {
       id="Projects"
     >
       <h2 className="text-2xl lg:text-4xl mx-auto my-2 dark:text-Detail  drop-shadow-xl">
-        {" "}
-        My latest Projects
+        {t("navBar.Projects")}
       </h2>
 
       <ul className="mx-auto my-10 flex flex-wrap gap-4 justify-center">
