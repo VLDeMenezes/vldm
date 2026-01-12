@@ -49,7 +49,7 @@ export const project = [
   },
   {
     name: "SurveyApp",
-    image: "/surveyapp.webp",
+    image: "/surveyAppPic.webp",
     path: "https://surveyapp-xi.vercel.app/",
     status: "Deployed",
     tecs: [
