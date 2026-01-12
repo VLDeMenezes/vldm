@@ -17,12 +17,39 @@ import {
   SiRedux,
   SiPostgresql,
   SiMongodb,
-  SiSwagger
+  SiSwagger,
+  SiAwslambda,
 } from "react-icons/si";
 export const project = [
   {
+    name: "BelandApp",
+    image: "/belandapp.webp",
+    path: "https://beland.app",
+    status: "Deployed",
+    tecs: [
+      { name: "TypeScript", icon: <TbBrandTypescript /> },
+      { name: "ReactNative", icon: <IoLogoReact /> },
+      { name: "AWS", icon: <SiAwslambda /> },
+      { name: "NativeWind", icon: <RiTailwindCssFill /> },
+    ],
+    github: "https://github.com/VLDeMenezes/",
+  },
+  {
+    name: "Awaq",
+    image: "/somosawaq.webp",
+    path: "https://www.somosawaq.org/",
+    status: "Deployed",
+    tecs: [
+      { name: "TypeScript", icon: <TbBrandTypescript /> },
+      { name: "React", icon: <IoLogoReact /> },
+      { name: "AWS", icon: <SiAwslambda /> },
+      { name: "TailwindCss", icon: <RiTailwindCssFill /> },
+    ],
+    github: "https://github.com/VLDeMenezes/",
+  },
+  {
     name: "SurveyApp",
-    image: "/surveyApp.webp",
+    image: "/surveyapp.webp",
     path: "https://surveyapp-xi.vercel.app/",
     status: "Deployed",
     tecs: [

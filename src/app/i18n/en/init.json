@@ -13,7 +13,9 @@
     "beland": "Mobile application development for the Beland, a web3 company creating is own Eco cryptocurrency. Also allows users to participate and acquire entries and related products."
   },
   "Projects": {
-    "SurveyApp": "SurveyApp is an Progressive Web App for IOs, Android and Windows for pollsters focused on political and partisan interests. Intuitive interface built on a mobile-first foundation. CRUD for surveys, stages, users, and automatic generation of analytics and progress.",
+    "BelandApp": "BelandApp is a mobile application for the Beland, a web3 company creating its own Eco cryptocurrency. Also allows users to participate and acquire entries and related products.",
+    "Awaq": "Awaq is a web application for the NGO Somos Awaq, focused on environmental protection and social development. It includes features for managing projects, events, and donations.",
+    "SurveyApp": "SurveyApp is an Progressive Web App for IOs, Android and Windows for pollsters focused on political and partisan interests. Intuitive interface built on a mobile-first foundation. Integrated automatic generation of analytics and progress.",
     "Milagros Cosmetic": "E-commerce offering products, blogs, and courses for a one-person cosmetic dermatology business. With search engine optimization and SEO.",
     "Gilson Regalos": "Toy store website showing promotions, articles and contact with the company, about page and CTA for contact via WhatsApp",
     "Node Ready": "Backend based on NodeJs and Express, with Auth and JWT, easy to deploy and with complete API documentation. It uses PostgreSQL and MongoDB as databases, and Swagger for API documentation.",
