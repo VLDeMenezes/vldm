@@ -19,11 +19,28 @@ import {
   SiMongodb,
   SiSwagger,
   SiAwslambda,
+  SiExpo,
+  SiGoogleplay,
 } from "react-icons/si";
 export const project = [
   {
+    name: "LobaCounter",
+    image: "/lobacounter.webp",
+    mainImage: "/lobacountermain.webp",
+    path: "https://lobacounter.com",
+    status: "Deployed",
+    tecs: [
+      { name: "TypeScript", icon: <TbBrandTypescript /> },
+      { name: "ReactNative", icon: <IoLogoReact /> },
+      { name: "Expo", icon: <SiExpo /> },
+      { name: "Google Ads", icon: <SiGoogleplay /> },
+    ],
+    github: "https://github.com/VLDeMenezes/",
+  },
+  {
     name: "BelandApp",
     image: "/belandapp.webp",
+    mainImage: "/belandappmain.webp",
     path: "https://beland.app",
     status: "Deployed",
     tecs: [
@@ -50,6 +67,7 @@ export const project = [
   {
     name: "SurveyApp",
     image: "/surveyAppPic.webp",
+    mainImage: "/surveyappmain.webp",
     path: "https://surveyapp-xi.vercel.app/",
     status: "Deployed",
     tecs: [
