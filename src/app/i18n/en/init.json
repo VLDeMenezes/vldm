@@ -13,6 +13,8 @@
     "beland": "Mobile application development for the Beland, a web3 company creating is own Eco cryptocurrency. Also allows users to participate and acquire entries and related products."
   },
   "Projects": {
+    "PhotoPuzzle": "Photo Puzzle is a mobile game where you can create your own puzzles or just play beautiful and default ones. You can time you records and share when you win!",
+    "RNFactory": "RN Factory is a tool to develop and deploy React Native apps very quickly with advanced tools by default like monitoring, monetization, translations adn expo configuration",
     "LobaCounter": "LobaCounter is a mobile application designed to track scores for the traditional card game “La Loba”. It provides an intuitive and streamlined interface to manage rounds, players, and scoring in real time, eliminating the need for manual tracking.",
     "BelandApp": "BelandApp is a mobile application for the Beland, a web3 company creating its own Eco cryptocurrency. Also allows users to participate and acquire entries and related products.",
     "Awaq": "Awaq is a web application for the NGO Somos Awaq, focused on environmental protection and social development. It includes features for managing projects, events, and donations.",

@@ -24,6 +24,32 @@ import {
 } from "react-icons/si";
 export const project = [
   {
+    name: "PhotoPuzzle",
+    image: "/photo_puzzle.webp",
+    mainImage: "/photo_puzzle_main.webp",
+    path: "https://rn-factory/en/photo_puzzle",
+    status: "Deployed",
+    tecs: [
+      { name: "TypeScript", icon: <TbBrandTypescript /> },
+      { name: "ReactNative", icon: <IoLogoReact /> },
+      { name: "Expo", icon: <SiExpo /> },
+      { name: "Google Ads", icon: <SiGoogleplay /> },
+    ],
+    github: "https://github.com/VLDeMenezes/",
+  },
+  {
+    name: "RNFactory",
+    image: "/rnfactory.webp",
+    mainImage: "/rnfactory_main.webp",
+    path: "https://rn-factory/",
+    status: "Deployed",
+    tecs: [
+      { name: "TypeScript", icon: <TbBrandTypescript /> },
+      { name: "NextJs", icon: <RiNextjsLine /> },
+    ],
+    github: "https://github.com/VLDeMenezes/",
+  },
+  {
     name: "LobaCounter",
     image: "/lobacounter.webp",
     mainImage: "/lobacountermain.webp",
