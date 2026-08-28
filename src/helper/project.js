@@ -27,7 +27,7 @@ export const project = [
     name: "PhotoPuzzle",
     image: "/photo_puzzle.webp",
     mainImage: "/photo_puzzle_main.webp",
-    path: "https://rn-factory/en/photo_puzzle",
+    path: "https://rn-factory.com/en/photo-puzzle",
     status: "Deployed",
     tecs: [
       { name: "TypeScript", icon: <TbBrandTypescript /> },
@@ -41,7 +41,7 @@ export const project = [
     name: "RNFactory",
     image: "/rnfactory.webp",
     mainImage: "/rnfactory_main.webp",
-    path: "https://rn-factory/",
+    path: "https://rn-factory.com/",
     status: "Deployed",
     tecs: [
       { name: "TypeScript", icon: <TbBrandTypescript /> },
