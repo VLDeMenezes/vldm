@@ -1,6 +1,6 @@
 import { project } from "../helper/project";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { IoCloseCircle } from "react-icons/io5";
 
@@ -10,7 +10,21 @@ const ProjectSection = () => {
   const handleOpenModal = (project) => {
     setSelectedProject(project);
   };
+  useEffect(() => {
+    if (!selectedProject) return;
 
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        handleCloseModal();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedProject]);
   const handleCloseModal = () => {
     setSelectedProject(null);
   };
