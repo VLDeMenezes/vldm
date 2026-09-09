@@ -61,7 +61,7 @@ const ProjectSection = () => {
               {t("Projects." + item.name)}
             </p>
 
-            <small
+            {/* <small
               className={`text-end text-sm md:text-base lg:text-lg font-semibold ${
                 item.status === "Deployed"
                   ? "text-green-600 dark:text-green-800"
@@ -69,7 +69,7 @@ const ProjectSection = () => {
               }`}
             >
               {item.status}
-            </small>
+            </small> */}
 
             <div className="hidden group-hover:flex md:group-hover:flex-row gap-2 items-center text-3xl justify-center mt-4 opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 ease-in-out ">
               {item.tecs.map((tec) => (
@@ -117,7 +117,7 @@ const ProjectSection = () => {
             <p className="text-sm md:text-base lg:text-lg my-4">
               {selectedProject.description}
             </p>
-            <div className="flex flex-row justify-center gap-4 ">
+            {/* <div className="flex flex-row justify-center gap-4 ">
               <a
                 className="text-sm md:text-lg font-semibold md:hover:scale-105 md:hover:text-Detail"
                 href={selectedProject.github}
@@ -144,7 +144,7 @@ const ProjectSection = () => {
                   {selectedProject.status}
                 </small>
               )}
-            </div>
+            </div> */}
             <div className="flex justify-center gap-4 md:mt-2 text-2xl ">
               {selectedProject.tecs.map((tec) => (
                 <div
