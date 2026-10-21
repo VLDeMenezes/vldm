@@ -10,14 +10,14 @@ import CaseStudiesSection from "./CaseStudiesSection";
 
 function ProjectCard({ project, onOpen, t }) {
   return (
-    <li className="group relative flex flex-col overflow-hidden rounded-xl border border-black/10 bg-Surface shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-lg dark:border-white/10 dark:bg-SurfaceDark">
+    <li className="group relative flex flex-col rounded-xl border border-black/10 bg-Surface shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-lg dark:border-white/10 dark:bg-SurfaceDark">
       <Image
         src={project.image}
         alt=""
         width={640}
         height={400}
         sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 92vw"
-        className="aspect-[16/10] w-full bg-black/5 object-cover dark:bg-white/5"
+        className="z-10 aspect-[16/10] w-full object-contain transition-all duration-300 group-hover:-translate-y-5"
       />
       <div className="flex flex-1 flex-col gap-2 p-5">
         <div className="flex items-start justify-between gap-2">

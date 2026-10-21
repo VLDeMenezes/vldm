@@ -2,11 +2,7 @@
 
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import {
-  IoCloseOutline,
-  IoLogoGithub,
-  IoOpenOutline,
-} from "react-icons/io5";
+import { IoCloseOutline, IoLogoGithub, IoOpenOutline } from "react-icons/io5";
 import { useDialog } from "@/hooks/useDialog";
 import { track } from "@/lib/analytics";
 
@@ -29,10 +25,10 @@ export default function ProjectDialog({ project, onClose }) {
         close();
       }}
       onClick={handleBackdropClick}
-      className="fixed inset-x-0 bottom-0 top-[10dvh] m-0 h-auto max-h-none w-full max-w-none overflow-hidden rounded-t-2xl border border-black/10 bg-Surface p-0 text-Ink shadow-2xl dark:border-white/10 dark:bg-SurfaceDark dark:text-InkDark md:inset-0 md:m-auto md:max-h-[90dvh] md:w-[min(92vw,56rem)] md:rounded-2xl"
+      className="fixed inset-x-0 bottom-0 top-[5dvh] m-0 h-auto max-h-none w-full max-w-none overflow-hidden rounded-t-2xl border-2 border-black/10 bg-Surface p-0 text-Ink shadow-2xl dark:border-white/10 dark:bg-SurfaceDark dark:text-InkDark md:inset-0 md:m-auto md:max-h-[90dvh] md:w-[min(92vw,56rem)] md:rounded-l-2xl md:rounded-tr-none dark:md:border-r-0"
     >
       {project ? (
-        <div className="flex h-full flex-col overflow-y-auto overscroll-contain">
+        <div className="flex h-full flex-col overflow-y-scroll overscroll-contain">
           <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-black/5 dark:bg-white/5">
             <Image
               src={project.mainImage || project.image}
@@ -117,10 +113,7 @@ export default function ProjectDialog({ project, onClose }) {
                 >
                   <IoOpenOutline aria-hidden="true" className="text-lg" />
                   {t("Work.live")}
-                  <span className="sr-only">
-                    {" "}
-                    ({t("A11y.opensInNewTab")})
-                  </span>
+                  <span className="sr-only"> ({t("A11y.opensInNewTab")})</span>
                 </a>
               ) : null}
 
@@ -139,10 +132,7 @@ export default function ProjectDialog({ project, onClose }) {
                 >
                   <IoLogoGithub aria-hidden="true" className="text-lg" />
                   {t("Work.code")}
-                  <span className="sr-only">
-                    {" "}
-                    ({t("A11y.opensInNewTab")})
-                  </span>
+                  <span className="sr-only"> ({t("A11y.opensInNewTab")})</span>
                 </a>
               ) : null}
             </div>

@@ -27,7 +27,7 @@ export default function SkillsSection() {
           {coreSkills.map((skill) => (
             <li
               key={skill}
-              className="rounded-full bg-SectionDark px-3 py-1 text-sm font-semibold text-white dark:bg-DetailLight dark:text-Ink"
+              className="cursor-default rounded-full bg-SectionDark px-3 py-1 text-sm font-semibold text-white duration-150 hover:scale-105 dark:bg-DetailLight dark:text-Ink"
             >
               {skill}
             </li>
