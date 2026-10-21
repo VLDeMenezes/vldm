@@ -15,7 +15,7 @@ export default function ExperienceSection() {
     <section
       id="experience"
       aria-labelledby="experience-title"
-      className="rounded-2xl bg-SectionLigth p-6 text-Ink dark:bg-SectionDark dark:text-InkDark md:p-10"
+      className="rounded-2xl bg-Surface p-6 text-Ink dark:bg-SectionDark dark:text-InkDark md:p-10"
     >
       <h2 id="experience-title" className="text-3xl font-black">
         {t("Experience.title")}

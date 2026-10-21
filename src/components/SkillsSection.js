@@ -41,7 +41,10 @@ export default function SkillsSection() {
             <h4 className="text-sm font-bold">{t(group.labelKey)}</h4>
             <ul className="mt-2 flex flex-wrap gap-1.5">
               {group.items.map((item) => (
-                <li key={item} className="chip">
+                <li
+                  key={item}
+                  className="chip dark cursor-default hover:bg-DetailLight hover:text-white dark:hover:bg-Detail"
+                >
                   {item}
                 </li>
               ))}

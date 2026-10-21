@@ -23,7 +23,7 @@ module.exports = {
         InkDark: "#EAF2F5",
         InkDarkMuted: "#B9CBD2",
         AccentInk: "#7A3A08",
-        DetailLight: "#F2A65A",
+        DetailLight: "#BF6316",
         Surface: "#F3EBE4",
         SurfaceDark: "#022E40",
         Focus: "#FFD166",

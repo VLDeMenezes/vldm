@@ -76,7 +76,7 @@ export default function ProjectSection() {
 
       {otherProjects.length > 0 ? (
         <details className="mt-8 rounded-xl border border-black/10 p-4 dark:border-white/10">
-          <summary className="min-h-11 cursor-pointer text-sm font-bold">
+          <summary className="min-h-11 cursor-pointer text-xl font-bold">
             {t("Work.more")} ({otherProjects.length})
           </summary>
           <ul className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

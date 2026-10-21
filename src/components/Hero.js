@@ -13,7 +13,7 @@ export default function Hero() {
     <section
       id="home"
       aria-labelledby="hero-title"
-      className="relative overflow-hidden rounded-2xl bg-SectionLigth p-6 text-Ink dark:bg-SectionDark dark:text-InkDark md:p-10"
+      className="relative overflow-hidden rounded-2xl bg-Surface p-6 text-Ink dark:bg-SectionDark dark:text-InkDark md:p-10"
     >
       <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
@@ -39,9 +39,7 @@ export default function Hero() {
             {t("Hero.summary")}
           </p>
 
-          <p className="mt-4 max-w-xl font-semibold italic">
-            {t("Hero.goal")}
-          </p>
+          <p className="mt-4 max-w-xl font-semibold italic">{t("Hero.goal")}</p>
 
           <div className="mt-7 flex flex-wrap gap-3">
             <a

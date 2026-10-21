@@ -11,7 +11,7 @@ export default function ContactSection() {
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="rounded-2xl bg-SectionLigth p-6 text-Ink dark:bg-SectionDark dark:text-InkDark md:p-10"
+      className="rounded-2xl bg-Surface p-6 text-Ink dark:bg-SectionDark dark:text-InkDark md:p-10"
     >
       <p className="eyebrow text-Ink dark:text-DetailLight">
         {t("Contact.eyebrow")}
@@ -34,9 +34,7 @@ export default function ContactSection() {
               <a
                 href={link.href}
                 {...externalProps}
-                onClick={() =>
-                  track("contact_click", { channel: link.event })
-                }
+                onClick={() => track("contact_click", { channel: link.event })}
                 className="group flex h-full items-center gap-3 rounded-xl border border-black/15 bg-black/5 p-4 text-black transition-colors hover:bg-black/10 dark:border-white/20 dark:bg-white/5 dark:text-InkDark dark:hover:bg-white/10"
               >
                 <span aria-hidden="true" className="shrink-0 text-3xl">

@@ -75,7 +75,7 @@ export default function CaseStudiesSection() {
               <dl className="space-y-3">
                 {STAR_PARTS.map((part) => (
                   <div key={part}>
-                    <dt className="text-[0.65rem] font-bold uppercase tracking-[0.16em]">
+                    <dt className="text-[0.65rem] font-bold uppercase tracking-[0.16em] text-DetailLight">
                       {t(`CaseStudies.${part}`)}
                     </dt>
                     <dd className="mt-0.5 text-sm leading-relaxed">
@@ -105,10 +105,7 @@ export default function CaseStudiesSection() {
                   onClick={() => track("case_study_open", { id: study.id })}
                 >
                   {t("CaseStudies.open", { company: study.company })}
-                  <span className="sr-only">
-                    {" "}
-                    ({t("A11y.opensInNewTab")})
-                  </span>
+                  <span className="sr-only"> ({t("A11y.opensInNewTab")})</span>
                 </a>
               ) : null}
             </article>

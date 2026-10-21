@@ -7,14 +7,17 @@ import Image from "next/image";
  */
 export default function HeroVisual() {
   return (
-    <Image
-      src="/hero-poster.webp"
-      alt=""
-      width={1154}
-      height={580}
-      priority
-      sizes="(min-width: 1024px) 45vw, 92vw"
-      className="mx-auto h-auto w-full max-w-2xl rounded-xl"
-    />
+    <>
+      <Image
+        src="/profile.webp"
+        alt=""
+        width={200}
+        height={200}
+        priority
+        sizes="(min-width: 500px) 25vw, 72vw"
+        className="mx-auto h-auto max-w-2xl rounded-xl"
+      />
+      <div className="h-2 w-full rounded-t-xl bg-Detail" />
+    </>
   );
 }
