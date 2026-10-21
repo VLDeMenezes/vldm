@@ -7,6 +7,6 @@ export default function robots() {
       allow: "/",
     },
     sitemap: `${profile.url}/sitemap.xml`,
-    host: profile.url,
+    host: "vldm.is-a.dev",
   };
 }

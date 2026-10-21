@@ -10,6 +10,7 @@ import SkipLink from "@/components/SkipLink";
 import Analytics from "@/components/Analytics";
 import ThemeSync from "@/components/ThemeSync";
 import { profile } from "@/data/profile";
+import { projects } from "@/data/projects";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -40,11 +41,17 @@ export async function generateMetadata({ params }) {
       "React Native",
       "Next.js",
       "TypeScript",
+      "Node.js",
+      "Angular",
+      "AWS",
       "Barcelona",
       "remote",
+      "portfolio",
     ],
     authors: [{ name: profile.fullName, url: profile.url }],
     creator: profile.fullName,
+    publisher: { name: profile.fullName, url: profile.url },
+    category: "technology",
     alternates: {
       canonical: path,
       languages: {
@@ -60,11 +67,13 @@ export async function generateMetadata({ params }) {
       title: meta.title,
       description: meta.description,
       locale: path === "/es" ? "es_ES" : "en_US",
+      alternateLocale: path === "/es" ? ["en_US"] : ["es_ES"],
       images: [
         {
-          url: "/TagFoto.webp",
+          url: "/og-image.jpg",
           width: 1200,
-          height: 628,
+          height: 630,
+          type: "image/jpeg",
           alt: meta.ogAlt,
         },
       ],
@@ -73,11 +82,18 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: meta.title,
       description: meta.description,
-      images: ["/TagFoto.webp"],
+      images: [{ url: "/og-image.jpg", alt: meta.ogAlt }],
     },
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
     },
   };
 }
@@ -92,11 +108,11 @@ export const viewport = {
 };
 
 const personSchema = {
-  "@context": "https://schema.org",
   "@type": "Person",
+  "@id": `${profile.url}/#person`,
   name: profile.fullName,
   alternateName: "VLDM",
-  jobTitle: "Full Stack Developer & Frontend Engineer",
+  jobTitle: profile.role,
   description:
     "Full Stack Developer and Frontend Engineer with 6+ years building web and mobile products.",
   url: profile.url,
@@ -114,11 +130,26 @@ const personSchema = {
     "React Native",
     "Next.js",
     "TypeScript",
+    "Angular",
     "Node.js",
     "AWS",
     "CI/CD",
     "AI-assisted engineering",
   ],
+  worksFor: {
+    "@type": "Organization",
+    name: "Beland",
+  },
+  hasOccupation: {
+    "@type": "Occupation",
+    name: profile.role,
+    occupationLocation: {
+      "@type": "City",
+      name: "Barcelona",
+    },
+    skills:
+      "React, React Native, Next.js, TypeScript, Node.js, AWS, CI/CD",
+  },
   alumniOf: [
     { "@type": "CollegeOrUniversity", name: "Soy Henry" },
     { "@type": "CollegeOrUniversity", name: "Silicon Misiones" },
@@ -130,7 +161,61 @@ export default async function LocaleLayout({ children, params }) {
   if (!isLocale(locale)) notFound();
 
   const year = new Date().getFullYear();
-  const schema = JSON.stringify(personSchema).replace(/</g, "\\u003c");
+  const meta = resources[locale]?.Meta ?? resources[defaultLocale].Meta;
+  const copy = resources[locale] ?? resources[defaultLocale];
+  const pageUrl = `${profile.url}/${locale}`;
+  const profileId = `${pageUrl}/#profile`;
+  const websiteId = `${profile.url}/#website`;
+  const projectsId = `${pageUrl}/#projects`;
+
+  const schema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      personSchema,
+      {
+        "@type": "WebSite",
+        "@id": websiteId,
+        url: profile.url,
+        name: profile.name,
+        description: resources[defaultLocale].Meta.description,
+        inLanguage: locales,
+        publisher: { "@id": personSchema["@id"] },
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": profileId,
+        url: pageUrl,
+        name: meta.title,
+        description: meta.description,
+        inLanguage: locale,
+        isPartOf: { "@id": websiteId },
+        about: { "@id": personSchema["@id"] },
+        mainEntity: { "@id": personSchema["@id"] },
+        hasPart: { "@id": projectsId },
+        dateModified: new Date().toISOString(),
+      },
+      {
+        "@type": "ItemList",
+        "@id": projectsId,
+        name: copy.Work?.title ?? "Selected work",
+        numberOfItems: projects.length,
+        itemListOrder: "https://schema.org/ItemListOrderAscending",
+        itemListElement: projects.map((project, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@type": "CreativeWork",
+            name: project.name,
+            url: project.path || project.github,
+            image: `${profile.url}${project.mainImage || project.image}`,
+            description: copy.Projects?.[project.name],
+            dateCreated: project.year,
+            author: { "@id": personSchema["@id"] },
+          },
+        })),
+      },
+    ],
+  }).replace(/</g, "\\u003c");
 
   return (
     <html

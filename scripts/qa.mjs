@@ -48,6 +48,20 @@ async function analyze(page) {
 
   await page.goto(`${baseUrl}/en`, { waitUntil: "networkidle" });
   await page.waitForTimeout(400);
+  results.projects = await page.evaluate(() => {
+    const buttons = [
+      ...document.querySelectorAll(
+        'section#work button[aria-label^="Open project details for "]'
+      ),
+    ];
+    return {
+      count: buttons.length,
+      names: buttons.map((button) =>
+        button.getAttribute("aria-label").replace("Open project details for ", "")
+      ),
+      moreGrids: document.querySelectorAll("section#work details").length,
+    };
+  });
   results.axeLight = await analyze(page);
   await page.keyboard.press("Tab");
   results.firstTab = await page.evaluate(() => ({
@@ -84,7 +98,7 @@ async function analyze(page) {
     stored: localStorage.getItem("theme"),
   }));
 
-  await page.click('button[aria-label="Open project details for BelandApp"]');
+  await page.click('button[aria-label="Open project details for RNFactory"]');
   await page.waitForTimeout(400);
   results.dialog = await page.evaluate(() => {
     const dialog = document.querySelector("dialog");
@@ -325,6 +339,128 @@ for (const width of [320, 768, 1440]) {
     atDomContentLoaded,
     afterReload,
     afterBack,
+    consoleErrors: [...new Set(errors)],
+  };
+  await context.close();
+}
+
+// 8. Mobile project sheet
+{
+  const context = await browser.newContext({
+    viewport: { width: 390, height: 844 },
+  });
+  const page = await context.newPage();
+  const errors = [];
+  watchConsole(page, errors);
+  await page.goto(`${baseUrl}/en`, { waitUntil: "networkidle" });
+  await page.click('button[aria-label="Open project details for RNFactory"]');
+  await page.waitForTimeout(450);
+
+  results.mobileSheet = await page.evaluate(() => {
+    const dialog = document.querySelector("dialog");
+    if (!dialog) return null;
+    const rect = dialog.getBoundingClientRect();
+    const style = getComputedStyle(dialog);
+    const image = dialog.querySelector("img");
+    const imageRect = image?.getBoundingClientRect();
+
+    return {
+      top: rect.top,
+      bottom: rect.bottom,
+      left: rect.left,
+      right: rect.right,
+      width: rect.width,
+      viewportHeight: window.innerHeight,
+      focused: document.activeElement?.getAttribute("aria-label") ?? null,
+      radiusTop: style.borderTopLeftRadius,
+      radiusBottom: style.borderBottomLeftRadius,
+      imageAspect: imageRect
+        ? Number((imageRect.width / imageRect.height).toFixed(2))
+        : null,
+      imageFit: image ? getComputedStyle(image).objectFit : null,
+    };
+  });
+  await page.keyboard.press("Escape");
+  await page.waitForTimeout(250);
+  results.mobileSheet.closedWithEscape = await page.evaluate(
+    () => !document.querySelector("dialog")?.open
+  );
+  results.mobileSheet.consoleErrors = [...new Set(errors)];
+  await context.close();
+}
+
+// 9. Metadata and social sharing tags
+{
+  const context = await browser.newContext({
+    viewport: { width: 1440, height: 1000 },
+  });
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/en`, { waitUntil: "networkidle" });
+
+  results.seo = await page.evaluate(() => {
+    const content = (selector) =>
+      document.querySelector(selector)?.getAttribute("content") ?? null;
+    const href = (selector) =>
+      document.querySelector(selector)?.getAttribute("href") ?? null;
+    const schema = JSON.parse(
+      document.querySelector('script[type="application/ld+json"]')
+        ?.textContent ?? "{}"
+    );
+    const graph = schema["@graph"] ?? [];
+    const projects = graph.find((entry) => entry["@type"] === "ItemList");
+
+    return {
+      title: document.title,
+      description: content('meta[name="description"]'),
+      canonical: href('link[rel="canonical"]'),
+      ogType: content('meta[property="og:type"]'),
+      ogImage: content('meta[property="og:image"]'),
+      ogImageWidth: content('meta[property="og:image:width"]'),
+      ogImageHeight: content('meta[property="og:image:height"]'),
+      ogImageAlt: content('meta[property="og:image:alt"]'),
+      twitterCard: content('meta[name="twitter:card"]'),
+      twitterImage: content('meta[name="twitter:image"]'),
+      hreflangs: [
+        ...document.querySelectorAll('link[rel="alternate"][hreflang]'),
+      ].map((link) => ({
+        lang: link.getAttribute("hreflang"),
+        href: link.getAttribute("href"),
+      })),
+      manifest: href('link[rel="manifest"]'),
+      schemaTypes: graph.map((entry) => entry["@type"]),
+      schemaProjects: projects?.itemListElement?.length ?? 0,
+    };
+  });
+
+  const imageResponse = await page.request.get(`${baseUrl}/og-image.jpg`);
+  results.seo.ogImageStatus = imageResponse.status();
+  results.seo.ogImageType = imageResponse.headers()["content-type"];
+  await context.close();
+}
+
+// 10. Locale switch returns smoothly to the top
+{
+  const context = await browser.newContext({
+    viewport: { width: 1440, height: 900 },
+  });
+  const page = await context.newPage();
+  const errors = [];
+  watchConsole(page, errors);
+  await page.goto(`${baseUrl}/en`, { waitUntil: "networkidle" });
+  await page.evaluate(() =>
+    window.scrollTo(0, document.documentElement.scrollHeight)
+  );
+  await page.waitForTimeout(300);
+  const before = await page.evaluate(() => window.scrollY);
+  await page.click('button[aria-label*="Switch to Spanish"]');
+  await page.waitForURL("**/es");
+  await page.waitForTimeout(500);
+  const after = await page.evaluate(() => window.scrollY);
+
+  results.localeScroll = {
+    before,
+    after,
+    lang: await page.evaluate(() => document.documentElement.lang),
     consoleErrors: [...new Set(errors)],
   };
   await context.close();

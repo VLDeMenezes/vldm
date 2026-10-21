@@ -29,30 +29,40 @@ export default function ProjectDialog({ project, onClose }) {
         close();
       }}
       onClick={handleBackdropClick}
-      className="m-auto max-h-[90dvh] w-[min(92vw,56rem)] overflow-hidden rounded-2xl border border-black/10 bg-Surface p-0 text-Ink shadow-2xl dark:border-white/10 dark:bg-SurfaceDark dark:text-InkDark"
+      className="fixed inset-x-0 bottom-0 top-[10dvh] m-0 h-auto max-h-none w-full max-w-none overflow-hidden rounded-t-2xl border border-black/10 bg-Surface p-0 text-Ink shadow-2xl dark:border-white/10 dark:bg-SurfaceDark dark:text-InkDark md:inset-0 md:m-auto md:max-h-[90dvh] md:w-[min(92vw,56rem)] md:rounded-2xl"
     >
       {project ? (
-        <div className="max-h-[90dvh] overflow-y-auto">
-          <div className="relative">
+        <div className="flex h-full flex-col overflow-y-auto overscroll-contain">
+          <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-black/5 dark:bg-white/5">
             <Image
               src={project.mainImage || project.image}
               alt={`${project.name} — ${t("Work.impact." + project.slug)}`}
-              width={1000}
-              height={600}
-              sizes="(min-width: 768px) 56rem, 92vw"
-              className="max-h-[45dvh] w-full bg-black/5 object-contain p-4 dark:bg-white/5"
+              fill
+              priority
+              quality={85}
+              sizes="(min-width: 768px) 56rem, 100vw"
+              className="object-cover"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/45 to-transparent"
+            />
+            <span
+              aria-hidden="true"
+              className="absolute left-1/2 top-2.5 h-1 w-10 -translate-x-1/2 rounded-full bg-white/70 md:hidden"
             />
             <button
               type="button"
               onClick={close}
+              data-dialog-initial-focus
               aria-label={t("A11y.closeDialog")}
-              className="absolute right-3 top-3 flex min-h-11 min-w-11 items-center justify-center rounded-full bg-Ink/90 text-2xl text-white shadow-lg transition-colors hover:bg-Ink dark:bg-white/90 dark:text-Ink dark:hover:bg-white"
+              className="absolute right-3 top-3 flex min-h-11 min-w-11 items-center justify-center rounded-full bg-Ink/90 text-2xl text-white shadow-lg transition-transform duration-200 hover:scale-105 hover:bg-Ink active:scale-95 dark:bg-white/90 dark:text-Ink dark:hover:bg-white md:right-4 md:top-4"
             >
               <IoCloseOutline aria-hidden="true" />
             </button>
           </div>
 
-          <div className="p-5 md:p-7">
+          <div className="p-5 pb-[calc(1.25rem+env(safe-area-inset-bottom))] md:p-7 md:pb-7">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
                 <h2

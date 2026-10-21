@@ -13,6 +13,7 @@ export default function sitemap() {
       languages: {
         en: `${profile.url}/en`,
         es: `${profile.url}/es`,
+        "x-default": `${profile.url}/en`,
       },
     },
   }));

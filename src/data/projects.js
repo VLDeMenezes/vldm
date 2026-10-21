@@ -1,45 +1,24 @@
 import {
-  IoLogoCss3,
   IoLogoVercel,
   IoLogoReact,
-  IoLogoNodejs,
-  IoLogoHtml5,
-  IoLogoJavascript,
 } from "react-icons/io5";
 import { TbBrandTypescript } from "react-icons/tb";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import {
   SiExpress,
   SiRender,
-  SiAxios,
-  SiBootstrap,
-  SiRedux,
   SiPostgresql,
-  SiMongodb,
   SiSwagger,
-  SiAwslambda,
   SiExpo,
   SiGoogleplay,
-  SiPrisma,
 } from "react-icons/si";
 
+/**
+ * Six selected projects. Work-owned products (Beland, Happ3n, Awaq) are
+ * intentionally excluded so the portfolio does not repeat the experience
+ * timeline.
+ */
 export const projects = [
-  {
-    slug: "belandapp",
-    name: "BelandApp",
-    image: "/belandapp.webp",
-    mainImage: "/belandappmain.webp",
-    path: "https://beland.app",
-    year: "2025",
-    roleKey: "Work.roles.mobile",
-    featured: true,
-    tecs: [
-      { name: "TypeScript", icon: <TbBrandTypescript /> },
-      { name: "React Native", icon: <IoLogoReact /> },
-      { name: "Expo", icon: <SiExpo /> },
-      { name: "AWS", icon: <SiAwslambda /> },
-    ],
-  },
   {
     slug: "rnfactory",
     name: "RNFactory",
@@ -48,7 +27,6 @@ export const projects = [
     path: "https://rn-factory.com/",
     year: "2025",
     roleKey: "Work.roles.fullstack",
-    featured: true,
     tecs: [
       { name: "TypeScript", icon: <TbBrandTypescript /> },
       { name: "Next.js", icon: <RiNextjsLine /> },
@@ -64,7 +42,6 @@ export const projects = [
     path: "https://lobacounter.com",
     year: "2024",
     roleKey: "Work.roles.mobile",
-    featured: true,
     tecs: [
       { name: "TypeScript", icon: <TbBrandTypescript /> },
       { name: "React Native", icon: <IoLogoReact /> },
@@ -80,7 +57,6 @@ export const projects = [
     path: "https://surveyapp-xi.vercel.app/",
     year: "2024",
     roleKey: "Work.roles.fullstack",
-    featured: true,
     tecs: [
       { name: "TypeScript", icon: <TbBrandTypescript /> },
       { name: "Next.js", icon: <RiNextjsLine /> },
@@ -95,7 +71,6 @@ export const projects = [
     path: "https://sentenciasapp.vercel.app/",
     year: "2024",
     roleKey: "Work.roles.fullstack",
-    featured: true,
     github: "https://github.com/VLDeMenezes/sentenciasapp",
     tecs: [
       { name: "TypeScript", icon: <TbBrandTypescript /> },
@@ -111,26 +86,11 @@ export const projects = [
     path: "https://gilsonregalos.com.ar/",
     year: "2024",
     roleKey: "Work.roles.frontend",
-    featured: true,
     tecs: [
       { name: "Next.js", icon: <RiNextjsLine /> },
       { name: "TypeScript", icon: <TbBrandTypescript /> },
       { name: "Vercel", icon: <IoLogoVercel /> },
       { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
-    ],
-  },
-  {
-    slug: "awaq",
-    name: "Awaq",
-    image: "/somosawaq.webp",
-    path: "https://www.somosawaq.org/",
-    year: "2025",
-    roleKey: "Work.roles.fullstack",
-    tecs: [
-      { name: "React", icon: <IoLogoReact /> },
-      { name: "TypeScript", icon: <TbBrandTypescript /> },
-      { name: "Node.js", icon: <IoLogoNodejs /> },
-      { name: "AWS", icon: <SiAwslambda /> },
     ],
   },
   {
@@ -149,102 +109,4 @@ export const projects = [
       { name: "Render", icon: <SiRender /> },
     ],
   },
-  {
-    slug: "photopuzzle",
-    name: "PhotoPuzzle",
-    image: "/photo_puzzle.webp",
-    mainImage: "/photo_puzzle_main.webp",
-    path: "https://rn-factory.com/en/photo-puzzle",
-    year: "2024",
-    roleKey: "Work.roles.mobile",
-    tecs: [
-      { name: "TypeScript", icon: <TbBrandTypescript /> },
-      { name: "React Native", icon: <IoLogoReact /> },
-      { name: "Expo", icon: <SiExpo /> },
-      { name: "Google Play", icon: <SiGoogleplay /> },
-    ],
-  },
-  {
-    slug: "milagros",
-    name: "Milagros Cosmetic",
-    image: "/Milagros.webp",
-    path: "https://www.milagrosgutierrezcosmiatra.com.ar/",
-    year: "2024",
-    roleKey: "Work.roles.frontend",
-    tecs: [
-      { name: "Next.js", icon: <RiNextjsLine /> },
-      { name: "TypeScript", icon: <TbBrandTypescript /> },
-      { name: "Vercel", icon: <IoLogoVercel /> },
-      { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
-    ],
-  },
-  {
-    slug: "nodeready",
-    name: "Node Ready",
-    image: "/NodeReady.webp",
-    path: "https://github.com/VLDeMenezes/NodeReady",
-    year: "2023",
-    roleKey: "Work.roles.backend",
-    github: "https://github.com/VLDeMenezes/NodeReady",
-    tecs: [
-      { name: "Node.js", icon: <IoLogoNodejs /> },
-      { name: "Express", icon: <SiExpress /> },
-      { name: "PostgreSQL", icon: <SiPostgresql /> },
-      { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "Prisma", icon: <SiPrisma /> },
-      { name: "Swagger", icon: <SiSwagger /> },
-    ],
-  },
-  {
-    slug: "shopall",
-    name: "ShopAll",
-    image: "/shopAllPic.webp",
-    path: "https://github.com/VLDeMenezes/ShopAll",
-    year: "2023",
-    roleKey: "Work.roles.fullstack",
-    github: "https://github.com/VLDeMenezes/ShopAll",
-    tecs: [
-      { name: "Next.js", icon: <RiNextjsLine /> },
-      { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
-      { name: "Express", icon: <SiExpress /> },
-      { name: "Axios", icon: <SiAxios /> },
-      { name: "PostgreSQL", icon: <SiPostgresql /> },
-    ],
-  },
-  {
-    slug: "leyria",
-    name: "Leyria & De Menezes",
-    image: "/leyriaPic.webp",
-    path: "https://l-dm.vercel.app/",
-    year: "2023",
-    roleKey: "Work.roles.fullstack",
-    github: "https://github.com/VLDeMenezes/L-DM",
-    tecs: [
-      { name: "HTML5", icon: <IoLogoHtml5 /> },
-      { name: "CSS3", icon: <IoLogoCss3 /> },
-      { name: "JavaScript", icon: <IoLogoJavascript /> },
-      { name: "Redux", icon: <SiRedux /> },
-      { name: "Bootstrap", icon: <SiBootstrap /> },
-      { name: "Express", icon: <SiExpress /> },
-      { name: "PostgreSQL", icon: <SiPostgresql /> },
-    ],
-  },
-  {
-    slug: "showfilms",
-    name: "ShowFilms",
-    image: "/showFilmsPic.webp",
-    path: "https://github.com/VLDeMenezes/ShowFilms",
-    year: "2023",
-    roleKey: "Work.roles.frontend",
-    github: "https://github.com/VLDeMenezes/ShowFilms",
-    tecs: [
-      { name: "HTML5", icon: <IoLogoHtml5 /> },
-      { name: "CSS3", icon: <IoLogoCss3 /> },
-      { name: "JavaScript", icon: <IoLogoJavascript /> },
-      { name: "MongoDB", icon: <SiMongodb /> },
-    ],
-  },
 ];
-
-export const featuredProjects = projects.filter((project) => project.featured);
-export const otherProjects = projects.filter((project) => !project.featured);

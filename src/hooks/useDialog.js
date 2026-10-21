@@ -17,6 +17,12 @@ export function useDialog(open, onClose) {
 
     if (open && !dialog.open) {
       dialog.showModal();
+
+      // The scrollable panel is the first focusable box in Chromium, so the
+      // browser would otherwise land there instead of on a useful control.
+      dialog
+        .querySelector("[data-dialog-initial-focus]")
+        ?.focus({ preventScroll: true });
     } else if (!open && dialog.open) {
       dialog.close();
     }

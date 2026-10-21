@@ -20,8 +20,10 @@
 **Current status (2026-10-21):** Phases 0–4 are complete. Phase 5 analytics is wired
 and verified locally against Umami Cloud; the dashboard readback happens after deploy.
 Phase 6 passes locally for Lighthouse, axe, keyboard, reduced motion and responsive
-layouts; VoiceOver, 200% zoom, Safari/Firefox/iOS and the Netlify production checks
-remain manual.
+layouts. The recruiter follow-up is also complete: six selected projects, an iOS-style
+mobile project sheet, hero/modal micro-motion, smooth locale switching, richer social
+metadata and a static-friendly pragmatic CSP. VoiceOver, 200% zoom, Safari/Firefox/iOS
+and the Netlify production checks remain manual.
 
 ---
 
@@ -81,13 +83,17 @@ Measured contrast today (WCAG AA needs 4.5:1 for body text, 3:1 for large text/U
 ### Document, metadata and landmarks
 
 - [x] Remove the manual `<head>` in `src/app/layout.js`; use the `metadata` API
-- [x] `metadataBase: https://vldm.is-a.dev`, canonical, Open Graph, Twitter cards
-      (current `twitter:image` wrongly points to `metatags.io`)
+- [x] `metadataBase: https://vldm.is-a.dev`, canonical, Open Graph, Twitter cards,
+      localized `og:locale`, `og:image:alt`, Googlebot preview directives and
+      `x-default` hreflang
 - [x] `export const viewport` with `themeColor` for light/dark
 - [x] `<html lang>` rendered server-side from the locale (Phase 2) instead of hardcoded `es`
 - [x] Skip link to `#main`; `header` / `nav[aria-label]` / `main` / `footer` landmarks
 - [x] One `<h1>` per page; section `<h2>`; card `<h3>`
-- [x] JSON-LD `Person` schema
+- [x] JSON-LD `@graph` with `Person`, `WebSite`, `ProfilePage` and a six-item
+      `ItemList` of selected projects
+- [x] Dedicated 1200×630 `og-image.jpg` (branded name, role, stack and portrait),
+      plus `manifest.webmanifest`
 - [x] Remove the unpkg Lottie player and 605 KB JSON; the hero now uses the optimized
       static portrait (`/profile.webp`). This was the single biggest LCP win.
 - [x] Icons get `aria-hidden`; icon-only controls get `aria-label`
@@ -113,6 +119,12 @@ Measured contrast today (WCAG AA needs 4.5:1 for body text, 3:1 for large text/U
 - [x] `useBodyScrollLock` while open
 - [x] Fix empty modal body: use `t("Projects." + name)` instead of the missing `description`
 - [x] Add live/github links in the modal with `rel="noopener noreferrer"`
+- [x] 16:10 `object-cover` media in the modal and project cards; source images are
+      intentionally left untouched for the owner to replace
+- [x] iOS-style bottom sheet on mobile (`top: 10dvh`, full width, rounded top,
+      safe-area padding, drag handle) and a centered dialog on desktop
+- [x] Initial focus lands on the close button; open animation slides the sheet up
+      and fades the backdrop, with reduced-motion handled globally
 
 **Done when:** axe reports 0 critical/serious on `/` and `/movile`, full keyboard pass,
 WCAG AA contrast, `prefers-reduced-motion` disables non-essential motion, Lighthouse
@@ -144,7 +156,9 @@ is wrong. We move to path-based locales and server-rendered translations.
 - [x] `params` awaited (Next 16 async request APIs)
 - [x] `generateMetadata` with localized title/description and `alternates.languages`
 - [x] Add `src/proxy.js` (Next 16 renamed middleware → proxy): cookie → `Accept-Language` → `en`
-- [x] Language switch navigates to the other locale path, sets the cookie, preserves hash
+- [x] Language switch navigates to the other locale path, sets the cookie, preserves
+      hash and smooth-scrolls to the top before navigating (with reduced-motion and
+      hash bypasses)
 - [x] Internal links use locale-aware `Link`; CV and project external links unchanged
 - [x] Add `sitemap.js`, `robots.js` and a localized 404
 
@@ -192,7 +206,10 @@ Cloud/DevOps · Monitoring & Tools · Practices.
 | AWAQ | Low-latency NGO platform with SAP and manual deploys | 6+ reusable components, Node/Express APIs, SAP extension, GitHub Actions CI/CD | **−30%** feature development time, manual deploy errors eliminated |
 | Happ3n XYZ | Web3 events platform going international | i18n, accessible React/RN Web UI, REST microservice integration, Vercel/Railway deploys | **3** major features on time, **99.9%** deployment uptime |
 
-- [x] Project cards show year, role and one-line impact; featured projects first
+- [x] Project cards show year, role and one-line impact; six selected projects:
+      RNFactory, LobaCounter, SurveyApp, Sumario Legal API, Gilson Regalos and NearVet
+- [x] Work-owned products (Beland, Happ3n, Awaq) are excluded so the project grid
+      does not repeat the experience timeline; the “more projects” grid is removed
 - [x] Fix wrong tech icons (e.g. LeyriaApp says "HTML 5" with a React icon)
 - [x] Rewrite hero and section copy with recruiter hooks (result-first, no filler)
 - [x] Update EN + ES translations; fix existing grammar/typos
@@ -265,6 +282,8 @@ the ad-blocker check remain deploy-time checks.
       Safari remain manual QA.
 - [~] Netlify deploy preview and production domain must be checked after the user deploys;
       the production build and `netlify.toml` are verified locally.
+- [x] QA covers six projects/no more-grid, mobile sheet geometry, metadata/OG tags,
+      JSON-LD, CSP-compatible hydration and locale scroll-to-top
 - [x] Update this document with final results
 
 **Targets:** accessibility ≥ 95 (goal 100), performance ≥ 90, SEO ≥ 95,
@@ -343,11 +362,14 @@ React & React Native · Barcelona, Spain · victorleandrodemenezes@gmail.com ·
   (`X-Frame-Options: SAMEORIGIN` for the `/movile` iframe, `X-Content-Type-Options`,
   `Referrer-Policy`, `Permissions-Policy`, HSTS)
 - The footer links to securityheaders.com for `vldm.is-a.dev` and does **not** claim a
-  letter grade. A nonce-based CSP would force dynamic rendering, so it is deliberately
-  left out; the copy says headers are configured rather than overstating a grade.
-  `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`
-  and HSTS are present in the branch config; the published site (and its D scan) is
-  still the older deployment. Re-scan after deploying this branch.
+  letter grade. A pragmatic CSP is present alongside `X-Frame-Options`,
+  `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy` and HSTS.
+  It keeps the site static by allowing `'unsafe-inline'` for Next.js hydration and
+  React styles instead of forcing nonce-based dynamic rendering. `script-src` and
+  `connect-src` allow only the Umami Cloud script and its `gateway.umami.is` endpoint.
+  The policy was exercised through a local proxy: page hydration, theme toggle, project
+  dialog and analytics all worked with zero CSP console errors. The published site and
+  its scan are still the older deployment; re-scan after deploying this branch.
 
 ## Appendix C — Progress log
 
@@ -363,3 +385,4 @@ React & React Native · Barcelona, Spain · victorleandrodemenezes@gmail.com ·
 | 2026-10-21 | Phase 5 | Umami script + queue, all events wired (including `case_study_open`), UTM contact links, cookieless footer note. Local requests: script 200, pageview/theme/project/scroll events 200 with the website ID. Dashboard readback pending deploy. |
 | 2026-10-21 | Phase 6 | Final Lighthouse `/en` 95/100/100/100 mobile, 100/100/100/100 desktop; `/es` 95/100/100/100 mobile, 100/100/100/100 desktop; `/en/movile` 96/100/100/66. axe 0 including `/en/movile`; 0 overflow at 320/768/1440; skip link, theme persistence, reduced motion, dialog and `/movile` iframe/focus guard pass; prod audit 0. Cross-browser/VoiceOver/zoom and Netlify deploy remain manual. |
 | 2026-10-21 | Follow-up | Fixed scroll spy (reference line; Contact → Work after ~50 px up), removed the inline theme script (instrumentation + ThemeSync; no script warning, theme survives EN↔ES), restored WCAG AA contrast for the new orange palette, and added scroll-spy/locale-theme checks to `npm run qa`. QA: axe 0, 0 overflow, no console errors. Security headers: XFO/Referrer/Permissions/HSTS/nosniff configured in `netlify.toml`; CSP still intentionally absent. |
+| 2026-10-21 | Recruiter polish | Pruned to six non-work projects (RNFactory, LobaCounter, SurveyApp, Sumario Legal API, Gilson Regalos, NearVet), removed the “more projects” grid and switched cards/modal media to 16:10 `object-cover`. Added the iOS bottom-sheet dialog (top 10dvh, rounded top, safe area, slide-up), explicit close-button focus, hero float/glow/sheen/bar motion, button/card/modal transitions, smooth locale scroll-to-top and a 1200×630 JPEG OG image. Metadata now includes locale alternates, Googlebot previews, `x-default`, manifest and a Person/WebSite/ProfilePage/ItemList JSON-LD graph. Added a static-friendly CSP allowing Next inline hydration and Umami (`cloud.umami.is`, `gateway.umami.is`); proxy test showed no CSP errors. QA: 6 projects, no more-grid, sheet top 84.39/844, 16:10 cover, focus on close, OG 200, locale scroll 4680→0, axe 0, no console errors. |
