@@ -1,21 +1,22 @@
-const PhoneScreen = () => {
+export default function PhoneScreen({
+  locale = "en",
+  title = "Mobile preview of the portfolio",
+}) {
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="relative w-[22%] h-[95%] bg-black rounded-[50px] shadow-phoneMockup ">
-        <div className="absolute top-4 left-4 right-4 bottom-4 bg-black rounded-[30px] overflow-hidden">
+    <div className="flex h-full items-center justify-center p-4">
+      <div className="relative h-[calc(100dvh-2rem)] w-[min(92vw,24rem)] rounded-[2.5rem] bg-black p-2 shadow-phoneMockup">
+        <div className="h-full w-full overflow-hidden rounded-[2rem] bg-white">
           <iframe
-            className="w-[108%] h-full bg-transparent rounded-[30px]"
-            src="/"
+            title={title}
+            src={`/${locale}`}
+            className="h-full w-full border-0"
           />
         </div>
-
-        <div className="absolute top-[5px] left-[50%] translate-x-[-50%] h-2 w-12 bg-gray-900 rounded"></div>
-
-        <div className="absolute top-[100px] -rigth-1 h-16 w-1 bg-gray-900 rounded"></div>
-        <div className="absolute top-[180px] rigth-1 h-40 w-1 bg-gray-900 rounded"></div>
+        <div
+          aria-hidden="true"
+          className="absolute left-1/2 top-3 h-1.5 w-16 -translate-x-1/2 rounded-full bg-black/80"
+        />
       </div>
     </div>
   );
-};
-
-export default PhoneScreen;
+}

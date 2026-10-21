@@ -1,0 +1,232 @@
+{
+  "Meta": {
+    "title": "Víctor De Menezes — Desarrollador Full Stack & Frontend Engineer",
+    "description": "Desarrollador Full Stack e Ingeniero Frontend con más de 6 años creando productos web y móviles escalables con React, React Native, Next.js, TypeScript y Node.js. Basado en Barcelona, abierto a roles remotos.",
+    "ogAlt": "Víctor De Menezes, Desarrollador Full Stack y Frontend Engineer"
+  },
+  "A11y": {
+    "skip": "Saltar al contenido",
+    "primaryNav": "Navegación principal",
+    "openProject": "Abrir los detalles del proyecto {{name}}",
+    "closeDialog": "Cerrar los detalles del proyecto",
+    "toggleTheme": "Cambiar el modo oscuro",
+    "switchToSpanish": "Cambiar a español",
+    "switchToEnglish": "Cambiar a inglés",
+    "viewCv": "Ver CV en una pestaña nueva",
+    "openLinkedIn": "Abrir el perfil de LinkedIn en una pestaña nueva",
+    "openGitHub": "Abrir el perfil de GitHub en una pestaña nueva",
+    "sendEmail": "Enviar un correo a Víctor",
+    "opensInNewTab": "se abre en una pestaña nueva",
+    "logoAlt": "Logo de {{company}}",
+    "technologies": "Tecnologías utilizadas",
+    "selected": "Seleccionado"
+  },
+  "Nav": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "work": "Proyectos",
+    "contact": "Contacto"
+  },
+  "Hero": {
+    "greeting": "Hola, te invito a conocerme",
+    "name": "Víctor De Menezes",
+    "role": "Desarrollador Full Stack & Frontend Engineer",
+    "stack": "React · React Native · Next.js · TypeScript · Node.js",
+    "summary": "Construyo productos web y móviles escalables de punta a punta. Seis años en fintech, Web3 y e-commerce, transformando requerimientos complejos en funcionalidades con impacto medible.",
+    "goal": "Transformo requerimientos de producto en funcionalidades medibles y en producción.",
+    "viewCv": "Ver CV",
+    "viewWork": "Ver proyectos",
+    "location": "Barcelona, España · Remoto",
+    "experience": "Más de 6 años de experiencia"
+  },
+  "Experience": {
+    "title": "Experiencia",
+    "subtitle": "Seis años lanzando productos web y móviles en fintech, Web3 y e-commerce.",
+    "present": "Presente",
+    "remote": "Remoto",
+    "fullTime": "Tiempo completo",
+    "contract": "Contrato",
+    "impact": "Impacto seleccionado",
+    "stack": "Stack",
+    "items": {
+      "beland": {
+        "role": "Ingeniero de Producto Fundador — Frontend & Mobile",
+        "achievements": [
+          "Diseñé una arquitectura frontend modular basada en features para una plataforma de e-wallet, acelerando la entrega de funcionalidades un 25% y reduciendo la deuda técnica.",
+          "Creé una librería de componentes unificada de React y React Native utilizada en los flujos principales de web y mobile.",
+          "Integré APIs REST seguras para autenticación, procesamiento de pagos y sincronización de estado en tiempo real.",
+          "Diseñé y ejecuté pruebas unitarias y funcionales automatizadas que cubren más de 20 flujos críticos, reduciendo regresiones en producción.",
+          "Implementé un sistema de AI harnessing (agentes, restricciones y sub-agentes) para automatizar flujos repetitivos de desarrollo.",
+          "Mentoricé a ingenieros junior y lideré revisiones de código, elevando la calidad y la eficiencia del equipo."
+        ]
+      },
+      "awaq": {
+        "role": "Frontend Engineer / Desarrollador Full Stack",
+        "achievements": [
+          "Construí componentes React de alto rendimiento optimizados para acceso de baja latencia, mejorando la respuesta y la retención.",
+          "Creé más de 6 componentes de UI reutilizables integrados con APIs propias de Node.js y Express, reduciendo un 30% el tiempo de desarrollo.",
+          "Extendí funcionalidades personalizadas de SAP e integraciones empresariales.",
+          "Implementé flujos de CI/CD con GitHub Actions, eliminando errores manuales de despliegue.",
+          "Documenté la arquitectura central y mentoricé al equipo en un entorno Agile."
+        ]
+      },
+      "happ3n": {
+        "role": "Desarrollador Frontend / Full Stack",
+        "achievements": [
+          "Implementé soporte multiidioma (i18n) e interfaces responsive y accesibles en React y React Native Web.",
+          "Entregué 3 funcionalidades Web3 importantes a tiempo, integrando la UI con microservicios REST.",
+          "Orquesté despliegues automatizados en Vercel y Railway, manteniendo un 99,9% de uptime."
+        ]
+      },
+      "prisma": {
+        "role": "Desarrollador Frontend / Full Stack",
+        "achievements": [
+          "Entregué más de 5 productos web y móviles a medida, desde el análisis de requerimientos hasta el despliegue.",
+          "Diseñé flujos full stack, arquitecturas de APIs REST e integraciones con el ecosistema SAP.",
+          "Modelé bases de datos e implementé servicios de autenticación y autorización (JWT/OAuth).",
+          "Estandaricé la arquitectura con prácticas SOLID y Clean Code en los proyectos de clientes."
+        ]
+      }
+    }
+  },
+  "Skills": {
+    "title": "Habilidades",
+    "subtitle": "Las herramientas que uso a diario, agrupadas según cómo las aplico.",
+    "core": "Stack principal",
+    "groups": {
+      "frontend": "Frontend",
+      "mobile": "Mobile",
+      "backend": "Backend y datos",
+      "testing": "Testing",
+      "ai": "Ingeniería asistida por IA",
+      "cloud": "Cloud, DevOps y entrega",
+      "tools": "Monitoreo y herramientas",
+      "practices": "Prácticas"
+    }
+  },
+  "Work": {
+    "title": "Proyectos seleccionados",
+    "subtitle": "Productos seleccionados de mi CV, ordenados por impacto. Abre cualquier tarjeta para ver el stack y los enlaces.",
+    "featured": "Destacados",
+    "more": "Más proyectos",
+    "live": "Sitio en vivo",
+    "code": "Código fuente",
+    "role": "Rol",
+    "year": "Año",
+    "technologies": "Tecnologías",
+    "impact": {
+      "belandapp": "Funcionalidades de e-wallet en iOS, Android y web desde un único sistema de componentes.",
+      "rnfactory": "Fábrica de apps móviles que inicializa proyectos React Native con flujos de IA y monetización.",
+      "lobacounter": "Conteo de puntos en tiempo real que reemplazó el papel y lápiz en un juego de cartas tradicional.",
+      "surveyapp": "PWA con soporte offline y gráficos en vivo para equipos de encuestas políticas.",
+      "sumariolegal": "Resúmenes legales asistidos por IA, exportados como documentos Word editables.",
+      "gilson": "Tienda en producción con SEO, catálogo dinámico y un camino de conversión por WhatsApp.",
+      "awaq": "Plataforma para una ONG con componentes React reutilizables conectados a servicios Node y Express.",
+      "nearvet": "App de clínica veterinaria con turnos, historiales y pagos integrados.",
+      "photopuzzle": "Juego de rompecabezas multiplataforma con fotos propias y récords compartibles.",
+      "milagros": "E-commerce con foco en SEO para una práctica de dermocosmiatría.",
+      "nodeready": "Starter de Node y Express con auth JWT, PostgreSQL, MongoDB y Swagger.",
+      "shopall": "Plantilla de e-commerce enfocada en Apple con productos servidos desde PostgreSQL.",
+      "leyria": "Sitio de estudio jurídico con noticias, certificaciones y turnos online.",
+      "showfilms": "Explorador de películas sin frameworks para demostrar fundamentos de HTML, CSS y JS."
+    },
+    "roles": {
+      "mobile": "Mobile",
+      "frontend": "Frontend",
+      "fullstack": "Full stack",
+      "backend": "Backend"
+    }
+  },
+  "CaseStudies": {
+    "eyebrow": "Casos de estudio",
+    "title": "Tres proyectos medidos por su resultado",
+    "subtitle": "Tres proyectos donde un cambio concreto produjo un número que puedo defender.",
+    "situation": "Situación",
+    "task": "Tarea",
+    "action": "Acción",
+    "result": "Resultado",
+    "impact": "Impacto",
+    "open": "Abrir {{company}}",
+    "items": {
+      "beland": {
+        "situation": "Beland estaba construyendo una e-wallet que debía ofrecer los mismos flujos principales en web y mobile, mientras el código crecía más rápido que el equipo.",
+        "task": "Hacerme cargo de la arquitectura frontend y mobile, crear una base de UI compartida e integrar autenticación, pagos y estado en tiempo real sin frenar la entrega.",
+        "action": "Diseñé una arquitectura modular basada en features; construí una librería única de componentes React y React Native; integré APIs REST seguras; cubrí más de 20 flujos críticos con pruebas automatizadas; implementé un flujo de AI harnessing con agentes, restricciones y sub-agentes; mentoricé al equipo y lideré revisiones.",
+        "result": "La entrega de funcionalidades se volvió un 25% más rápida, bajaron la deuda técnica y las regresiones, y el onboarding de nuevos ingenieros pasó a ser un proceso repetible.",
+        "metrics": {
+          "delivery": "más velocidad de entrega",
+          "paths": "flujos críticos testeados",
+          "library": "librería de componentes compartida"
+        }
+      },
+      "awaq": {
+        "situation": "La plataforma de AWAQ debía mantenerse rápida para usuarios de baja latencia mientras extendía integraciones SAP, y cada release dependía de pasos manuales.",
+        "task": "Mejorar la respuesta y la retención, construir UI reutilizable conectada a servicios Node y Express, y eliminar el trabajo manual de release.",
+        "action": "Construí componentes React de alto rendimiento; entregué más de 6 componentes de UI reutilizables integrados con APIs propias; extendí funcionalidades de SAP; automaticé CI/CD con GitHub Actions; documenté la arquitectura y mentoricé al equipo.",
+        "result": "El tiempo de desarrollo de funcionalidades cayó un 30%, desaparecieron los errores manuales de despliegue y las operaciones entre sistemas siguieron funcionando sin interrupciones.",
+        "metrics": {
+          "time": "menos tiempo de desarrollo",
+          "components": "componentes de UI reutilizables",
+          "deployErrors": "errores manuales de despliegue"
+        },
+        "note": "AWAQ trabajó en las plataformas Somos Awaq y ACI."
+      },
+      "happ3n": {
+        "situation": "Happ3n estaba llevando una plataforma de eventos Web3 a usuarios internacionales mientras tres funcionalidades importantes tenían fechas fijas.",
+        "task": "Entregar interfaces multiidioma, accesibles y responsive, conectadas a microservicios REST sin comprometer el uptime.",
+        "action": "Implementé i18n e interfaces accesibles en React y React Native Web; integré el frontend con microservicios REST; orquesté despliegues automatizados en Vercel y Railway.",
+        "result": "Las tres funcionalidades se entregaron a tiempo, los despliegues mantuvieron un 99,9% de uptime y la plataforma llegó a nuevas audiencias internacionales.",
+        "metrics": {
+          "features": "funcionalidades importantes a tiempo",
+          "uptime": "uptime de despliegue"
+        }
+      }
+    }
+  },
+  "Projects": {
+    "PhotoPuzzle": "Un juego de rompecabezas móvil donde podés armar puzzles con tus propias fotos o jugar con paisajes prediseñados, registrar tus mejores tiempos y compartir tus victorias.",
+    "RNFactory": "Una fábrica de apps React Native y Expo que acelera el arranque de proyectos móviles con AI harnessing, arquitectura monorepo compartida y monetización integrada.",
+    "LobaCounter": "Una app móvil para llevar el conteo del juego de cartas tradicional “La Loba”, con rondas en tiempo real, gestión de jugadores y sin anotaciones manuales. Publicada en Google Play con EAS.",
+    "BelandApp": "Una app móvil para Beland, una empresa Web3 que crea su propia criptomoneda ecológica, donde los usuarios pueden participar y adquirir entradas y productos relacionados.",
+    "Awaq": "Una plataforma web para la ONG Somos Awaq, enfocada en protección ambiental y desarrollo social, con gestión de proyectos, eventos y donaciones.",
+    "SurveyApp": "Una PWA para iOS, Android y Windows usada por encuestadores políticos, con interfaz mobile-first, gráficos dinámicos y analíticas automáticas de progreso.",
+    "Milagros Cosmetic": "Un e-commerce con productos, blog y cursos para una práctica de dermocosmiatría, construido con SEO y contenido pensado para buscadores.",
+    "Gilson Regalos": "Una tienda de juguetes con promociones, artículos, página institucional y CTA de contacto por WhatsApp, además de SEO automatizado y catálogo dinámico.",
+    "Node Ready": "Un starter de backend con Node.js y Express, auth JWT, PostgreSQL y MongoDB, documentación completa de la API en Swagger y estructura lista para desplegar.",
+    "NearVet": "Una app para clínicas veterinarias con CRUD de usuarios, mascotas, veterinarios, turnos e historiales, integración de pagos y base de datos alojada en Render.",
+    "ShopAll": "Una plantilla de e-commerce de celulares, tablets y computadoras, con páginas de producto detalladas y precios servidos desde PostgreSQL.",
+    "Leyria & De Menezes": "Un sitio para un estudio jurídico con noticias, certificaciones y reserva de turnos online, pensado para reutilizarse en otros estudios.",
+    "ShowFilms": "Un explorador de películas con descripciones, elenco, directores y puntuaciones, construido con HTML, CSS y JavaScript puros y MongoDB para mostrar fundamentos sin frameworks.",
+    "Sumario Legal API": "Una API de texto legal que transforma datos estructurados de casos en documentos Word estandarizados, usando Gemini para redactar resúmenes de sentencias."
+  },
+  "Contact": {
+    "eyebrow": "Contacto",
+    "title": "Construyamos algo medible",
+    "intro": "Estoy abierto a roles full-time y por contrato donde pueda hacerme cargo de la arquitectura frontend, lanzar producto y trabajar cerca del usuario. El email es la vía más rápida — normalmente respondo en un día.",
+    "channels": {
+      "mail": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "location": "Basado en Barcelona, España · Remoto",
+    "availability": "Abierto a roles full-time y por contrato",
+    "languages": "Español (nativo) · Inglés (B2)"
+  },
+  "Footer": {
+    "tagline": "Desarrollador Full Stack & Frontend Engineer",
+    "security": "Este sitio tiene cabeceras de seguridad configuradas. Verificalas en",
+    "analytics": "Analíticas sin cookies y respetuosas de la privacidad con Umami",
+    "rights": "© {{year}} Víctor De Menezes. Hecho con Next.js y Tailwind CSS."
+  },
+  "Movile": {
+    "title": "Vista móvil",
+    "description": "Vista previa del portafolio en un marco de teléfono.",
+    "back": "Volver al sitio",
+    "iframeTitle": "Vista previa móvil del portafolio"
+  },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscás no existe o cambió de lugar.",
+    "back": "Volver al inicio"
+  }
+}

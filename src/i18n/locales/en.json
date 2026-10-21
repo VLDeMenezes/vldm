@@ -1,0 +1,232 @@
+{
+  "Meta": {
+    "title": "Víctor De Menezes — Full Stack Developer & Frontend Engineer",
+    "description": "Full Stack Developer and Frontend Engineer with 6+ years building scalable web and mobile products with React, React Native, Next.js, TypeScript and Node.js. Based in Barcelona, open to remote roles.",
+    "ogAlt": "Víctor De Menezes, Full Stack Developer and Frontend Engineer"
+  },
+  "A11y": {
+    "skip": "Skip to content",
+    "primaryNav": "Primary navigation",
+    "openProject": "Open project details for {{name}}",
+    "closeDialog": "Close project details",
+    "toggleTheme": "Toggle dark mode",
+    "switchToSpanish": "Switch to Spanish",
+    "switchToEnglish": "Switch to English",
+    "viewCv": "View CV in a new tab",
+    "openLinkedIn": "Open LinkedIn profile in a new tab",
+    "openGitHub": "Open GitHub profile in a new tab",
+    "sendEmail": "Send an email to Víctor",
+    "opensInNewTab": "opens in a new tab",
+    "logoAlt": "{{company}} logo",
+    "technologies": "Technologies used",
+    "selected": "Selected"
+  },
+  "Nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "greeting": "Hey, let's get to know each other",
+    "name": "Víctor De Menezes",
+    "role": "Full Stack Developer & Frontend Engineer",
+    "stack": "React · React Native · Next.js · TypeScript · Node.js",
+    "summary": "I build scalable web and mobile products end to end. Six years across fintech, Web3 and e-commerce, turning complex requirements into shipped features with measurable impact.",
+    "goal": "I turn product requirements into shipped, measurable features.",
+    "viewCv": "View CV",
+    "viewWork": "See selected work",
+    "location": "Barcelona, Spain · Remote",
+    "experience": "6+ years of experience"
+  },
+  "Experience": {
+    "title": "Experience",
+    "subtitle": "Six years shipping web and mobile products across fintech, Web3 and e-commerce.",
+    "present": "Present",
+    "remote": "Remote",
+    "fullTime": "Full-time",
+    "contract": "Contract",
+    "impact": "Selected impact",
+    "stack": "Stack",
+    "items": {
+      "beland": {
+        "role": "Founding Product Engineer — Frontend & Mobile",
+        "achievements": [
+          "Architected a modular, feature-based frontend for an e-wallet platform, accelerating feature delivery by 25% and reducing technical debt.",
+          "Created a unified React and React Native component library used across core multi-platform workflows.",
+          "Integrated secure REST APIs for authentication, payment processing and real-time state synchronization.",
+          "Designed and executed automated unit and functional tests covering 20+ core user paths, reducing production regressions.",
+          "Introduced an AI harnessing system (agents, constraints and sub-agents) that automates repetitive development workflows.",
+          "Mentored junior engineers and led technical code reviews, raising code quality and delivery efficiency."
+        ]
+      },
+      "awaq": {
+        "role": "Frontend Engineer / Full Stack Developer",
+        "achievements": [
+          "Built performant React components optimized for low-latency access, improving responsiveness and user retention.",
+          "Created 6+ reusable UI components integrated with custom Node.js and Express REST APIs, cutting feature development time by 30%.",
+          "Extended custom SAP functionality and enterprise business integrations.",
+          "Engineered CI/CD workflows with GitHub Actions, eliminating manual deployment errors.",
+          "Authored core architecture documentation and mentored developers in an Agile team."
+        ]
+      },
+      "happ3n": {
+        "role": "Frontend / Full Stack Developer",
+        "achievements": [
+          "Delivered multi-language support (i18n) and responsive, accessible React and React Native Web interfaces.",
+          "Shipped 3 major Web3 features on time, integrating the UI with RESTful backend microservices.",
+          "Orchestrated automated cloud deployments on Vercel and Railway, sustaining 99.9% uptime."
+        ]
+      },
+      "prisma": {
+        "role": "Frontend / Full Stack Developer",
+        "achievements": [
+          "Delivered 5+ custom web and mobile products from requirement analysis to deployment.",
+          "Designed full-stack workflows, RESTful API architectures and SAP ecosystem integrations.",
+          "Modeled databases and implemented authentication and authorization services (JWT/OAuth).",
+          "Standardized architecture with SOLID and Clean Code practices across client projects."
+        ]
+      }
+    }
+  },
+  "Skills": {
+    "title": "Skills",
+    "subtitle": "The tools I use daily, grouped by how I apply them.",
+    "core": "Core stack",
+    "groups": {
+      "frontend": "Frontend",
+      "mobile": "Mobile",
+      "backend": "Backend & data",
+      "testing": "Testing",
+      "ai": "AI-assisted engineering",
+      "cloud": "Cloud, DevOps & delivery",
+      "tools": "Monitoring & tooling",
+      "practices": "Practices"
+    }
+  },
+  "Work": {
+    "title": "Selected work",
+    "subtitle": "Selected products from my CV, ordered by impact. Open any card for the full stack and links.",
+    "featured": "Featured",
+    "more": "More projects",
+    "live": "Live site",
+    "code": "Source code",
+    "role": "Role",
+    "year": "Year",
+    "technologies": "Technologies",
+    "impact": {
+      "belandapp": "E-wallet features shipped across iOS, Android and web from one component system.",
+      "rnfactory": "Mobile app factory that bootstraps React Native projects with AI workflows and monetization.",
+      "lobacounter": "Real-time score tracking that replaced pen and paper for a traditional card game.",
+      "surveyapp": "Offline-friendly PWA with live charts for political survey teams.",
+      "sumariolegal": "AI-assisted legal summaries, exported as editable Word documents.",
+      "gilson": "Production storefront with SEO, dynamic catalogs and a WhatsApp conversion path.",
+      "awaq": "NGO platform with reusable React components wired to Node and Express services.",
+      "nearvet": "Veterinary clinic CRUD app with appointments, records and payment integration.",
+      "photopuzzle": "Cross-platform puzzle game with custom photo puzzles and shareable records.",
+      "milagros": "SEO-focused e-commerce for a cosmetic dermatology practice.",
+      "nodeready": "Opinionated Node and Express starter with JWT auth, PostgreSQL, MongoDB and Swagger.",
+      "shopall": "Apple-focused e-commerce template with product data served from PostgreSQL.",
+      "leyria": "Law firm site with news, certifications and online appointment booking.",
+      "showfilms": "Framework-free movie explorer built to demonstrate core HTML, CSS and JS."
+    },
+    "roles": {
+      "mobile": "Mobile",
+      "frontend": "Frontend",
+      "fullstack": "Full stack",
+      "backend": "Backend"
+    }
+  },
+  "CaseStudies": {
+    "eyebrow": "Case studies",
+    "title": "Three projects, measured by their outcome",
+    "subtitle": "Three projects where a specific change produced a number I can defend.",
+    "situation": "Situation",
+    "task": "Task",
+    "action": "Action",
+    "result": "Result",
+    "impact": "Impact",
+    "open": "Open {{company}}",
+    "items": {
+      "beland": {
+        "situation": "Beland was building an e-wallet that had to ship the same core flows on web and mobile, while the codebase was growing faster than the team.",
+        "task": "Own the frontend and mobile architecture, create a shared UI foundation, and integrate authentication, payments and real-time state without slowing delivery.",
+        "action": "Designed a modular, feature-based architecture; built one React and React Native component library; integrated secure REST APIs; covered 20+ core paths with automated tests; introduced an AI harnessing workflow with agents, constraints and sub-agents; mentored juniors and led reviews.",
+        "result": "Feature delivery became 25% faster, technical debt and production regressions dropped, and onboarding new engineers became a repeatable process.",
+        "metrics": {
+          "delivery": "faster feature delivery",
+          "paths": "core user paths tested",
+          "library": "shared component library"
+        }
+      },
+      "awaq": {
+        "situation": "AWAQ's platform had to stay fast for low-latency users while extending SAP integrations, and every release depended on manual deployment steps.",
+        "task": "Improve responsiveness and retention, build reusable UI connected to Node and Express services, and remove manual release work.",
+        "action": "Built performant React components; shipped 6+ reusable UI components integrated with custom APIs; extended SAP functionality; automated CI/CD with GitHub Actions; documented the architecture and mentored the team.",
+        "result": "Feature development time fell by 30%, manual deployment errors disappeared, and cross-system operations kept running without interruptions.",
+        "metrics": {
+          "time": "less feature development time",
+          "components": "reusable UI components",
+          "deployErrors": "manual deploy errors"
+        },
+        "note": "AWAQ worked on the Somos Awaq and ACI platforms."
+      },
+      "happ3n": {
+        "situation": "Happ3n was taking a Web3 events platform to international users while three major features had fixed deadlines.",
+        "task": "Deliver multilingual, accessible, responsive interfaces and connect them to REST microservices without compromising uptime.",
+        "action": "Implemented i18n and accessible React and React Native Web UI; integrated the frontend with RESTful microservices; orchestrated automated cloud deployments on Vercel and Railway.",
+        "result": "All three features shipped on time, deployments held 99.9% uptime, and the platform reached new international audiences.",
+        "metrics": {
+          "features": "major features on time",
+          "uptime": "deployment uptime"
+        }
+      }
+    }
+  },
+  "Projects": {
+    "PhotoPuzzle": "A mobile puzzle game where players build puzzles from their own photos or play curated ones, track their best times and share wins.",
+    "RNFactory": "A React Native and Expo app factory that speeds up mobile bootstrapping with AI harnessing, shared monorepo architecture and built-in monetization.",
+    "LobaCounter": "A mobile scorekeeper for the traditional card game “La Loba”, with real-time rounds, player management and no manual notes. Published on Google Play with EAS.",
+    "BelandApp": "A mobile app for Beland, a Web3 company building its own eco cryptocurrency, where users can participate and acquire entries and related products.",
+    "Awaq": "A web platform for the NGO Somos Awaq, focused on environmental protection and social development, with project, event and donation management.",
+    "SurveyApp": "A PWA for iOS, Android and Windows used by political pollsters, with a mobile-first interface, dynamic charts and automatic progress analytics.",
+    "Milagros Cosmetic": "An e-commerce site with products, blog and courses for a cosmetic dermatology practice, built with SEO and search-friendly content.",
+    "Gilson Regalos": "A toy store storefront with promotions, articles, an about page and a WhatsApp contact CTA, plus automated SEO and a dynamic catalog.",
+    "Node Ready": "A Node.js and Express backend starter with JWT auth, PostgreSQL and MongoDB, full API documentation in Swagger and a deploy-ready structure.",
+    "NearVet": "A veterinary clinic app with CRUD for users, pets, veterinarians, appointments and medical records, payment integration and a Render-hosted database.",
+    "ShopAll": "An e-commerce template for phones, tablets and computers, with detailed product pages and prices served from PostgreSQL.",
+    "Leyria & De Menezes": "A law firm website with news, certifications and online appointment booking, designed to be reused by other practices.",
+    "ShowFilms": "A movie explorer with descriptions, cast, directors and ratings, built with plain HTML, CSS and JavaScript plus MongoDB to show framework-free fundamentals.",
+    "Sumario Legal API": "A legal-text API that transforms structured case data into standardized Word documents, using Gemini to draft summaries for court rulings."
+  },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "Let's build something measurable",
+    "intro": "I'm open to full-time and contract roles where I can own frontend architecture, ship product and work close to the user. Email is the fastest way to reach me — I usually reply within a day.",
+    "channels": {
+      "mail": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "location": "Based in Barcelona, Spain · Remote",
+    "availability": "Open to full-time and contract roles",
+    "languages": "Spanish (native) · English (B2)"
+  },
+  "Footer": {
+    "tagline": "Full Stack Developer & Frontend Engineer",
+    "security": "Security headers are configured on this site. Check them at",
+    "analytics": "Cookieless, privacy-friendly analytics with Umami",
+    "rights": "© {{year}} Víctor De Menezes. Built with Next.js and Tailwind CSS."
+  },
+  "Movile": {
+    "title": "Mobile preview",
+    "description": "Preview of the portfolio in a phone frame.",
+    "back": "Back to the site",
+    "iframeTitle": "Mobile preview of the portfolio"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has moved.",
+    "back": "Back to home"
+  }
+}

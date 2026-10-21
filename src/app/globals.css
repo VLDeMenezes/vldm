@@ -1,64 +1,127 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@media (prefers-reduced-motion: reduce) {
-  .animate-backgroundMove {
-    animation: none;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    /* Accessible light-mode accent: 6.15:1 on the case-study surface. */
+    --detail-light: 191 99 22;
+  }
+
+  .dark {
+    color-scheme: dark;
+    /* Lighter accent for dark surfaces: 7.35:1+ on SurfaceDark/Darkground. */
+    --detail-light: 242 166 90;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-Background text-Ink dark:bg-Darkground dark:text-InkDark;
+    min-height: 100vh;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  ::selection {
+    @apply bg-SectionLigth text-Ink;
+  }
+
+  :where(a, button, summary, input, select, textarea, [tabindex]):focus-visible {
+    outline: 3px solid #04121a;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px #ffd166;
+  }
+
+  .dark :where(a, button, summary, input, select, textarea, [tabindex]):focus-visible {
+    outline-color: #ffd166;
+    box-shadow: 0 0 0 6px #011720;
+  }
+
+  section {
+    scroll-margin-top: 1.5rem;
+  }
+
+  #main:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  dialog::backdrop {
+    background: rgb(0 0 0 / 0.65);
+    backdrop-filter: blur(4px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
-:root {
-  scroll-behavior: smooth;
-}
 
-body {
-  @apply bg-Background dark:bg-Darkground text-gray-50 dark:text-iconDarkSelect;
-  height: 100%;
-}
+@layer components {
+  .skip-link {
+    @apply sr-only;
+  }
 
-h1 {
-  @apply text-3xl font-bold text-SectionDark dark:text-SectionLigth;
+  .skip-link:focus {
+    @apply fixed left-4 top-4 z-[100] not-sr-only rounded-md bg-Ink px-4 py-3 text-base font-semibold text-white shadow-xl;
+  }
+
+  .section-shell {
+    @apply mx-auto w-[92%] max-w-content md:w-[86%];
+  }
+
+  .surface-card {
+    @apply rounded-xl border border-black/10 bg-Surface p-6 shadow-sm dark:border-white/10 dark:bg-SurfaceDark;
+  }
+
+  .muted {
+    @apply text-InkMuted dark:text-InkDarkMuted;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-black/10 bg-black/5 px-2.5 py-1 text-xs font-medium text-black dark:border-white/15 dark:bg-white/10 dark:text-InkDark;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-AccentInk dark:text-DetailLight;
+  }
+
+  .button-primary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-SectionDark px-5 py-2.5 text-sm font-semibold text-white transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-SectionDark/90 active:translate-y-0 dark:bg-DetailLight dark:text-Ink dark:hover:bg-DetailLight/90;
+  }
+
+  .button-secondary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-current px-5 py-2.5 text-sm font-semibold transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-black/5 active:translate-y-0 dark:hover:bg-white/10;
+  }
+
+  .link-accent {
+    @apply font-semibold text-AccentInk underline decoration-2 underline-offset-4 hover:text-AccentInk/80 dark:text-DetailLight dark:hover:text-DetailLight/80;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
 
-.navbar-item {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.navbar-item-selected {
-  transform: scale(1.2);
-}
-
-.parallax {
-  background-image: url("/profile.webp");
-  height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-body {
-  -webkit-overflow-scrolling: touch;
-  /* Para un scroll suave en iOS */
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 1fr;
-}
-.card-selected {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-.card-selected-div {
-}
 @keyframes backgroundMove {
   0% {
     background-position: 0 0;
@@ -66,25 +129,154 @@ body {
 
   100% {
     background-position: 100vw 0;
-    /* Mueve el fondo hacia la derecha */
   }
 }
 
 .animate-backgroundMove {
   animation: backgroundMove 30s linear infinite;
-  /* 30 segundos para un ciclo completo */
 }
 
-@keyframes roundAnimation {
+/* Hero portrait: a restrained float, a soft accent glow and a single sheen on
+   load. The image itself stays fully opaque so it can remain the LCP element. */
+.hero-visual {
+  animation: heroFloat 7s ease-in-out infinite;
+}
+
+.hero-visual__glow {
+  position: absolute;
+  inset: 9% 7% 5%;
+  z-index: 0;
+  border-radius: 9999px;
+  background: radial-gradient(
+    closest-side,
+    rgb(var(--detail-light) / 0.3),
+    transparent 72%
+  );
+  filter: blur(30px);
+  animation: heroGlow 6.5s ease-in-out infinite;
+}
+
+.hero-visual__image {
+  transition: transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.hero-visual:hover .hero-visual__image {
+  transform: scale(1.02);
+}
+
+.hero-visual__sheen {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 32%,
+    rgb(255 255 255 / 0.22) 50%,
+    transparent 68%
+  );
+  transform: translateX(-140%) skewX(-16deg);
+  animation: heroSheen 1.8s 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.hero-visual__bar {
+  transform-origin: left;
+  animation: heroBar 0.9s 0.15s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes heroGlow {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.96);
+  }
+
+  50% {
+    opacity: 0.55;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes heroSheen {
   0% {
-    border-radius: 0;
+    opacity: 0;
+    transform: translateX(-140%) skewX(-16deg);
+  }
+
+  18% {
+    opacity: 1;
   }
 
   100% {
-    border-radius: 50%;
+    opacity: 0;
+    transform: translateX(240%) skewX(-16deg);
   }
 }
 
-.animate-rounded {
-  animation: roundAnimation 5s ease-in-out forwards;
+@keyframes heroBar {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Native dialog: a quick modal lift on desktop and an iOS-style bottom sheet
+   on small screens. Closing is immediate, so focus returns without delay. */
+dialog[open] {
+  animation: dialogEnter 0.24s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+dialog[open]::backdrop {
+  animation: backdropEnter 0.22s ease-out both;
+}
+
+@media (max-width: 767px) {
+  dialog[open] {
+    animation: sheetEnter 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+}
+
+@keyframes dialogEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes sheetEnter {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes backdropEnter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

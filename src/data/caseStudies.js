@@ -1,0 +1,61 @@
+export const caseStudies = [
+  {
+    id: "beland",
+    company: "Beland",
+    logo: "/Jobs/beland-logo.png",
+    period: "2025 — Present",
+    url: "https://beland.app",
+    stack: [
+      "React",
+      "React Native",
+      "TypeScript",
+      "REST APIs",
+      "AWS",
+      "Automated Testing",
+    ],
+    metrics: [
+      { value: "+25%", labelKey: "CaseStudies.items.beland.metrics.delivery" },
+      { value: "20+", labelKey: "CaseStudies.items.beland.metrics.paths" },
+      { value: "1", labelKey: "CaseStudies.items.beland.metrics.library" },
+    ],
+  },
+  {
+    id: "awaq",
+    company: "AWAQ",
+    logo: "/Jobs/awaq-logo.png",
+    period: "2025",
+    url: "https://www.somosawaq.org/",
+    stack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "SAP",
+      "GitHub Actions",
+      "CI/CD",
+    ],
+    metrics: [
+      { value: "−30%", labelKey: "CaseStudies.items.awaq.metrics.time" },
+      { value: "6+", labelKey: "CaseStudies.items.awaq.metrics.components" },
+      { value: "0", labelKey: "CaseStudies.items.awaq.metrics.deployErrors" },
+    ],
+  },
+  {
+    id: "happ3n",
+    company: "Happ3n XYZ",
+    logo: "/Jobs/happ3n-logo.png",
+    period: "2024 — 2025",
+    stack: [
+      "React",
+      "React Native",
+      "TypeScript",
+      "Web3",
+      "i18n",
+      "Vercel",
+      "Railway",
+    ],
+    metrics: [
+      { value: "3", labelKey: "CaseStudies.items.happ3n.metrics.features" },
+      { value: "99.9%", labelKey: "CaseStudies.items.happ3n.metrics.uptime" },
+    ],
+  },
+];
