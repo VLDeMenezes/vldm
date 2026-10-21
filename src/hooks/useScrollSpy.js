@@ -3,39 +3,60 @@
 import { useEffect, useState } from "react";
 
 /**
- * Tracks which section is currently in the viewport. Used by the navigation
- * to expose aria-current without listening to every scroll event.
+ * Tracks which section currently occupies a reference line near the top of the
+ * viewport. A reference line is more reliable than an IntersectionObserver
+ * band: when scrolling up from the footer, the previous section becomes active
+ * as soon as it crosses the line, even before its heading reaches the top.
  */
 export function useScrollSpy(ids) {
   const [active, setActive] = useState(ids[0] ?? null);
   const key = ids.join("|");
 
   useEffect(() => {
-    const elements = key
+    const sections = key
       .split("|")
       .map((id) => document.getElementById(id))
       .filter(Boolean);
 
-    if (!elements.length) return undefined;
+    if (!sections.length) return undefined;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    let frame = 0;
 
-        if (visible[0]?.target.id) {
-          setActive(visible[0].target.id);
+    const update = () => {
+      frame = 0;
+      const line = window.innerHeight * 0.35;
+      let current = sections[0].id;
+
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= line) {
+          current = section.id;
         }
-      },
-      {
-        rootMargin: "-20% 0px -60% 0px",
-        threshold: [0, 0.25, 0.5, 0.75, 1],
       }
-    );
 
-    elements.forEach((element) => observer.observe(element));
-    return () => observer.disconnect();
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
+
+      if (atBottom) {
+        current = sections[sections.length - 1].id;
+      }
+
+      setActive((previous) => (previous === current ? previous : current));
+    };
+
+    const requestUpdate = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    update();
+
+    return () => {
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
   }, [key]);
 
   return active;

@@ -43,7 +43,7 @@ export default function SkillsSection() {
               {group.items.map((item) => (
                 <li
                   key={item}
-                  className="chip dark cursor-default hover:bg-DetailLight hover:text-white dark:hover:bg-Detail"
+                  className="chip dark cursor-default hover:bg-DetailLight hover:text-Ink dark:hover:bg-Detail dark:hover:text-Ink"
                 >
                   {item}
                 </li>

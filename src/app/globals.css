@@ -5,10 +5,14 @@
 @layer base {
   :root {
     color-scheme: light;
+    /* Accessible light-mode accent: 6.15:1 on the case-study surface. */
+    --detail-light: 191 99 22;
   }
 
   .dark {
     color-scheme: dark;
+    /* Lighter accent for dark surfaces: 7.35:1+ on SurfaceDark/Darkground. */
+    --detail-light: 242 166 90;
   }
 
   html {

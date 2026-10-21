@@ -75,7 +75,7 @@ export default function CaseStudiesSection() {
               <dl className="space-y-3">
                 {STAR_PARTS.map((part) => (
                   <div key={part}>
-                    <dt className="text-[0.65rem] font-bold uppercase tracking-[0.16em] text-DetailLight">
+                    <dt className="text-[0.65rem] font-bold uppercase tracking-[0.16em] text-AccentInk dark:text-DetailLight">
                       {t(`CaseStudies.${part}`)}
                     </dt>
                     <dd className="mt-0.5 text-sm leading-relaxed">

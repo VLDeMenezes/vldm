@@ -1,8 +1,7 @@
 "use client";
 
 import { useCallback, useSyncExternalStore } from "react";
-
-const THEME_EVENT = "vldm:themechange";
+import { THEME_EVENT } from "@/lib/theme";
 
 function subscribe(callback) {
   const media = window.matchMedia("(prefers-color-scheme: dark)");

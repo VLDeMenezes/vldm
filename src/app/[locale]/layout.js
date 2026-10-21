@@ -8,6 +8,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import SkipLink from "@/components/SkipLink";
 import Analytics from "@/components/Analytics";
+import ThemeSync from "@/components/ThemeSync";
 import { profile } from "@/data/profile";
 
 const geistSans = localFont({
@@ -124,8 +125,6 @@ const personSchema = {
   ],
 };
 
-const themeScript = `(function(){try{var stored=localStorage.getItem("theme");var dark=stored?stored==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.classList.toggle("dark",dark);}catch(e){}})();`;
-
 export default async function LocaleLayout({ children, params }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
@@ -141,7 +140,6 @@ export default async function LocaleLayout({ children, params }) {
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: schema }}
@@ -155,6 +153,7 @@ export default async function LocaleLayout({ children, params }) {
         />
 
         <I18nProvider key={locale} locale={locale}>
+          <ThemeSync />
           <SkipLink />
           <header>
             <NavBar />

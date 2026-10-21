@@ -215,5 +215,120 @@ for (const width of [320, 768, 1440]) {
   await context.close();
 }
 
+// 6. Scroll spy: the section line changes before a heading reaches the top
+{
+  const context = await browser.newContext({
+    viewport: { width: 1440, height: 900 },
+  });
+  const page = await context.newPage();
+  const errors = [];
+  watchConsole(page, errors);
+  await page.goto(`${baseUrl}/en`, { waitUntil: "networkidle" });
+
+  const active = () =>
+    page
+      .locator('nav a[aria-current="location"]')
+      .textContent()
+      .then((text) => text?.trim() ?? null);
+
+  const positions = await page.evaluate(() =>
+    Object.fromEntries(
+      ["home", "experience", "work", "contact"].map((id) => {
+        const element = document.getElementById(id);
+        return [id, { top: element?.offsetTop ?? 0 }];
+      })
+    )
+  );
+  const bottom = await page.evaluate(
+    () => document.documentElement.scrollHeight - window.innerHeight
+  );
+
+  const at = async (y) => {
+    await page.evaluate((top) => window.scrollTo(0, top), y);
+    await page.waitForTimeout(220);
+    return active();
+  };
+
+  results.scrollSpy = {
+    atTop: await at(0),
+    atExperience: await at(positions.experience.top + 50),
+    atWork: await at(positions.work.top + 50),
+    atContact: await at(positions.contact.top + 50),
+    atBottom: await at(bottom),
+    afterScrollingUp100px: await at(bottom - 100),
+    consoleErrors: [...new Set(errors)],
+  };
+  await context.close();
+}
+
+// 7. Theme survives locale changes and starts before hydration
+{
+  const context = await browser.newContext({
+    viewport: { width: 1440, height: 1000 },
+  });
+  const page = await context.newPage();
+  const errors = [];
+  watchConsole(page, errors);
+
+  const pressed = () =>
+    page.locator("nav button[aria-pressed]").getAttribute("aria-pressed");
+
+  await page.goto(`${baseUrl}/en`, { waitUntil: "networkidle" });
+  await page.click('button[aria-label="Toggle dark mode"]');
+  await page.waitForTimeout(250);
+  const before = {
+    dark: await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    ),
+    pressed: await pressed(),
+  };
+
+  await page.click('button[aria-label*="Switch to Spanish"]');
+  await page.waitForURL("**/es");
+  await page.waitForTimeout(500);
+  const afterSwitch = {
+    dark: await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    ),
+    lang: await page.evaluate(() => document.documentElement.lang),
+    pressed: await pressed(),
+  };
+
+  await page.reload({ waitUntil: "domcontentloaded" });
+  const atDomContentLoaded = {
+    dark: await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    ),
+  };
+  await page.waitForLoadState("networkidle");
+  const afterReload = {
+    dark: await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    ),
+    pressed: await pressed(),
+  };
+
+  await page.click('button[aria-label*="Cambiar a inglés"]');
+  await page.waitForURL("**/en");
+  await page.waitForTimeout(500);
+  const afterBack = {
+    dark: await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    ),
+    lang: await page.evaluate(() => document.documentElement.lang),
+    pressed: await pressed(),
+  };
+
+  results.languageTheme = {
+    before,
+    afterSwitch,
+    atDomContentLoaded,
+    afterReload,
+    afterBack,
+    consoleErrors: [...new Set(errors)],
+  };
+  await context.close();
+}
+
 console.log(JSON.stringify(results, null, 2));
 await browser.close();

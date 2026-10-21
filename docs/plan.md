@@ -67,8 +67,8 @@ Measured contrast today (WCAG AA needs 4.5:1 for body text, 3:1 for large text/U
 
 - [x] Keep brand fills (`Background`, `Darkground`, `SectionLigth`, `SectionDark`, `Detail`)
 - [x] Add semantic tokens: `Ink` (#04121A), `InkMuted` (#3F4E52), `InkDark` (#EAF2F5),
-      `InkDarkMuted` (#B9CBD2), `AccentInk` (#7A3A08), `DetailLight` (#F2A65A),
-      `Surface` (#F3EBE4), `SurfaceDark` (#022E40), `Focus` (#FFD166)
+      `InkDarkMuted` (#B9CBD2), `AccentInk` (#7A3A08), `DetailLight` (#BF6316 on light,
+      #F2A65A on dark), `Surface` (#F3EBE4), `SurfaceDark` (#022E40), `Focus` (#FFD166)
 - [x] Body: `bg-Background text-Ink dark:bg-Darkground dark:text-InkDark`
 - [x] Sections: dark ink on orange, light ink on teal, in both themes
 - [x] Global `:focus-visible` double ring (dark inner + light outer) that works on every surface
@@ -88,8 +88,8 @@ Measured contrast today (WCAG AA needs 4.5:1 for body text, 3:1 for large text/U
 - [x] Skip link to `#main`; `header` / `nav[aria-label]` / `main` / `footer` landmarks
 - [x] One `<h1>` per page; section `<h2>`; card `<h3>`
 - [x] JSON-LD `Person` schema
-- [x] Remove the unpkg Lottie player and 605 KB JSON; the hero now uses a 15 KB static
-      poster (`hero-poster.webp`) of the final frame. This was the single biggest LCP win.
+- [x] Remove the unpkg Lottie player and 605 KB JSON; the hero now uses the optimized
+      static portrait (`/profile.webp`). This was the single biggest LCP win.
 - [x] Icons get `aria-hidden`; icon-only controls get `aria-label`
 - [x] Tooltips visible on hover **and** focus-visible
 - [x] Fix invalid `<p alt="...">` in `ContactSection`
@@ -97,10 +97,13 @@ Measured contrast today (WCAG AA needs 4.5:1 for body text, 3:1 for large text/U
 
 ### Navigation, theme, language
 
-- [x] `useScrollSpy` with `IntersectionObserver` (replaces per-scroll DOM scan)
+- [x] `useScrollSpy` with a rAF-throttled scroll/resize reference line (replaces the
+      IntersectionObserver band, which missed Work when scrolling up from the footer)
 - [x] `aria-current="location"` on the active section link
 - [x] Visible labels on desktop, accessible names on mobile
-- [x] Theme toggle is a `<button aria-pressed>`; inline pre-paint script avoids flash
+- [x] Theme toggle is a `<button aria-pressed>`; `instrumentation-client.js` applies
+      the stored theme before hydration and `ThemeSync` re-applies it on navigation,
+      so no inline script tag is rendered and the theme survives locale changes
 - [x] Language switcher is a `<button>` with an accessible name and pending state
 
 ### Project modal
@@ -117,8 +120,10 @@ accessibility ≥ 95. ✅
 
 **Result:** axe-core 0 violations in light, dark, EN, ES, 320 px, 1440 px and `/en/movile`. Lighthouse
 accessibility 100. Ink on orange is 4.56:1; chips use black text on the translucent
-overlay (5.05:1). The skip link moves focus to `#main`, the theme persists across reloads,
-and reduced motion is honoured globally.
+overlay (5.05:1). `DetailLight` resolves to #BF6316 in light and #F2A65A in dark, so
+case-study labels and links stay above 4.5:1 on both surfaces. The skip link moves
+focus to `#main`, the theme persists across reloads and locale changes, and reduced
+motion is honoured globally.
 
 ---
 
@@ -199,7 +204,7 @@ and in the first scroll, in both languages. ✅
 
 ## Phase 4 — Hooks refactor
 
-- [x] `useScrollSpy` — IntersectionObserver
+- [x] `useScrollSpy` — rAF-throttled reference line
 - [x] `useTheme` — localStorage + system preference + `<html>.dark`
 - [x] `useLocale` — locale switch, cookie, hash preservation, pending state
 - [x] `useDialog` — native `<dialog>` lifecycle + focus restore
@@ -340,6 +345,9 @@ React & React Native · Barcelona, Spain · victorleandrodemenezes@gmail.com ·
 - The footer links to securityheaders.com for `vldm.is-a.dev` and does **not** claim a
   letter grade. A nonce-based CSP would force dynamic rendering, so it is deliberately
   left out; the copy says headers are configured rather than overstating a grade.
+  `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`
+  and HSTS are present in the branch config; the published site (and its D scan) is
+  still the older deployment. Re-scan after deploying this branch.
 
 ## Appendix C — Progress log
 
@@ -354,3 +362,4 @@ React & React Native · Barcelona, Spain · victorleandrodemenezes@gmail.com ·
 | 2026-10-21 | Phase 4 | `useTheme`, `useLocale`, `useDialog`, `useBodyScrollLock`, `useScrollSpy`, `useScrollDepth`; native dialog focus/Escape verified. Removed unused `useLocalStorage`/`usePrefersReducedMotion`. |
 | 2026-10-21 | Phase 5 | Umami script + queue, all events wired (including `case_study_open`), UTM contact links, cookieless footer note. Local requests: script 200, pageview/theme/project/scroll events 200 with the website ID. Dashboard readback pending deploy. |
 | 2026-10-21 | Phase 6 | Final Lighthouse `/en` 95/100/100/100 mobile, 100/100/100/100 desktop; `/es` 95/100/100/100 mobile, 100/100/100/100 desktop; `/en/movile` 96/100/100/66. axe 0 including `/en/movile`; 0 overflow at 320/768/1440; skip link, theme persistence, reduced motion, dialog and `/movile` iframe/focus guard pass; prod audit 0. Cross-browser/VoiceOver/zoom and Netlify deploy remain manual. |
+| 2026-10-21 | Follow-up | Fixed scroll spy (reference line; Contact → Work after ~50 px up), removed the inline theme script (instrumentation + ThemeSync; no script warning, theme survives EN↔ES), restored WCAG AA contrast for the new orange palette, and added scroll-spy/locale-theme checks to `npm run qa`. QA: axe 0, 0 overflow, no console errors. Security headers: XFO/Referrer/Permissions/HSTS/nosniff configured in `netlify.toml`; CSP still intentionally absent. |
