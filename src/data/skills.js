@@ -15,6 +15,7 @@ export const skillGroups = [
       "React",
       "React Native",
       "Next.js",
+      "Angular",
       "JavaScript (ES6+)",
       "TypeScript",
       "HTML5",
