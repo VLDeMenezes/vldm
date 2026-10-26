@@ -466,5 +466,78 @@ for (const width of [320, 768, 1440]) {
   await context.close();
 }
 
+// 11. WebMCP menu: disclosure, shortcuts, responsive panel and axe
+for (const width of [1440, 320]) {
+  const height = width === 320 ? 900 : 1000;
+  const context = await browser.newContext({ viewport: { width, height } });
+  const page = await context.newPage();
+  const errors = [];
+  watchConsole(page, errors);
+  await page.goto(`${baseUrl}/en`, { waitUntil: "networkidle" });
+  await page.waitForTimeout(400);
+
+  const trigger = page.getByRole("button", {
+    name: "AI tools for agents",
+  });
+  const bucket = {};
+
+  bucket.webmcpSupported = await page.evaluate(
+    () => "modelContext" in document
+  );
+  bucket.expandedBefore = await trigger.getAttribute("aria-expanded");
+
+  await trigger.click();
+  await page.waitForTimeout(250);
+
+  bucket.expandedAfter = await page.evaluate(() =>
+    document
+      .querySelector('button[aria-controls="webmcp-panel"]')
+      ?.getAttribute("aria-expanded")
+  );
+  bucket.panel = await page.evaluate(() => {
+    const panel = document.getElementById("webmcp-panel");
+    if (!panel) return null;
+    const rect = panel.getBoundingClientRect();
+    return {
+      hidden: panel.hidden,
+      heading: panel.querySelector("h2")?.textContent?.trim(),
+      status: panel.querySelector('[aria-live="polite"]')?.textContent?.trim(),
+      tools: [...panel.querySelectorAll("[data-webmcp-tool]")].map((node) =>
+        node.getAttribute("data-webmcp-tool")
+      ),
+      insideViewport:
+        rect.left >= 0 && rect.right <= window.innerWidth + 0.5,
+    };
+  });
+  bucket.axeOpen = await analyze(page);
+
+  await page.keyboard.press("Escape");
+  await page.waitForTimeout(200);
+  bucket.afterEscape = await page.evaluate(() => ({
+    hidden: document.getElementById("webmcp-panel")?.hidden,
+    focus: document.activeElement?.getAttribute("aria-label"),
+  }));
+
+  await page.getByRole("button", { name: "AI tools for agents" }).click();
+  await page.waitForTimeout(200);
+  await page.evaluate(() =>
+    document.body.dispatchEvent(
+      new PointerEvent("pointerdown", { bubbles: true })
+    )
+  );
+  await page.waitForTimeout(200);
+  bucket.afterOutsideClick = await page.evaluate(
+    () => document.getElementById("webmcp-panel")?.hidden
+  );
+
+  await page.getByRole("button", { name: "AI tools for agents" }).click();
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: `/tmp/vldm-webmcp-${width}.png` });
+
+  bucket.consoleErrors = [...new Set(errors)];
+  results[`webmcp${width}`] = bucket;
+  await context.close();
+}
+
 console.log(JSON.stringify(results, null, 2));
 await browser.close();

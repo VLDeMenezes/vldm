@@ -212,6 +212,44 @@
     "availability": "Open to full-time and contract roles",
     "languages": "Spanish (native) · English (B2)"
   },
+  "WebMcp": {
+    "button": "AI tools",
+    "buttonLabel": "AI tools for agents",
+    "close": "Close AI tools",
+    "eyebrow": "WebMCP",
+    "title": "Tools for AI agents",
+    "intro": "This site exposes tools that AI agents in supported browsers can call directly. You can use the same shortcuts yourself.",
+    "promptLabel": "Try asking your agent",
+    "prompt": "Download Víctor's CV",
+    "status": {
+      "checking": "Checking browser support…",
+      "active": "Active in this browser",
+      "unsupported": "Not available in this browser",
+      "error": "Tools could not be registered"
+    },
+    "unsupportedHint": "WebMCP requires Chrome 149+ or the WebMCP testing flag. The shortcuts below still work.",
+    "readOnly": "Read-only",
+    "tools": {
+      "cv": {
+        "label": "Download CV",
+        "description": "Get Víctor's CV as a PDF."
+      },
+      "contact": {
+        "label": "Contact Víctor",
+        "description": "Open a prefilled email, LinkedIn or GitHub."
+      },
+      "rnfactory": {
+        "label": "Explore RNFactory",
+        "description": "Víctor's React Native and Expo app factory."
+      },
+      "profile": {
+        "label": "Profile summary",
+        "description": "Role, stack, location and links, read by agents."
+      }
+    },
+    "footer": "WebMCP is a proposed web standard.",
+    "learn": "About WebMCP"
+  },
   "Footer": {
     "tagline": "Full Stack Developer & Frontend Engineer",
     "security": "Security headers are configured on this site. Check them at",
