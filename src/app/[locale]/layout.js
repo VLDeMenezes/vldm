@@ -7,6 +7,7 @@ import I18nProvider from "@/i18n/I18nProvider";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import SkipLink from "@/components/SkipLink";
+import WebMcpMenu from "@/components/WebMcpMenu";
 import Analytics from "@/components/Analytics";
 import ThemeSync from "@/components/ThemeSync";
 import { profile } from "@/data/profile";
@@ -163,6 +164,7 @@ export default async function LocaleLayout({ children, params }) {
   const year = new Date().getFullYear();
   const meta = resources[locale]?.Meta ?? resources[defaultLocale].Meta;
   const copy = resources[locale] ?? resources[defaultLocale];
+  const originTrialToken = process.env.WEBMCP_ORIGIN_TRIAL_TOKEN;
   const pageUrl = `${profile.url}/${locale}`;
   const profileId = `${pageUrl}/#profile`;
   const websiteId = `${profile.url}/#website`;
@@ -225,6 +227,9 @@ export default async function LocaleLayout({ children, params }) {
       suppressHydrationWarning
     >
       <head>
+        {originTrialToken ? (
+          <meta httpEquiv="origin-trial" content={originTrialToken} />
+        ) : null}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: schema }}
@@ -240,6 +245,7 @@ export default async function LocaleLayout({ children, params }) {
         <I18nProvider key={locale} locale={locale}>
           <ThemeSync />
           <SkipLink />
+          <WebMcpMenu />
           <header>
             <NavBar />
           </header>

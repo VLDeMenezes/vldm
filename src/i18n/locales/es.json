@@ -212,6 +212,44 @@
     "availability": "Abierto a roles full-time y por contrato",
     "languages": "Español (nativo) · Inglés (B2)"
   },
+  "WebMcp": {
+    "button": "Herramientas IA",
+    "buttonLabel": "Herramientas IA para agentes",
+    "close": "Cerrar herramientas de IA",
+    "eyebrow": "WebMCP",
+    "title": "Herramientas para agentes de IA",
+    "intro": "Este sitio expone herramientas que los agentes de IA pueden usar directamente en navegadores compatibles. También puedes usar los mismos accesos tú.",
+    "promptLabel": "Prueba a pedirle a tu agente",
+    "prompt": "Descarga el CV de Víctor",
+    "status": {
+      "checking": "Comprobando compatibilidad…",
+      "active": "Activo en este navegador",
+      "unsupported": "No disponible en este navegador",
+      "error": "No se pudieron registrar las herramientas"
+    },
+    "unsupportedHint": "WebMCP requiere Chrome 149+ o el flag de pruebas de WebMCP. Los accesos de abajo siguen funcionando.",
+    "readOnly": "Solo lectura",
+    "tools": {
+      "cv": {
+        "label": "Descargar CV",
+        "description": "Obtén el CV de Víctor en PDF."
+      },
+      "contact": {
+        "label": "Contactar a Víctor",
+        "description": "Abre un correo, LinkedIn o GitHub ya preparados."
+      },
+      "rnfactory": {
+        "label": "Explorar RNFactory",
+        "description": "La fábrica de apps React Native y Expo de Víctor."
+      },
+      "profile": {
+        "label": "Resumen del perfil",
+        "description": "Rol, stack, ubicación y enlaces, para agentes."
+      }
+    },
+    "footer": "WebMCP es un estándar web propuesto.",
+    "learn": "Sobre WebMCP"
+  },
   "Footer": {
     "tagline": "Desarrollador Full Stack & Frontend Engineer",
     "security": "Este sitio tiene cabeceras de seguridad configuradas. Verificalas en",
