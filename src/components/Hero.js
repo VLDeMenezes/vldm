@@ -1,16 +1,57 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { IoDownloadOutline, IoArrowDownOutline } from "react-icons/io5";
 import { profile } from "@/data/profile";
 import { track } from "@/lib/analytics";
 import HeroVisual from "./HeroVisual";
 
-export default function Hero() {
+export default function Hero({ years }) {
   const { t } = useTranslation();
+  const heroRef = useRef(null);
+  const [displayedYears, setDisplayedYears] = useState(years);
+  const [isCounting, setIsCounting] = useState(false);
+
+  useEffect(() => {
+    if (
+      years <= 1 ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      !heroRef.current ||
+      !("IntersectionObserver" in window)
+    ) {
+      return;
+    }
+
+    let intervalId;
+    let startTimeoutId;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+
+      observer.disconnect();
+      setDisplayedYears(1);
+      startTimeoutId = window.setTimeout(() => {
+        let nextYears = 1;
+        setIsCounting(true);
+        intervalId = window.setInterval(() => {
+          nextYears += 1;
+          setDisplayedYears(nextYears);
+          if (nextYears >= years) window.clearInterval(intervalId);
+        }, 280);
+      }, 30);
+    });
+
+    observer.observe(heroRef.current);
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(startTimeoutId);
+      window.clearInterval(intervalId);
+    };
+  }, [years]);
 
   return (
     <section
+      ref={heroRef}
       id="home"
       aria-labelledby="hero-title"
       className="relative overflow-hidden rounded-2xl bg-Surface p-6 text-Ink dark:bg-SectionDark dark:text-InkDark md:p-10"
@@ -36,6 +77,19 @@ export default function Hero() {
           </p>
 
           <p className="mt-5 max-w-xl text-base leading-relaxed">
+            <span className="sr-only">+{years}</span>
+            <span className="experience-counter" aria-hidden="true">
+              <span
+                className={`experience-counter__track${isCounting ? " experience-counter__track--animated" : ""}`}
+                style={{
+                  transform: `translateY(-${years - displayedYears}em)`,
+                }}
+              >
+                {Array.from({ length: years }, (_, index) => (
+                  <span key={index}>+{years - index}</span>
+                ))}
+              </span>
+            </span>{" "}
             {t("Hero.summary")}
           </p>
 
@@ -62,7 +116,6 @@ export default function Hero() {
 
           <p className="mt-5 flex flex-wrap gap-x-4 gap-y-1 text-sm font-medium">
             <span>{t("Hero.location")}</span>
-            <span>{t("Hero.experience")}</span>
           </p>
         </div>
 
