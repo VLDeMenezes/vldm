@@ -30,18 +30,17 @@
   "Hero": {
     "greeting": "Hola, te invito a conocerme",
     "name": "Víctor De Menezes",
-    "role": "Desarrollador Full Stack & Frontend Engineer",
-    "stack": "React · React Native · Next.js · TypeScript · Node.js",
-    "summary": "Construyo productos web y móviles escalables de punta a punta. Seis años en fintech, Web3 y e-commerce, transformando requerimientos complejos en funcionalidades con impacto medible.",
+    "role": "Senior Software Engineer, React & React Native",
+    "stack": "React · React Native · Next.js · TypeScript · Node.js · NestJs",
+    "summary": "Desarrollando productos web y móviles escalables de punta a punta. ",
     "goal": "Transformo requerimientos de producto en funcionalidades medibles y en producción.",
     "viewCv": "Ver CV",
     "viewWork": "Ver proyectos",
-    "location": "Barcelona, España · Remoto",
-    "experience": "Más de 6 años de experiencia"
+    "location": "Barcelona, España · Remoto"
   },
   "Experience": {
     "title": "Experiencia",
-    "subtitle": "Seis años lanzando productos web y móviles en fintech, Web3 y e-commerce.",
+    "subtitle": "Desde las bases técnicas hasta la dirección de productos",
     "present": "Presente",
     "remote": "Remoto",
     "fullTime": "Tiempo completo",
@@ -50,14 +49,15 @@
     "stack": "Stack",
     "items": {
       "beland": {
-        "role": "Ingeniero de Producto Fundador — Frontend & Mobile",
+        "role": "Ingeniero de Producto — Frontend & Mobile",
         "achievements": [
-          "Diseñé una arquitectura frontend modular basada en features para una plataforma de e-wallet, acelerando la entrega de funcionalidades un 25% y reduciendo la deuda técnica.",
-          "Creé una librería de componentes unificada de React y React Native utilizada en los flujos principales de web y mobile.",
-          "Integré APIs REST seguras para autenticación, procesamiento de pagos y sincronización de estado en tiempo real.",
-          "Diseñé y ejecuté pruebas unitarias y funcionales automatizadas que cubren más de 20 flujos críticos, reduciendo regresiones en producción.",
-          "Implementé un sistema de AI harnessing (agentes, restricciones y sub-agentes) para automatizar flujos repetitivos de desarrollo.",
-          "Mentoricé a ingenieros junior y lideré revisiones de código, elevando la calidad y la eficiencia del equipo."
+          "Dirigí el desarrollo completo de múltiples productos web y móviles de alto impacto para clientes externos a través de alianzas estratégicas, utilizando React, React Native",
+          "Diseñé e implementé un AI-Harness para aprovechando el uso de IA con agentes personalizados, sub-agentes e inyección de contexto dinámico, impulsando la velocidad de desarrollo del equipo en más de un 40%",
+          "Integré servidores de Model Context Protocol (MCP) y herramientas WebMCP para otorgar a los flujos de trabajo agénticos acceso en tiempo real al contexto de la aplicación, esquemas de bases de datos y especificaciones de API externas.",
+          "Diseñé estructuras frontend escalables y modulares, así como bibliotecas de componentes unificadas en plataformas web y móviles, reduciendo drásticamente la deuda técnica.",
+          "Construí y mantuve servicios Backend robustos y micro-aplicaciones utilizando Node.js, NestJS y Python, asegurando una integración fluida con aplicaciones cliente multiplataforma.",
+          "Implementé canales de prueba automatizados con Playwright y E2E impulsados por arneses de pruebas agénticos, cubriendo más de 20 historias de usuario principales con una sobrecarga de mantenimiento mínima.",
+          "Mentor de los miembros del equipo en Spec Drive Development(SDD) y flujos de trabajo asistidos por IA, estableciendo estrictos estándares de calidad de código y revisiones automatizadas."
         ]
       },
       "awaq": {
@@ -149,10 +149,10 @@
     "open": "Abrir {{company}}",
     "items": {
       "beland": {
-        "situation": "Beland estaba construyendo una e-wallet que debía ofrecer los mismos flujos principales en web y mobile, mientras el código crecía más rápido que el equipo.",
+        "situation": "Beland estaba construyendo entre sus productos una e-wallet que debía ofrecer los mismos flujos principales en web y mobile, mientras el código crecía más rápido que el equipo.",
         "task": "Hacerme cargo de la arquitectura frontend y mobile, crear una base de UI compartida e integrar autenticación, pagos y estado en tiempo real sin frenar la entrega.",
         "action": "Diseñé una arquitectura modular basada en features; construí una librería única de componentes React y React Native; integré APIs REST seguras; cubrí más de 20 flujos críticos con pruebas automatizadas; implementé un flujo de AI harnessing con agentes, restricciones y sub-agentes; mentoricé al equipo y lideré revisiones.",
-        "result": "La entrega de funcionalidades se volvió un 25% más rápida, bajaron la deuda técnica y las regresiones, y el onboarding de nuevos ingenieros pasó a ser un proceso repetible.",
+        "result": "La entrega de funcionalidades se volvió un 40% más rápida, bajaron la deuda técnica y las regresiones, y el onboarding de nuevos ingenieros pasó a ser un proceso repetible.",
         "metrics": {
           "delivery": "más velocidad de entrega",
           "paths": "flujos críticos testeados",

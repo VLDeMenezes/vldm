@@ -1,8 +1,8 @@
 {
   "Meta": {
-    "title": "Víctor De Menezes — Full Stack Developer & Frontend Engineer",
-    "description": "Full Stack Developer and Frontend Engineer with 6+ years building scalable web and mobile products with React, React Native, Next.js, TypeScript and Node.js. Based in Barcelona, open to remote roles.",
-    "ogAlt": "Víctor De Menezes, Full Stack Developer and Frontend Engineer"
+    "title": "Víctor De Menezes — Full Stack Developer & Senior Software Engineer",
+    "description": "Full Stack Developer and Senior Software Engineer with 6+ years building scalable web and mobile products with React, React Native, Next.js, TypeScript and Node.js. Based in Barcelona, open to remote roles.",
+    "ogAlt": "Víctor De Menezes, Full Stack Developer and Senior Software Engineer"
   },
   "A11y": {
     "skip": "Skip to content",
@@ -30,18 +30,17 @@
   "Hero": {
     "greeting": "Hey, let's get to know each other",
     "name": "Víctor De Menezes",
-    "role": "Full Stack Developer & Frontend Engineer",
-    "stack": "React · React Native · Next.js · TypeScript · Node.js",
-    "summary": "I build scalable web and mobile products end to end. Six years across fintech, Web3 and e-commerce, turning complex requirements into shipped features with measurable impact.",
+    "role": "Senior Software Engineer, React & React Native",
+    "stack": "React · React Native · Next.js · TypeScript · Node.js · NestJs",
+    "summary": "Developing scalable web and mobile products end to end. ",
     "goal": "I turn product requirements into shipped, measurable features.",
     "viewCv": "View CV",
     "viewWork": "See selected work",
-    "location": "Barcelona, Spain · Remote",
-    "experience": "6+ years of experience"
+    "location": "Barcelona, Spain · Remote"
   },
   "Experience": {
     "title": "Experience",
-    "subtitle": "Six years shipping web and mobile products across fintech, Web3 and e-commerce.",
+    "subtitle": "From writing code to leading products",
     "present": "Present",
     "remote": "Remote",
     "fullTime": "Full-time",
@@ -52,12 +51,13 @@
       "beland": {
         "role": "Founding Product Engineer — Frontend & Mobile",
         "achievements": [
-          "Architected a modular, feature-based frontend for an e-wallet platform, accelerating feature delivery by 25% and reducing technical debt.",
-          "Created a unified React and React Native component library used across core multi-platform workflows.",
-          "Integrated secure REST APIs for authentication, payment processing and real-time state synchronization.",
-          "Designed and executed automated unit and functional tests covering 20+ core user paths, reducing production regressions.",
-          "Introduced an AI harnessing system (agents, constraints and sub-agents) that automates repetitive development workflows.",
-          "Mentored junior engineers and led technical code reviews, raising code quality and delivery efficiency."
+          "Spearheaded the end-to-end development of multiple high-impact web and mobile products for external clients through strategic alliances, utilizing React, React Native, Next.js, Node.js, NestJS, and Python",
+          "Designed and deployed an AI Harnessing framework with custom agents, sub-agents, and dynamic context injection, boosting team engineering velocity by over 40%",
+          "Integrated Model Context Protocol (MCP) servers and WebMCP tools to grant agentic workflows real-time access to application context, database schemas, and external API specifications.",
+          "Architected scalable, modular frontend structures and unified component libraries across web and mobile platforms, drastically reducing technical debt.",
+          "Built and maintained robust backend services and micro-apps using Node.js, NestJS, and Python, ensuring seamless integration with multi-platform client applications.",
+          "Implemented automated Playwright and E2E testing pipelines driven by agentic test harnesses, covering over 20 core user journeys with minimal maintenance overhead.",
+          "Mentored team members on Spec-Driven Development (SDD) and AI-assisted workflows, establishing strict code quality standards and automated review gates."
         ]
       },
       "awaq": {
@@ -152,7 +152,7 @@
         "situation": "Beland was building an e-wallet that had to ship the same core flows on web and mobile, while the codebase was growing faster than the team.",
         "task": "Own the frontend and mobile architecture, create a shared UI foundation, and integrate authentication, payments and real-time state without slowing delivery.",
         "action": "Designed a modular, feature-based architecture; built one React and React Native component library; integrated secure REST APIs; covered 20+ core paths with automated tests; introduced an AI harnessing workflow with agents, constraints and sub-agents; mentored juniors and led reviews.",
-        "result": "Feature delivery became 25% faster, technical debt and production regressions dropped, and onboarding new engineers became a repeatable process.",
+        "result": "Feature delivery became 40% faster, technical debt and production regressions dropped, and onboarding new engineers became a repeatable process.",
         "metrics": {
           "delivery": "faster feature delivery",
           "paths": "core user paths tested",
@@ -251,7 +251,7 @@
     "learn": "About WebMCP"
   },
   "Footer": {
-    "tagline": "Full Stack Developer & Frontend Engineer",
+    "tagline": "Full Stack Developer & Senior Software Engineer",
     "security": "Security headers are configured on this site. Check them at",
     "analytics": "Cookieless, privacy-friendly analytics with Umami",
     "rights": "© {{year}} Víctor De Menezes. Built with Next.js and Tailwind CSS."
