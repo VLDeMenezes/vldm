@@ -91,7 +91,10 @@ export default function ExperienceSection() {
                 aria-label={`${job.company} — ${t("Experience.stack")}`}
               >
                 {job.stack.map((tech) => (
-                  <li key={tech} className="chip">
+                  <li
+                    key={tech}
+                    className="chip cursor-default hover:scale-105 hover:bg-SectionLigth"
+                  >
                     {tech}
                   </li>
                 ))}

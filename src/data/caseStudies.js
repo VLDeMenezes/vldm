@@ -14,8 +14,8 @@ export const caseStudies = [
       "Automated Testing",
     ],
     metrics: [
-      { value: "+25%", labelKey: "CaseStudies.items.beland.metrics.delivery" },
-      { value: "20+", labelKey: "CaseStudies.items.beland.metrics.paths" },
+      { value: "+40%", labelKey: "CaseStudies.items.beland.metrics.delivery" },
+      { value: "+20", labelKey: "CaseStudies.items.beland.metrics.paths" },
       { value: "1", labelKey: "CaseStudies.items.beland.metrics.library" },
     ],
   },
@@ -25,17 +25,10 @@ export const caseStudies = [
     logo: "/Jobs/awaq-logo.png",
     period: "2025",
     url: "https://www.somosawaq.org/",
-    stack: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "SAP",
-      "GitHub Actions",
-      "CI/CD",
-    ],
+    stack: ["React", "Node.js", "Express.js", "SAP", "GitHub Actions", "CI/CD"],
     metrics: [
       { value: "−30%", labelKey: "CaseStudies.items.awaq.metrics.time" },
-      { value: "6+", labelKey: "CaseStudies.items.awaq.metrics.components" },
+      { value: "+6", labelKey: "CaseStudies.items.awaq.metrics.components" },
       { value: "0", labelKey: "CaseStudies.items.awaq.metrics.deployErrors" },
     ],
   },
@@ -53,9 +46,10 @@ export const caseStudies = [
       "Vercel",
       "Railway",
     ],
+    url: "https://happ3n.xyz/",
     metrics: [
-      { value: "3", labelKey: "CaseStudies.items.happ3n.metrics.features" },
-      { value: "99.9%", labelKey: "CaseStudies.items.happ3n.metrics.uptime" },
+      { value: "+3", labelKey: "CaseStudies.items.happ3n.metrics.features" },
+      { value: "~99.9%", labelKey: "CaseStudies.items.happ3n.metrics.uptime" },
     ],
   },
 ];
