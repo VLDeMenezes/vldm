@@ -1,7 +1,4 @@
-import {
-  IoLogoVercel,
-  IoLogoReact,
-} from "react-icons/io5";
+import { IoLogoVercel, IoLogoReact } from "react-icons/io5";
 import { TbBrandTypescript } from "react-icons/tb";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import {
@@ -54,7 +51,6 @@ export const projects = [
     name: "SurveyApp",
     image: "/surveyAppPic.webp",
     mainImage: "/surveyappmain.webp",
-    path: "https://surveyapp-xi.vercel.app/",
     year: "2024",
     roleKey: "Work.roles.fullstack",
     tecs: [
@@ -68,10 +64,8 @@ export const projects = [
     slug: "sumariolegal",
     name: "Sumario Legal API",
     image: "/sentenciasPic.webp",
-    path: "https://sentenciasapp.vercel.app/",
     year: "2024",
     roleKey: "Work.roles.fullstack",
-    github: "https://github.com/VLDeMenezes/sentenciasapp",
     tecs: [
       { name: "TypeScript", icon: <TbBrandTypescript /> },
       { name: "Next.js", icon: <RiNextjsLine /> },
@@ -97,10 +91,8 @@ export const projects = [
     slug: "nearvet",
     name: "NearVet",
     image: "/NearVetPic.webp",
-    path: "https://near-vet-front-git-main-teamhvets-projects.vercel.app/",
     year: "2024",
     roleKey: "Work.roles.fullstack",
-    github: "https://github.com/VLDeMenezes/NearVet",
     tecs: [
       { name: "Next.js", icon: <RiNextjsLine /> },
       { name: "TypeScript", icon: <TbBrandTypescript /> },
