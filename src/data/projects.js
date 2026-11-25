@@ -1,5 +1,5 @@
 import { IoLogoVercel, IoLogoReact } from "react-icons/io5";
-import { TbBrandTypescript } from "react-icons/tb";
+import { TbBrandNodejs, TbBrandTypescript } from "react-icons/tb";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import {
   SiExpress,
@@ -16,6 +16,19 @@ import {
  * timeline.
  */
 export const projects = [
+  {
+    slug: "cliBeland",
+    name: "CLI-BELAND",
+    image: "/clibeland.webp",
+    mainImage: "/clibeland.main.webp",
+    github: "https://github.com/VLDeMenezes/wallet-cli",
+    year: "2026",
+    roleKey: "Work.roles.devops",
+    tecs: [
+      { name: "TypeScript", icon: <TbBrandTypescript /> },
+      { name: "Node", icon: <TbBrandNodejs /> },
+    ],
+  },
   {
     slug: "rnfactory",
     name: "RNFactory",
@@ -87,18 +100,18 @@ export const projects = [
       { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
     ],
   },
-  {
-    slug: "nearvet",
-    name: "NearVet",
-    image: "/NearVetPic.webp",
-    year: "2024",
-    roleKey: "Work.roles.fullstack",
-    tecs: [
-      { name: "Next.js", icon: <RiNextjsLine /> },
-      { name: "TypeScript", icon: <TbBrandTypescript /> },
-      { name: "Express", icon: <SiExpress /> },
-      { name: "PostgreSQL", icon: <SiPostgresql /> },
-      { name: "Render", icon: <SiRender /> },
-    ],
-  },
+  // {
+  //   slug: "nearvet",
+  //   name: "NearVet",
+  //   image: "/NearVetPic.webp",
+  //   year: "2024",
+  //   roleKey: "Work.roles.fullstack",
+  //   tecs: [
+  //     { name: "Next.js", icon: <RiNextjsLine /> },
+  //     { name: "TypeScript", icon: <TbBrandTypescript /> },
+  //     { name: "Express", icon: <SiExpress /> },
+  //     { name: "PostgreSQL", icon: <SiPostgresql /> },
+  //     { name: "Render", icon: <SiRender /> },
+  //   ],
+  // },
 ];

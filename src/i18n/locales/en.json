@@ -115,6 +115,7 @@
     "year": "Year",
     "technologies": "Technologies",
     "impact": {
+      "cliBeland": "Command Line Interface to help with workflows at Beland, sync api-contracts, simulate transfers/deposit",
       "belandapp": "E-wallet features shipped across iOS, Android and web from one component system.",
       "rnfactory": "Mobile app factory that bootstraps React Native projects with AI workflows and monetization.",
       "lobacounter": "Real-time score tracking that replaced pen and paper for a traditional card game.",
@@ -134,7 +135,8 @@
       "mobile": "Mobile",
       "frontend": "Frontend",
       "fullstack": "Full stack",
-      "backend": "Backend"
+      "backend": "Backend",
+      "devops": "DevOps"
     }
   },
   "CaseStudies": {
@@ -184,6 +186,7 @@
     }
   },
   "Projects": {
+    "CLI-BELAND": "A CLI that assists with daily tasks, allowing us to check for changes to API contracts and test transaction webhooks.",
     "PhotoPuzzle": "A mobile puzzle game where players build puzzles from their own photos or play curated ones, track their best times and share wins.",
     "RNFactory": "A React Native and Expo app factory that speeds up mobile bootstrapping with AI harnessing, shared monorepo architecture and built-in monetization.",
     "LobaCounter": "A mobile scorekeeper for the traditional card game “La Loba”, with real-time rounds, player management and no manual notes. Published on Google Play with EAS.",
