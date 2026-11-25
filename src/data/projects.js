@@ -22,6 +22,7 @@ export const projects = [
     image: "/clibeland.webp",
     mainImage: "/clibeland.main.webp",
     github: "https://github.com/VLDeMenezes/wallet-cli",
+    npm: "https://www.npmjs.com/package/@-vldm/wallet-cli",
     year: "2026",
     roleKey: "Work.roles.devops",
     tecs: [

@@ -2,7 +2,12 @@
 
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import { IoCloseOutline, IoLogoGithub, IoOpenOutline } from "react-icons/io5";
+import {
+  IoCloseOutline,
+  IoLogoGithub,
+  IoLogoNpm,
+  IoOpenOutline,
+} from "react-icons/io5";
 import { useDialog } from "@/hooks/useDialog";
 import { track } from "@/lib/analytics";
 
@@ -129,6 +134,24 @@ export default function ProjectDialog({ project, onClose }) {
                 >
                   <IoLogoGithub aria-hidden="true" className="text-lg" />
                   {t("Work.code")}
+                  <span className="sr-only"> ({t("A11y.opensInNewTab")})</span>
+                </a>
+              ) : null}
+              {project.npm ? (
+                <a
+                  className="button-secondary"
+                  href={project.npm}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    track("project_link_click", {
+                      project: project.slug,
+                      type: "repo",
+                    })
+                  }
+                >
+                  <IoLogoNpm aria-hidden="true" className="text-lg" />
+                  {t("Work.npm")}
                   <span className="sr-only"> ({t("A11y.opensInNewTab")})</span>
                 </a>
               ) : null}

@@ -113,6 +113,7 @@
     "code": "Código fuente",
     "role": "Rol",
     "year": "Año",
+    "npm": "Paquete de NPM",
     "technologies": "Tecnologías",
     "impact": {
       "cliBeland": "Interfaz de línea de comandos para facilitar los flujos de trabajo en Beland, sincronizar contratos de API y simular transferencias o depósitos.",
