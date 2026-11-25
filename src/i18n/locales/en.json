@@ -116,6 +116,7 @@
     "year": "Year",
     "technologies": "Technologies",
     "impact": {
+      "mcpRulesIntern": "Backend service for adding global rules and conventions that agents can consume via the Model Control Protocol (MCP)",
       "cliBeland": "Command Line Interface to help with workflows at Beland, sync api-contracts, simulate transfers/deposit",
       "belandapp": "E-wallet features shipped across iOS, Android and web from one component system.",
       "rnfactory": "Mobile app factory that bootstraps React Native projects with AI workflows and monetization.",
@@ -187,6 +188,7 @@
     }
   },
   "Projects": {
+    "MCP-RULES-BELAND": "A backend with a simple authentication and authorization interface; it allows for the creation of tokens that enable agents to access tools and utilize globally established rules, and facilitates the rapid modification or implementation of AI conventions across different projects.",
     "CLI-BELAND": "A CLI that assists with daily tasks, allowing us to check for changes to API contracts and test transaction webhooks.",
     "PhotoPuzzle": "A mobile puzzle game where players build puzzles from their own photos or play curated ones, track their best times and share wins.",
     "RNFactory": "A React Native and Expo app factory that speeds up mobile bootstrapping with AI harnessing, shared monorepo architecture and built-in monetization.",

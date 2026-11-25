@@ -8,6 +8,8 @@ import {
   SiSwagger,
   SiExpo,
   SiGoogleplay,
+  SiFastify,
+  SiHtml5,
 } from "react-icons/si";
 
 /**
@@ -17,9 +19,23 @@ import {
  */
 export const projects = [
   {
+    slug: "mcpRulesIntern",
+    name: "MCP-RULES-BELAND",
+    image: "/mcp-rules.main.webp",
+    mainImage: "/mcp-rules.main.webp",
+    year: "2026",
+    roleKey: "Work.roles.devops",
+    tecs: [
+      { name: "TypeScript", icon: <TbBrandTypescript /> },
+      { name: "Node", icon: <TbBrandNodejs /> },
+      { name: "Fastify", icon: <SiFastify /> },
+      { name: "HTML 5", icon: <SiHtml5 /> },
+    ],
+  },
+  {
     slug: "cliBeland",
     name: "CLI-BELAND",
-    image: "/clibeland.webp",
+    image: "/clibeland.main.webp",
     mainImage: "/clibeland.main.webp",
     github: "https://github.com/VLDeMenezes/wallet-cli",
     npm: "https://www.npmjs.com/package/@-vldm/wallet-cli",
@@ -101,18 +117,18 @@ export const projects = [
       { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
     ],
   },
-  // {
-  //   slug: "nearvet",
-  //   name: "NearVet",
-  //   image: "/NearVetPic.webp",
-  //   year: "2024",
-  //   roleKey: "Work.roles.fullstack",
-  //   tecs: [
-  //     { name: "Next.js", icon: <RiNextjsLine /> },
-  //     { name: "TypeScript", icon: <TbBrandTypescript /> },
-  //     { name: "Express", icon: <SiExpress /> },
-  //     { name: "PostgreSQL", icon: <SiPostgresql /> },
-  //     { name: "Render", icon: <SiRender /> },
-  //   ],
-  // },
+  {
+    slug: "nearvet",
+    name: "NearVet",
+    image: "/NearVetPic.webp",
+    year: "2024",
+    roleKey: "Work.roles.fullstack",
+    tecs: [
+      { name: "Next.js", icon: <RiNextjsLine /> },
+      { name: "TypeScript", icon: <TbBrandTypescript /> },
+      { name: "Express", icon: <SiExpress /> },
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      { name: "Render", icon: <SiRender /> },
+    ],
+  },
 ];

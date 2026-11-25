@@ -116,6 +116,7 @@
     "npm": "Paquete de NPM",
     "technologies": "Tecnologías",
     "impact": {
+      "mcpRulesIntern": "Servicio Backend para agregar reglas y convenciones globales que los agentes pueden consumir mediante Model Control Protocol (MCP)",
       "cliBeland": "Interfaz de línea de comandos para facilitar los flujos de trabajo en Beland, sincronizar contratos de API y simular transferencias o depósitos.",
       "belandapp": "Funcionalidades de e-wallet en iOS, Android y web desde un único sistema de componentes.",
       "rnfactory": "Fábrica de apps móviles que inicializa proyectos React Native con flujos de IA y monetización.",
@@ -187,6 +188,7 @@
     }
   },
   "Projects": {
+    "MCP-RULES-BELAND": "Backend con simple interfaz de autenticacion y autorizacion, permite crear tokens para que los agentes puedan acceder a las herramientas y consumir las reglas establecidas a nivel global, permite rapidamente modificar o implementar convenciones para AI entre diferentes proyectos",
     "CLI-BELAND": "CLI que nos ayuda con el trabajo diario, nos permite chequear si los contratos de la api cambiaron, y testear webhooks de transacciones",
     "PhotoPuzzle": "Un juego de rompecabezas móvil donde podés armar puzzles con tus propias fotos o jugar con paisajes prediseñados, registrar tus mejores tiempos y compartir tus victorias.",
     "RNFactory": "Una fábrica de apps React Native y Expo que acelera el arranque de proyectos móviles con AI harnessing, arquitectura monorepo compartida y monetización integrada.",
