@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "i18next": "^26.5.4",
-    "next": "^16.4.2",
+    "next": "16.4.6",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-i18next": "^17.1.0",
@@ -24,7 +24,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "eslint": "^9.39.5",
-    "eslint-config-next": "^16.4.2",
+    "eslint-config-next": "16.4.6",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "playwright-core": "^1.64.1",
     "postcss": "^8",
