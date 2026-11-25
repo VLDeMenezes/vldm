@@ -76,9 +76,6 @@ export default function ProjectDialog({ project, onClose }) {
             <p className="mt-4 text-base leading-relaxed">
               {t("Projects." + project.name)}
             </p>
-            <p className="mt-2 text-sm font-medium">
-              {t("Work.impact." + project.slug)}
-            </p>
 
             <h3 className="mt-6 text-xs font-bold uppercase tracking-[0.16em]">
               {t("Work.technologies")}
